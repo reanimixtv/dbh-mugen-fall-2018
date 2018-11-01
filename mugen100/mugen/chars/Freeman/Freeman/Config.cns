@@ -1,0 +1,158 @@
+;-----------------------------------------------------------------------------
+;設定項目
+;-----------------------------------------------------------------------------
+[Statedef 40000]
+anim = 9999
+ctrl = 0
+
+;-----------------------------------------------------------------------------
+;本体システム設定
+;-----------------------------------------------------------------------------
+; MUGENバージョン設定
+;  var(0) = 0 : MUGEN 1.0
+;  var(0) = 1 : WinMugen
+
+[State 40000, MUGEN Version]
+Type = VarSet
+Trigger1 = 1
+var(0) = 0
+;(0:MUGEN 1.0 1:WinMugen)
+
+;---------------------------------------------------------------------------
+; T.O.P.配置設定時間設定
+;  var(1)の数値を任意の値に変更して下さい。単位は秒です。
+;  デフォルトはvar(1) = 5(5秒)。
+
+[State 40000, Mode Setting Time]
+type = VarSet
+trigger1 = 1
+var(1) = 5 ;(*sec)
+
+;---------------------------------------------------------------------------
+; T.O.P.配置初期位置設定
+;  var(0) = 0 : 最後
+;  var(0) = 1 : 中央
+;  var(0) = 2 : 最初
+
+[State 40000, T.O.P Position]
+type = VarSet
+trigger1 = 1
+var(2) = 1
+;(0:Back 1:Center 2:Front)
+
+;-----------------------------------------------------------------------------
+;AI設定
+;-----------------------------------------------------------------------------
+; AIレベル設定
+;  var(57)の数値を1～8の間で変更して下さい。
+
+[State 40000, AI Level]
+Type = ParentVarSet
+trigger1 = 1
+var(57) = 6
+;(Please Setting between 1-8)
+
+;---------------------------------------------------------------------------
+; 反応速度設定
+;  var(56)の数値を1～10の間で変更して下さい。
+
+[State 40000, AI Response]
+Type = ParentVarSet
+trigger1 = 1
+var(56) = 6
+;(Please Setting between 1-10)
+
+;-----------------------------------------------------------------------------
+;設定項目はここまで。以下はいじらないでください
+;-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+[State 40000, AssertSpecial]
+type = AssertSpecial
+Trigger1 = 1
+flag = NoShadow
+flag2 = invisible
+
+[State 40000, NotHitBy]
+type = NotHitBy
+Trigger1 = 1
+value = SCA,AA,AT,AP
+
+;[State 40000, DestroySelf]
+;type = DestroySelf
+;trigger1 = RoundState > 1
+
+;-----------------------------------------------------------------------------
+; AI用p2name等
+;-----------------------------------------------------------------------------
+; 行動制限
+
+[State -1, 行動制限解除]
+Type = VarSet
+triggerall = Root,Var(59) = 1
+trigger1 = 1
+fvar(1) = 0
+
+[State -1, 行動制限(地上受身)]
+Type = VarSet
+triggerall = Root,Var(59) = 1
+trigger1 = (enemynear(var(58)),stateno = [5200,5201])
+fvar(1) = 1
+
+[State -1, 行動制限(地上受身2)]
+Type = VarSet
+triggerall = Root,Var(59) = 1
+trigger1 = enemynear(var(58)),stateno = 702 && enemy,authorname = "ahuron"
+trigger2 = enemynear(var(58)),stateno = 52000
+fvar(1) = 2
+
+[State -1, 行動制限(ブリーチDS勢)]
+Type = VarSet
+triggerall = Root,Var(59) = 1
+trigger1 = enemy,authorname = "ikaruga" && enemy,numexplod(78431)
+trigger1 = p2stateno = 800 || p2stateno = 801 || p2stateno = 810 || p2stateno = 811
+fvar(1) = 3
+
+;-----------------------------------------------------------------------------
+; リバーサルの判定
+
+[State -2, VarSet]
+type = VarSet
+trigger1 = (Root,stateno = 151 || Root,stateno = 153) && Root,HitOver
+trigger2 = Root,statetype = S || Root,statetype = C
+trigger2 = (Root,StateNo = 5001 || Root,StateNo = 5011) && Root,HitOver
+trigger3 = Root,StateNo = 5120; && Root,AnimTime = 0
+trigger4 = Root,StateNo = 5201; && Root,AnimTime = 0
+fvar(2) = 4
+
+[State -2, VarAdd]
+type = VarAdd
+triggerall = fvar(2) > 0
+triggerall = Root,StateNo != 5120 && Root,StateNo != 5201
+trigger1 = Root,HitOver
+trigger2 = Root,MoveType != H
+fvar(2) = -1
+
+;-----------------------------------------------------------------------------
+; 地雷震
+
+[State -1, 行動制限解除]
+Type = VarSet
+triggerall = Root,Var(59) = 1
+trigger1 = 1
+fvar(3) = 0
+
+[State -1, 行動制限(地上受身)]
+Type = VarSet
+triggerall = Root,Var(59) = 1
+trigger1 = p2name = "Goro Daimon" && enemy,authorname = "ikaruga"
+trigger1 = p2stateno = 1000 && enemy,AnimElemTime(1) >= 0 && enemy,AnimElemTime(8) < 0
+fvar(3) = 1
+
+;この下、一行以上空ける事。

@@ -1,0 +1,91 @@
+Akuma/Gouki, by Duende Macabro (also know as DM ^_^) v.080a
+Original game: SvC: Chaos
+
+HP: http://www.paodemugen.com.br/rickiecreations
+email: weaponx_nirvana@yahoo.com.br
+
+Visit also: http://www.paodemugen.com.br
+
+
+Random notes
+All the code in this char is open-source, except the ones that aren't made by me, as well.
+I made this char for myself, my characters have their own customization. If you don't like... I don't care! Hahaha >=D
+If you find any bug, PLEASE contact-me.
+About Dark Force, Akuma's attack power decreases 25%, but Akuma power attack + clone power attack = 150% >=D. Also, some moves can not be used (super moves, Charge power, zero counter, guard push...)
+People, sorry, my english is very very very bad =P
+
+
+Changes since last version (v.075):
+Fix several bugs
+2 new winposes
+2 .def files: AkumaDM.def and AkumaDM_noAI.def
+
+
+What's missing:
+Misogi, Kongou Kokuretsu Zan and some other moves;
+Groove select, maybe;
+Fix random bugs;
+And so on. I'm too lazy to remember all =P
+
+
+Commands
+a: weak kick
+b: strong kick
+x: weak punch
+y: strong punck
+
+
+Charge power : y + b
+Zero counter : B, DB, D, x/y (during guard, uses 1 power bar stock)
+Guard Push   : x + y (during guard)
+Tactical Step: F,F (during guard)
+Parry        : F (tap)
+
+
+Dark Force (Morrigan-like): z + c (uses 3 power bar stocks)
+
+
+Zugai Hasatsu: F + y
+Seoi Nage    : F ou B + y 
+
+
+Gou Hadou Ken         : D, DF, F, x/y
+Zankuu Hadou Ken      : D, DF, F, x/y (air)
+Gou Shouryuu Ken      : F, D, DF, x/y
+Shakunetsu Hadou Ken  : B, BD, D, DF, F, x/y
+Tatsumaki Zankuu Kyaku: D, DB, B, a/b
+Ashura Senkuu Zenpou  : F, D, DF, a+b/x+y
+Ashura Senkuu Kouhou  : B, D, DB, a+b/x+y
+
+---[ lv1 super moves, uses 1 power bar stock ]---
+Messatsu Gou Hadou   : D, DB, B, D, DB, B, x/y
+Messatsu Gou Shouryuu: D, DF, F, D, DF, F, x/y
+Tenma Shinzui Wari   : D, DF, F, D, DF, F, a/b (air)
+Tenma Gou Zankuu     : D, DF, F, D, DF, F, x/y (air)
+Messatsu Gou Rasen   : D, DB, B, D, DB, B, a/b
+
+---[ lv2 super moves, uses 2 power bar stocks ]---
+Metsu Jinrai Shou: D, DF, F, DF, D, DB, B, x/y
+Tenma Gou Zankuu Kouu: D, DB, B, D, DB, B, x/y (air)
+
+---[ lv3 super moves, uses 3 power bar stocks ]---
+Shin Asura Koku Hadou Ken: D, DB, B, F, x+y
+Shun Goku Satsu: x, x, F, a, y
+
+
+Thanks
+-Elecbite: for MUGEN =P
+-Sés, Aziz Vicentini, VirtuallTek: for MCM, ZCharCAD and Fighter Factory (respectively), very useful tools =D
+-Kawaks and Caname developers: kick-ass emulators \o\
+-Winame: for his AI activation code
+-The Dreamslayer, for your CvS2 rips
+-P.o.t.S., Cirio, Ironmugen, SMEE/Bia, Juke Kisaragi, Kurai Naito, Panda, Ex-Inferis: for letting me use some sounds, sprites and codes from his creations, thx =D
+-P.o.t.S, again, for ideas for moves n' movenames (like Tenma Gou Zankuu Kouu), plagio rox \o\ XDD
+-PDM, for support and hosting. Thanks =D
+-Beta-testers: Quiksilver\Mandrake, Panda, Kurai Naito, Fervicante, Ixnaydk, AoC staff
+-GameFAQs (www.gamefaqs.com), for... the gamefaqs =P
+-SNK, for KOF series and other great classic series. R.I.P.
+-Those who I forgot to mention... sorry >_<
+-You, for downloading my crappy creations ;_;
+
+Good fight, good night. ô7

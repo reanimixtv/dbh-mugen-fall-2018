@@ -1,0 +1,576 @@
+;--------------------------------------------
+;SvC Akuma by Duende Macabro
+;contact: weaponx_nirvana@yahoo.com.br
+;http://www.rickiecreations.paodemugen.com.br
+;--------------------------------------------
+
+
+;----------------------------------------[ SPECIALS ]------------------------------------------
+
+; Gou Hadouken
+;-------------------------
+[Statedef 1000]
+type = S
+physics = S
+movetype = A
+anim = 1000
+ctrl = 0
+velset = 0,0
+poweradd = 45*!var(15)
+sprpriority = 1
+
+[State 1000, strengthvar]
+type = varset
+trigger1 = !time
+var(14) = ifelse(command = "qcfy" || var(0) || prevstateno = 750,2,1)
+
+[State 4100, snd]
+type = playsnd
+trigger1 = animelem = 5
+value = 2,1
+ignorehitpause = 1
+persistent = 0
+
+[State 4100, snd]
+type = playsnd
+trigger1 = animelem = 5
+value = 3,1
+ignorehitpause = 1
+persistent = 0
+
+[State 1000, Helper]
+type = helper
+trigger1 = AnimElem = 5
+helpertype = normal
+stateno = 4100
+ID = 4100
+name = "Gou Hadouken"
+postype = p1
+pos = 91,-65
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+
+[State 1000, Helper2]
+type = helper
+trigger1 = AnimElem = 2
+helpertype = normal
+stateno = 8560
+ID = 8560
+name = "Gou Hadouken Charge Ball"
+postype = p1
+pos = 0,0
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+
+[State 1000, end]
+type = changestate
+trigger1 = !animtime
+value = 0
+ctrl = 1
+
+; Shakunetsu Hadouken
+;-------------------------
+[Statedef 1020]
+type = S
+physics = S
+movetype = A
+anim = 1020
+ctrl = 0
+velset = 0,0
+poweradd = 45*!var(15)
+sprpriority = 1
+
+[State 1000, strengthvar]
+type = varset
+trigger1 = !time
+var(14) = ifelse(command = "hcfy" || var(0) || prevstateno = 750,2,1)
+
+[State 4100, snd]
+type = playsnd
+trigger1 = animelem = 5
+value = 2,1
+ignorehitpause = 1
+persistent = 0
+
+[State 4100, snd]
+type = playsnd
+trigger1 = animelem = 5
+value = 3,1
+ignorehitpause = 1
+persistent = 0
+
+[State 1020, aura]
+type = explod
+trigger1 = AnimElem = 1
+anim = 8630
+ID = 8630
+sprpriority = -3
+postype = p1
+pos = 0,0
+removetime = 12
+removeongethit = 1
+scale = 1,1
+ownpal = 1
+pausemovetime = 60
+supermovetime = 60
+
+[State 1000, Helper]
+type = helper
+trigger1 = AnimElem = 8
+helpertype = normal
+stateno = 8626
+ID = 8626
+name = "Shakunetsu Gou Hadouken"
+postype = p1
+pos = 91,-65
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+
+[State 1000, end]
+type = changestate
+trigger1 = !animtime
+value = 0
+ctrl = 1
+
+
+; Zankuu Hadouken
+;-------------------------
+[Statedef 1001]
+type = A
+physics = A
+movetype = A
+anim = 1001
+ctrl = 0
+poweradd = 90
+sprpriority = 1
+
+[State 1000, strengthvar]
+type = varset
+trigger1 = !time
+var(14) = ifelse(command = "qcfy" || var(0),2,1)
+
+[State 1001, Hadouken]
+type=helper
+trigger1 = !animelemtime(1) || !animelemtime(3)
+helpertype = normal
+stateno = 8582
+ID = 8582
+name = "Zankuu Hadouken"
+postype = p1
+pos = ifelse((animelem=1),65,74),ifelse((animelem=1),-39,-40)
+
+[State 1050, snd]
+type = playsnd
+trigger1 = !animelemtime(1) || !animelemtime(3)
+value = 2,1
+channel = 0
+
+[State 1050, snd]
+type = playsnd
+trigger1 = !animelemtime(1) || !animelemtime(3)
+value = 3,1
+
+; Ashura Senkuu
+;-------------------------
+[Statedef 1200]
+type = S
+physics = N
+movetype = I
+anim = 1200
+velset = 0,0
+ctrl = 0
+sprpriority = -1
+
+[State 1200, strengthvar]
+type = varset
+trigger1 = !time
+var(14) = ifelse(command="df2p" || var(0),3,ifelse(command="df2k",2,ifelse(command="db2p",-3,-2)))
+
+[State 1200, afterimage]
+type = afterimage
+trigger1 = animelem = 3
+time = 80
+timegap = 1
+framegap = 6
+length = ifelse((var(14)=3||var(14)=-3),24,18)
+palbright = 0,0,0
+paladd = 0,0,0
+palmul = .9,.9,.9
+palcontrast = 160,160,160
+palpostbright = 0,0,0
+trans = add1
+
+[State 1200, parado pra lá e pra cá =P]
+type = velset
+trigger1 = animelemtime(2)>0 && animelemtime(6)<0
+x = ifelse(var(14)=3,-7,ifelse(var(14)=2,-4,ifelse(var(14)=-3,7,4)))*sin((time-2)/2)
+
+[State 1200, agora foi!]
+type = velset
+trigger1 = animelem = 6
+x = ifelse(var(14)=3,14,ifelse(var(14)=2,9,ifelse(var(14)=-3,-14,-9)))
+
+[State 1200, muda velocidade aos poucos]
+type = velmul
+trigger1 = animelemtime(6)>ifelse((var(14)=3||var(14)=-3),16,9)
+x = .9
+
+[State 1200, som parado]
+type = playsnd
+trigger1 = animelem = 1
+value = 3,6
+persistent = 0
+
+[State 1200, som indo]
+type = playsnd
+trigger1 = animelem = 6
+value = 3,5
+persistent = 0
+
+[State 1200, gasparzinho]
+type = playerpush
+trigger1 = animelemtime(3)>= 0
+value = 0
+
+[State 1200, ninguém rela dedo]
+type = nothitby
+trigger1 = animelemtime(3)>0 && animelemtime(6)<= ifelse((var(14)=3||var(14)=-3),35,20)
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+ignorehitpause = 1
+
+[State 1200, passa do enemy e vira]
+type = turn
+trigger1 = animelemtime(6)>0 && p2dist x<0
+
+[State 1200, cabou]
+type = changestate
+trigger1 = animelemtime(6) = ifelse((var(14)=3||var(14)=-3),40,25)
+trigger2 = animelemtime(6)>0 && vel x<0 && backedgebodydist<=const(size.ground.back)
+trigger3 = animelemtime(6)>0 && vel x>0 && frontedgebodydist<=const(size.ground.front)
+value = 0
+ctrl = 1
+
+; Gou Shoryuken
+;-------------------------
+[Statedef 1050]
+type = S
+physics = S
+movetype = A
+anim = 1050
+ctrl = 0
+velset = 0,0
+poweradd = 90
+juggle = 5
+
+[State 1050, strengthvar]
+type = varset
+trigger1 = !time
+var(14) = ifelse(command="shoryuu_y"||var(0)||prevstateno = 750,2,1)
+
+[State 1050, naum rela o dedo]
+type = nothitby
+trigger1 = anim = 1050 && animelemtime(4) < 0
+value = SCA
+time = 1
+ignorehitpause = 1
+
+[State 1050, vel]
+type = velset
+trigger1 = anim = 1050 && !animelemtime(4)
+x = ifelse(var(14)=2,12,6)
+y = ifelse(var(14)=2,-11,-5)
+
+[State 40, dust]
+type = helper
+trigger1 = anim = 1050 && !animelemtime(4)
+helpertype = normal
+stateno = 7100
+ID = 7100
+name = "Dust"
+postype = p1
+ownpal = 1
+
+[State 1050, vel]
+type = velmul
+trigger1 = 1
+x = .8
+
+[State 1050, vel]
+type = velmul
+trigger1 = vel y > 0
+x = 0
+
+[State 1050, snd]
+type = playsnd
+trigger1 = anim = 1050 && !animelemtime(4)
+value = 2,2
+channel = 0
+ignorehitpause = 1
+
+[State 1050, snd]
+type = playsnd
+trigger1 = anim = 1050 && !animelemtime(4)
+value = 3,12
+channel = 1
+ignorehitpause = 1
+
+[State 1050, hit]
+type = hitdef
+trigger1 = animelem = 2 && anim = 1050
+trigger1 = var(17):=-10 && var(18):=-52
+trigger2 = animelem = 3 && anim = 1050
+trigger2 = var(17):=-10 && var(18):=-75
+attr = S,SA                   
+damage = ifelse(var(14)=2,ceil(33+random/100),ceil(28+random/100))
+animtype = Medium
+fall.animtype = Medium
+guardflag = M          
+hitflag = MAF           
+priority = 6,Hit             
+pausetime = 10,10
+sparkno = s8600+(random%5)  
+guard.sparkno = s8519 
+sparkxy = -10, var(18)          
+hitsound = s1,1     
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = .5,-5.5
+air.type = Low
+air.velocity = .5,-5.5
+getpower = 10
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+fall.animtype = Medium
+
+[State 1050, hit2]
+type = hitdef
+trigger1 = animelem = 4 && anim = 1050
+trigger1 = var(17):=-10 && var(18):=-100
+attr = A,SA                   
+damage = ifelse(var(14)=2,ceil(38+random/100),ceil(32+random/100))
+animtype = Back        
+guardflag = MA           
+hitflag = MAF           
+priority = 6,Hit             
+pausetime = 12,12             
+sparkno = s8600+(random%5)  
+guard.sparkno = s8519  
+sparkxy = -10, var(18)      
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = ifelse(var(14)=1,-3,-4.2),ifelse(var(14)=1,-5,-7)
+air.type = Low
+air.velocity = ifelse(var(14)=1,-3,-4.2),ifelse(var(14)=1,-5,-7)
+getpower = 25
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+
+[State 1050, statetype]
+type = statetypeset
+trigger1 = anim = 1050 && animelemtime(4) >= 0
+statetype = A
+physics = N
+
+[State 1050, grav]
+type = gravity
+trigger1 = (anim = 1050 && animelemtime(4)>0) || (anim = 1051)
+
+[State 1050, changeanim]
+type = changeanim
+trigger1 = time > 9 && vel y >(ifelse(var(10) = 2,-5.3,-2.7))
+value = 1051
+persistent = 0
+
+[State 1050, changeanim]
+type = changeanim
+trigger1 = pos y >= -5 && anim = 1051
+value = 1052
+persistent = 0
+
+[State 1050, vel]
+type = velset
+trigger1 = anim = 1052
+y = 0
+
+[State 1050, vel]
+type = posset
+trigger1 = anim = 1052
+y = 0
+
+;---------------------
+
+[State 1050 ,Poera da descida]
+type = explod
+trigger1 = anim = 1052 && time >= 4 && !numexplod(8593)
+anim = 8593
+id = 8593
+pos = 0, 0
+postype = p1
+sprpriority = 0
+ownpal = 1
+scale = 0.5, 0.5
+
+[State 1050, Landing Sound]
+type = PlaySnd
+trigger1 = anim = 1052 && Time >= 4
+value = 40, 0
+persistent = 0 ;prrraaa nuuummm reeepeeetiirrr ooo ssooommm!!!
+
+;---------------------
+
+[State 1050, end]
+type = changestate
+trigger1 = anim = 1052 && !animtime
+value = 0
+ctrl = 1
+
+
+; Tatsumaki Zankuu Kyaku
+;-------------------------
+[Statedef 1100]
+type = A
+physics = N
+movetype = A
+anim = 1100
+ctrl = 0
+velset = 0,0
+poweradd = 80
+juggle = 5
+
+[State 1100, tatsumakivar]
+type = varset
+trigger1 =!time
+var(14) = ifelse(command = "qcbb", 2, 1)
+
+[State 1100, uiá!]
+type = playsnd
+trigger1 = anim = 1100
+value = 2,0
+channel = 0
+persistent = 0
+
+[State 1100, vuuush!]
+type = playsnd
+trigger1 = anim = 1100 && !animtime
+value = 3,13
+channel = 1
+persistent = 0
+
+[State 1100, vuuush!]
+type = stopsnd
+trigger1 = anim = 1103 && pos y = -1
+channel = 1
+persistent = 0
+
+[State 1100, anim]
+type = changeanim
+trigger1 = anim = 1100 && !animtime
+value = ifelse(var(14) = 2, 1102, 1101)
+
+[State 1100, vel]
+type = velset
+trigger1 = anim = 1100 && !animelemtime(1)
+x = 3.5
+y = -3.7
+
+[State 1100, vel]
+type = velset
+trigger1 = (anim = [1101,1102])
+x = 3.5
+y = 0
+
+[State 1100, anim]
+type = changeanim
+trigger1 = (anim = [1101,1102]) && !animtime
+value = 1103
+persistent = 0
+
+[State 1100, statetype]
+type = statetypeset
+trigger1 = (anim = [1101,1102])
+statetype = A
+physics = N
+
+[State 1100, statetype]
+type = statetypeset
+trigger1 = anim = 1103 && animelemtime(1)>0
+statetype = A
+physics = A
+
+[State 1100, hit]
+type = hitdef
+triggerall = anim = [1101,1103]
+trigger1 = animelem = 1 || animelem = 8 || animelem = 15
+trigger1 = var(17):=-10 && var(18):=-60
+attr = S,SA                   
+damage = ceil(35+random/150),5 
+ID = 1100
+nochainID = 11001 ;para acertar pelo lado certo, thanx fervicante por avisar =D  
+animtype = Hard        
+guardflag = MA       
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519         
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = -4,-4.5
+air.type = Low
+air.velocity = -4,-4.5
+getpower = 53
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+
+[State 1100, hit2]
+type = hitdef
+triggerall = anim = [1101,1103]
+trigger1 = animelem = 5 || animelem = 12 || animelem = 19
+trigger1 = var(17):=-10 && var(18):=-60
+attr = S,SA                   
+damage = ceil(35+random/150),5    
+ID = 11001
+nochainID = 1100 ;para acertar pelo lado certo, thanx fervicante por avisar =D  
+animtype = Hard        
+guardflag = MA          
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519        
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = 4,-4.5
+air.type = Low
+air.velocity = 4,-4.5
+getpower = 53
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+p2facing = -1

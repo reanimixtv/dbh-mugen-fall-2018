@@ -1,0 +1,37 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "Jason Voorhees Undead"
+displayname = "Jason Voorhees"
+versiondate = Today
+mugenversion = 
+author = "Lumppowraca"
+pal.defaults = 1,2,3,4,5,6
+
+[Files]
+sprite = jason.sff
+anim = jason.air
+sound = jason.snd
+cmd = jason.cmd
+cns = jason.cns
+stcommon = common1.cns
+st = jason.cns
+pal1 = jason1.act
+pal2 = jason2.act
+pal3 = jason3.act
+pal4 = jason4.act
+pal5 = mddnemesis.act
+pal6 = mddnemesisalt.act
+pal7 = jason6.act
+pal8 = MDDMvCAlt1.act
+pal9 = MDDMvCAlt2.act
+pal10 = MDDMvCAlt3.act
+pal11 = MDDMvCAlt4.act
+pal12 = MDDMvCAlt5.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

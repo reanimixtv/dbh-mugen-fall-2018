@@ -1,0 +1,92 @@
+;Stage by Acey (www.infinitymugenteam.com)
+;Adjustments by Mystery XIII
+
+
+[Info]
+name = "YuGiOh! - Ghosts n' Ghouls"
+
+[BGdef]
+spr = ArthurStage.sff
+debugbg = 0
+
+[Music]
+bgmusic = sound/Jealkb ~ Makemagic Tema Yu-Gi-Oh! 10º Aniversario.mp3
+;Ghosts'N_Goblins by Wanka Factory, available at OCReMix
+bgvolume = 255
+
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -150
+boundright = 260
+boundhigh = -350
+boundlow = 0
+verticalfollow = 1
+floortension = 75
+tension = 60
+
+[PlayerInfo]
+p1startx = -70          
+p1starty = 0            
+p1startz = 0            
+p1facing = 1        
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000 
+rightbound = 700 
+topbound  =  0     
+botbound  =  0     
+
+[Scaling] 
+topz     = 0       
+botz     = 50      
+topscale = 1       
+botscale = 1.2     
+
+[Bound]
+screenleft = 15    
+screenright = 15  
+
+[StageInfo]
+zoffset = 225
+autoturn = 1
+resetBG = 1
+
+[shadow]
+Intensity = 90
+color = 0,0,0
+yscale = .05
+fade.range = -400,-100
+
+[Reflection]
+intensity = 200
+
+;----------------------------------------[PCX IMAGE]
+[BG 0]
+type  = normal
+spriteno = 0, 0
+layerno = 0                
+start = 0,0;-160, 0
+delta = .6,.75
+trans = none
+;---------------------------------------
+[BG Ship]
+type  = normal
+spriteno = 0,3
+start = 0,0;-310,240 
+mask = 1
+delta = 1, .9
+;---------------------------------------
+[BG Fighting Ground]
+type  = normal
+spriteno = 0,1
+start = 0,0;-310,240  
+mask = 1
+;---------------------------------------[/PCX IMAGE]
+
+

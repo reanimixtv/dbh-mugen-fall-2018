@@ -1,0 +1,46 @@
+;--------------------------------------------
+;SvC Akuma by Duende Macabro
+;contact: weaponx_nirvana@yahoo.com.br
+;http://www.rickiecreations.paodemugen.com.br
+;--------------------------------------------
+
+[Info]
+name = "SvC Akuma by Duende Macabro"   
+displayname = "Akuma" 
+versiondate = 04,14,2002  
+mugenversion = 04,14,2002   
+author = "Duende Macabro"     
+pal.defaults = 1,2,3,4,5,6,7,8,9,10,11,12     
+
+
+[Files]
+cmd     = command_noAI.cmd   
+cns     = constants.cns   
+st      = States\common.cns
+st1     = States\normal.cns
+st2     = States\special.cns   
+st3     = States\supers.cns
+st4     = States\helpers.cns
+st5     = States\darkforce.cns
+st6     = States\sgs.cns
+stcommon = common1.cns 
+sprite  = sprite.sff   
+anim    = anim.air   
+sound   = sound.snd   
+pal1    = Palletes\blue.act 
+pal2    = Palletes\red.act
+pal3    = Palletes\green.act
+pal4    = Palletes\purple.act
+pal5    = Palletes\black.act
+pal6    = Palletes\orange.act
+pal7    = Palletes\shingouki.act
+pal8    = Palletes\shingouki2.act
+pal9    = Palletes\dark.act
+pal10   = Palletes\silent.act
+pal11   = Palletes\shingouki3.act
+pal12   = Palletes\demon.act
+
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

@@ -1,0 +1,30 @@
+
+[Info]
+name ="Joker"
+displayname ="Joker"
+versiondate =04,14,2001
+mugenversion =04,14,2001
+author ="ZVitor"
+pal.defaults =1
+
+[Files]
+sprite   =Template2.sff
+anim     =Template.air
+sound    =Template.snd
+stcommon =common1.cns
+cmd      =Template.cmd
+cns      =Template.cns
+st       =basics.st
+pal1=dc2.act
+pal2=dc2.act
+pal3=dc2.act
+pal4=dc2.act
+pal5=dc2.act
+pal6=dc2.act
+st1=specials.st
+st2=hypers.st
+st3=overrides.st
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=../../data/avx/endJLVSSF.def

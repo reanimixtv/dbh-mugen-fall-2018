@@ -1,0 +1,1761 @@
+;--------------------------------------------
+;SvC Akuma by Duende Macabro
+;contact: weaponx_nirvana@yahoo.com.br
+;http://www.rickiecreations.paodemugen.com.br
+;--------------------------------------------
+
+;--------------------------------------[ SUPER MOVES Lv.1]-----------------------------------------
+
+; Messatsu Gou Hadou      
+;-------------------------
+[Statedef 2000]
+type = S
+physics = S
+movetype = A
+anim = 2100
+ctrl = 0
+velset = 0,0
+poweradd = -1000
+sprpriority = 1
+
+;------------------- bloco do Super Charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2100 && !animelemtime(3)
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = -22,-48
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2100 && !animelemtime(3)
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+movetime = 61
+
+[State 3100, great dust]
+type = explod
+trigger1 = !animelemtime(3)
+anim = 8573
+ID = 8573
+pos = 0,5
+sprpriority = 7
+postype = p1
+removetime = -2
+supermovetime = 300
+ownpal = 1
+
+[State 2100, snd]
+type = playsnd
+trigger1 = !animelemtime(3)
+value = 2,4
+ignorehitpause = 1
+persistent = 0
+
+;------------------- fim do Super Charge
+
+[State 1000, end]
+type = changestate
+trigger1 = Anim = 2100 && Time > 68
+value = 2001
+ctrl = 0
+
+;---[Shot]---
+[Statedef 2001]
+type = S
+physics = S
+movetype = A
+anim = 2001
+ctrl = 0
+velset = 0,0
+poweradd = 0
+sprpriority = 1
+
+[State -3, afterimage lv1]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 128,128,128
+palpostbright = 0,0,0
+trans = add
+persistent = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = animelem = 5
+value = 2,5
+ignorehitpause = 1
+persistent = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = animelem = 5
+value = 3,1
+ignorehitpause = 1
+persistent = 0
+
+[State 2100, Helper]
+type = helper
+trigger1 = AnimElem = 5
+helpertype = normal
+stateno = 8570
+ID = 8570
+name = "Messatsu Gou Hadou"
+postype = p1
+pos = 100,-65
+size.xscale = 1
+size.yscale = 1
+
+[State 2100, Helper2]
+type = helper
+trigger1 = AnimElem = 2
+helpertype = normal
+stateno = 8560
+ID = 8560
+name = "Gou Hadouken Charge Ball"
+postype = p1
+pos = 0,0
+size.xscale = 1
+size.yscale = 1
+
+[State 2100, end]
+type = changestate
+trigger1 = Anim = 2001 && animelemtime(5)>20
+value = 2002
+ctrl = 0
+
+;---[Ends]---
+[Statedef 2002]
+type = S
+physics = S
+movetype = A
+anim = 2102
+ctrl = 0
+velset = 0,0
+poweradd = 0
+sprpriority = 1
+
+[State 1000, end]
+type = changestate
+trigger1 = Anim = 2102 && !animtime
+value = 0
+ctrl = 1
+
+; Tenma Gou Zankuu 
+;-------------------------
+[Statedef 2700]
+type = A
+physics = N
+movetype = A
+anim = 2700
+ctrl = 0
+poweradd = -1000
+sprpriority = 1
+
+;------------------- bloco do Super Charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2700 && AnimElem = 2
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = 72, -42
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2700 && AnimElem = 2
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = anim = 2700 && AnimElem = 2
+value = 2,7
+ignorehitpause = 1
+persistent = 0
+
+;------------------- fim do Super Charge
+
+[State -3, afterimage lv1]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 128,128,128
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 1001, Hadouken]
+type = helper
+trigger1 = AnimElem = 6
+helpertype = normal
+stateno = 8590
+ID = 8590
+name = "Tenma Gou Zankuu"
+postype = p1
+pos = 74, -40
+
+[State 2700, vel]
+type = velset
+trigger1 = AnimElemTime(1)>0 && AnimElemTime(6)<0
+x = 0
+y = 0
+
+[State 2700, vel]
+type = velset
+trigger1 = animelem = 6
+x= -1.5
+y= -5
+
+[State 2700, sts]
+type = statetypeset
+trigger1 = animelemtime(6)>0
+physics = A
+
+[State 1050, snd]
+type = playsnd
+trigger1 = AnimElem = 6
+value = 2,1
+channel = 0
+
+[State 1050, snd]
+type = playsnd
+trigger1 = AnimElem = 6
+value = 3,1
+
+; Messatsu Gou Shoryuu
+;-------------------------
+[Statedef 2200]
+type = S
+physics = S
+movetype = A
+ctrl = 0
+anim = 2200
+velset = 0,0
+juggle = 5
+sprpriority = 1
+poweradd = -1000
+
+;------------------- bloco Super Charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2200 && AnimElem = 1
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = 12,-30
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2200 && AnimElem = 1
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+movetime = 61
+
+[State 3100, great dust]
+type = explod
+trigger1 = anim = 2200 && AnimElem = 1
+anim = 8573
+ID = 8573
+pos = 0,5
+sprpriority = 7
+postype = p1
+removetime = -2
+supermovetime = 300
+ownpal = 1
+
+;------------------- fim do Super Charge
+
+[State 2200, afterimage lv1]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 128,128,128
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 2200, não rela dedo por mixaria]
+type = nothitby
+trigger1 = animelemtime(1) >= 2 && animelemtime(9)<0
+time = 1
+value = SCA
+ignorehitpause = 1
+
+[State 2200, vai fiote]
+type = velset
+trigger1 = anim = 2200 && (animelem = 2 || animelem = 10)
+x = 12
+
+[State 2200, vai!]
+type = velset
+trigger1 = anim = 2200 && animelem = 18
+x = 19
+
+[State 2200, avuando]
+type = velset
+trigger1 = anim = 2200 && animelemtime(20) = 1
+x = 18
+y = -11
+
+[State 2200, celera um pouquin]
+type = velmul
+trigger1 = vel y < 0
+x = .84
+
+[State 2200, para de celerá]
+type = velmul
+trigger1 = vel y > 0
+x = 0
+
+[State 2200, toca no solo e fica =)]
+type = velset
+trigger1 = anim = 1052
+y = 0
+
+[State 2200, escapa nun eh taum simples]
+type = width
+trigger1 = vel y < 0
+edge = const(size.air.front)
+
+[State 2200, tah no ar]
+type=statetypeset
+trigger1 = anim = 2200 && animelemtime(20) = 2
+statetype = A
+physics = N
+
+[State 2200, gravidade]
+type = gravity
+trigger1 = anim = 2200 && animelemtime(20) > 2
+trigger2 = anim = 1051
+
+[State 2200, do chao naum passa]
+type = velset
+trigger1 = anim = 1052
+y = 0
+
+[State 2200, do chao naum passa]
+type = posset
+trigger1 = anim = 1052
+y = 0
+
+;----------- bloco da porradaria
+
+[State 2200, hits 1 e 4]
+type = hitdef
+trigger1 = (animelem = 2 || animelem = 10) && anim = 2200
+trigger1 = var(17):=-10&&var(18):=-52
+attr = S,HA                   
+damage = ceil(20+random/200),5  
+animtype = Medium        
+fall.animtype = Medium        
+guardflag = M          
+hitflag = MAF           
+priority = 7,Hit             
+pausetime = 5,5
+sparkno = s8600+(random%5)  
+sparkxy = var(17),var(18)
+guard.sparkno = s8519            
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = -4,0
+air.velocity = -4,-1
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 5
+
+[State 2200, hits 2 e 5]
+type = hitdef
+trigger1 = (animelem = 3 || animelem = 11) && anim = 2200
+trigger1 = var(17):=-10 && var(18):=-75
+attr = S,HA                   
+damage = ceil(20+random/200),5  
+animtype = Hard      
+fall.animtype = Hard        
+guardflag = M          
+hitflag = MAF           
+priority = 7,Hit             
+pausetime = 5,5
+sparkno = s8600+(random%5)  
+sparkxy = var(17),var(18)
+guard.sparkno = s8519            
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = -4,0
+air.velocity = -4,-1
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 5
+
+[State 2200, hits 3 e 6]
+type = hitdef
+trigger1 = (animelem = 4 || animelem = 12) && anim = 2200
+trigger1 = var(17):=-10 && var(18):=-100
+attr = S,HA                   
+damage = ceil(25 + random/200),5  
+animtype = Hard        
+guardflag = M          
+hitflag = MAF           
+priority = 7,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)  
+sparkxy = var(17),var(18)
+guard.sparkno = s8519           
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = -4,0
+air.velocity = -4,-2
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 5
+
+[State 2200, hit7]
+type = hitdef
+trigger1 = animelem = 18 && anim = 2200
+trigger1 = var(17):=-10 && var(18):=-52
+attr = S,HA                   
+damage  = ceil(25 + random/200),5  
+animtype = Medium        
+fall.animtype = Medium        
+guardflag = M          
+hitflag = MAF           
+priority = 7,Hit             
+pausetime = 18,18
+sparkno = s8600+(random%5)  
+sparkxy = var(17),var(18)
+guard.sparkno = s8519         
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = .5,-6
+air.velocity = .5,-6
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 5
+fall = 1
+fall.recover = 0
+
+[State 2200, hit 8]
+type=hitdef
+trigger1 = animelem = 19 && anim = 2200
+trigger1 = var(17):=-10 && var(18):=-75
+attr = S,HA                   
+damage = ceil(35 + random/200),5  
+animtype = Hard      
+fall.animtype = Hard        
+guardflag = M          
+hitflag = MAF           
+priority = 7,Hit             
+pausetime = 18,18
+sparkno = s8600+(random%5)  
+sparkxy = var(17),var(18)
+guard.sparkno = s8519         
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = .5,-6
+air.velocity = .5,-6
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 5
+fall = 1
+fall.recover = 0
+
+[State 2200, hit 9]
+type = hitdef
+trigger1 = animelem = 20 && anim = 2200
+trigger1 = var(17):=-10 && var(18):=-100
+persistent = 0
+attr = S,HA                   
+damage = ceil(35 + random/200),5  
+animtype = Back        
+guardflag = M          
+hitflag = MAF           
+priority = 7,Hit             
+pausetime = 2,2
+sparkno = s8600+(random%5)  
+sparkxy = var(17),var(18)
+guard.sparkno = s8519        
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = -5,-8.5
+air.velocity = -5,-8.5
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 7
+fall = 1
+fall.recover = 0
+
+;---------- bloco das trocas de anim XD
+
+[State 2200, muda de anim no ar]
+type = changeanim
+trigger1 = anim = 2200 && animelemtime(20) > 2 && vel y > -5.5
+value = 1051
+persistent = 0
+
+[State 2200, muda de anim no solo]
+type = changeanim
+trigger1 = pos y >= -10 && anim = 1051
+value = 1052
+persistent = 0
+
+[State 3100, cabou]
+type = changestate
+trigger1 = anim = 1052 && !animtime
+value = 0
+ctrl = 1
+
+; Tenma Shinzui Wari
+;-------------------------
+[Statedef 2250]
+type = A
+physics = N
+movetype = A
+anim = 2250
+ctrl = 0
+velset = 0,0
+juggle = 5
+sprpriority = -1
+poweradd = -1000
+
+;--------- bloco do super charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2250 && AnimElem = 1
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = 0,-77
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2250 && AnimElem = 1
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = AnimElem = 1
+value = 2,7
+ignorehitpause = 1
+persistent = 0
+
+;------------- fim do super charge
+
+[State -3, afterimage lv1]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 128,128,128
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 2250, gambiarra pra arrumar durante algum combo]
+type = posadd
+trigger1 = !time && (prevstateno = 1050 || prevstateno = 2200)
+y = -20
+
+[State 2100, snd]
+type = playsnd
+trigger1 = AnimElem = 2
+value = 2,5
+ignorehitpause = 1
+persistent = 0
+
+[State 2250, ninguem rela dedo por mixaria]
+type = nothitby
+trigger1 = anim = 2250 && animelemtime(3)<0
+time = 1
+value = SCA
+ignorehitpause = 1
+
+[State 2250, o treco que ajuda a atravessa pelo p2 XD]
+type = playerpush
+trigger1 = 1
+value = 0
+
+[State 2250, prioridade baixa ehhehe XD]
+type = sprpriority
+trigger1 = anim = 2250
+value = -1
+ignorehitpause = 1
+
+[State 2250, na descida todo santo ajuda]
+type = velset
+trigger1 = anim = 2250 && animelem = 2
+x = 14
+y = 14
+
+[State 2250, efeito p0x que eu descolei no garou XD]
+type = helper
+trigger1 = anim = 2250 && !animelemtime(2) && !numhelper(8586)
+helpertype = normal
+stateno = 8586
+ID = 8586
+pos = 50,6
+name = "efeito p0x tenma"
+postype = p1
+ownpal = 1
+size.xscale = .8
+size.yscale = .8
+persistent = 0
+supermovetime = 9999
+
+[State 2250, hit]
+type = hitdef
+trigger1 = anim = 2250 && animelemtime(2) > 0
+trigger1 = var(17):=-10 && var(18):=-15
+ID = 2250
+nochainID = 2250 ;porcaria que serve pra não conectar 2 hits do mesmo golpe =P
+attr = A,HA                   
+damage = ceil(250 + random/50),5
+animtype = Hard       
+guardflag = H
+hitflag = MAF
+priority = 7,Hit
+pausetime = 2,20
+hitsound = s3,10      
+guardsound = s1,4
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = var(17),var(18)
+ground.type = Trip
+ground.slidetime = 24
+ground.hittime = 24
+ground.velocity = -1,-2
+air.velocity = -1,0
+getpower = 0
+envshake.time = 24
+envshake.freq = 60
+envshake.ampl = 6
+palfx.color = 32
+palfx.sinadd = 40,20,60,8
+palfx.mul = 384,128,512
+palfx.time = 40
+fall = 1
+
+[State 2250, acertou e o p2 sentiu a pressao XD]
+type = bgpalfx
+trigger1 = movehit
+invertall = 1
+time = 2
+ignorehitpause = 1
+persistent = 0
+
+[State 2250, toca no solo e abaixa]
+type = changeanim
+trigger1 = anim = 2250 && animelemtime(2)>0 && pos y>=-10
+value = 2251
+persistent = 0
+
+[State 2250, muda statetype junto ao treco de cima ae]
+type = statetypeset
+trigger1 = anim = 2251
+statetype = C
+physics = C
+
+[State 2250, do chao naum passa]
+type = posset
+trigger1 = anim = 2251
+y = 0
+
+[State 2250, idem ao de cima porem falando da velocidade do fiote]
+type = velset
+trigger1 = anim = 2251
+y = 0
+
+[State 2250, fim]
+type = changestate
+trigger1 = anim = 2251 && !animtime
+value = 0
+ctrl = 1
+
+; Messatsu Gou Rasen
+;-------------------------
+[Statedef 2800]
+type = A
+physics = N
+movetype = A
+anim = 2800
+ctrl = 0
+velset = 0,0
+poweradd = -1000
+juggle = 5
+
+;--------- bloco do super charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2800 && AnimElem = 1
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = -27,-16
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2800 && AnimElem = 1
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = AnimElem = 1
+value = 2,7
+ignorehitpause = 1
+persistent = 0
+
+[State 3100, great dust]
+type = explod
+trigger1 = anim = 2800 && AnimElem = 1
+anim = 8573
+ID = 8573
+pos = 0,5
+sprpriority = 7
+postype = p1
+removetime = -2
+supermovetime = 300
+ownpal = 1
+
+
+;------------- fim do super charge
+
+[State -3, afterimage lv1]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 15
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 128,128,128
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 1100, uiá!]
+type = playsnd
+trigger1 = anim = 2800 && animelem = 7
+value = 2,0
+channel = 0
+persistent = 0
+
+[State 1100, vuuush!]
+type = playsnd
+trigger1 = anim = 2800 && animelem = 7
+value = 3,13
+channel = 1
+persistent = 0
+
+[State 1100, vuuush!]
+type = stopsnd
+trigger1 = anim = 1103 && pos y = -1
+channel = 1
+persistent = 0
+
+[State 1100, vel]
+type = velset
+trigger1 = anim = 2800 && animelemtime(2)>0 && animelemtime(5)<0
+x = 0
+y = -3.9
+
+[State 1100, vel]
+type = velset
+trigger1 = anim = 2800 && animelemtime(5)>=0
+trigger2 = anim = 2800 && Time = 41
+x = 0
+y = 0
+
+[State 1100, vel]
+type = veladd
+trigger1 = anim = 2800 && Time = [7,40]
+y = -.55
+
+[State 1100, vel]
+type = veladd
+trigger1 = anim = 2800 && Time > 41
+y = .30
+
+[State 1100, anim]
+type = changeanim
+trigger1 = anim = 2800 && !animtime
+value = 1103
+persistent = 0
+
+[State 1100, statetype]
+type = statetypeset
+trigger1 = (anim = 2800) && animelemtime(5)>0
+statetype = A
+physics = N
+
+[State 1100, statetype]
+type = statetypeset
+trigger1 = anim = 1103 && animelemtime(1)>0
+statetype = A
+physics = A
+
+[State 2800, gasparzinho]
+type = playerpush
+trigger1 = anim = 2800 || anim = 1103
+value = 0
+
+[State 2800, hehe agora o p2 naum escapa do furacão >=D]
+type = width
+trigger1 = anim = 2800 && MoveHit
+edge = 50,40
+
+[State 2800, poera]
+type = explod
+trigger1 = anim = 2800 && !numexplod(8612) && animelemtime(5)>0
+anim = 8612
+ID = 8612
+sprpriority = -3
+postype = p1
+pos = 0,-ceil(pos y)
+removetime = -1
+ownpal = 1
+removeongethit = 1
+scale = 1,1
+
+[State 1100, hit]
+type = hitdef
+triggerall = anim = 2800
+triggerall = var(17):=-10 && var(18):=-60
+trigger1 = animelem = 7 || animelem = 14 || animelem = 21 || animelem = 28 || animelem = 35 || animelem = 42
+trigger2 = animelem = 49 || animelem = 56 || animelem = 63 || animelem = 70
+attr = S,SA                   
+damage = ceil(12+random/150),5    
+animtype = Hard        
+guardflag = MA       
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519         
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+p2facing = -1
+ground.velocity = ifelse(p2dist x>30,30,25)
+air.type = Low
+air.velocity = ifelse(p2dist x>30,18,15), ifelse(p2dist y<(enemy,const(size.mid.pos.y))+60,0,-3)+vel y
+getpower = 0
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 0
+air.fall = 1
+fall.recovery = 0
+fall.animtype = Hard
+
+[State 1100, hit2]
+type = hitdef
+triggerall = anim = 2800
+triggerall = var(17):=-10 && var(18):=-60
+trigger1 = animelem = 11 || animelem = 18 || animelem = 25 || animelem = 32 || animelem = 39 || animelem = 46
+trigger2 = animelem = 53 || animelem = 60 || animelem = 67 || animelem = 74
+attr = S,SA                   
+damage = ceil(12+random/150),5    
+animtype = Hard        
+guardflag = MA          
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519        
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = ifelse(p2dist x>30,-30,-25)
+air.type = Low
+air.velocity = ifelse(p2dist x>30,-18,-15), ifelse(p2dist y<(enemy,const(size.mid.pos.y))+60,0,-3)+vel y
+getpower = 0
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+p2facing = 1
+fall = 0
+air.fall = 1
+fall.recovery = 0
+fall.animtype = Hard
+
+[State 1100, hit final]
+type = hitdef
+triggerall = anim = 2800
+triggerall = var(17):=-10 && var(18):=-60
+trigger1 = animelem = 77 
+attr = S,SA                   
+damage = ceil(15+random/150),5    
+animtype = diagup    
+fall.animtype = diagup    
+guardflag = MA       
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519         
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+p2facing = 1
+ground.velocity = -7, -5
+air.type = Low
+air.velocity = -7,-5
+getpower = 0
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+air.fall = 1
+fall.recovery = 0
+
+
+
+;--------------------------------------[ SUPER MOVES Lv.2]-----------------------------------------
+
+; Metsu Jinrai Shou
+;-------------------------
+[Statedef 2500]
+type = S
+physics = S
+movetype = A
+anim = 2500
+ctrl = 0
+velset = 0,0
+sprpriority = 1
+poweradd = -2000
+
+;------------ bloco do super charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2500 && AnimElem = 3
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = -22,-48
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2500 && AnimElem = 3
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+
+[State 3100, great dust]
+type = explod
+trigger1 = anim = 2500 && AnimElem = 3
+anim = 8573
+ID = 8573
+pos = 0,5
+sprpriority = 7
+postype = p1
+removetime = -2
+supermovetime = 300
+ownpal = 1
+
+
+;-------------- fim do super charge
+
+[State -3, afterimage lv2]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 32,32,160
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 2100, ventin dos soquinhos]
+type = playsnd
+trigger1 = anim = 2500 && (animelem = 9 || animelem = 11 || animelem = 19 || animelem = 21)
+value = 0,0
+channel = 2
+
+[State 2100, ventin das patadas >=D]
+type = playsnd
+trigger1 = anim = 2500 && (animelem = 15 || animelem = 25)
+trigger2 = anim = 2501 && animelem = 5
+value = 0,1
+channel = 2
+
+[State 2100, iaaaaaaa!]
+type = playsnd
+trigger1 = anim = 2501 && animelem = 5
+value = 2,5
+channel = 2
+
+;--------------- bloco da porradaria
+
+[State 2500, hits na cara >=D]
+type = hitdef
+trigger1 = anim = 2500 && (animelem = 9 || animelem = 11 || animelem = 19 || animelem = 21)
+trigger1 = var(17):=-10 && var(18):=-83
+attr = S,HA 
+damage = ceil(30+random/200),5  
+animtype = Hard 
+guardflag = MA 
+hitflag = MAF
+priority = 5,Hit
+pausetime = 2,2
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-83
+hitsound = s1, 0                  
+guardsound = s1, 4 
+p2facing = 1
+ground.type = High
+ground.slidetime = 32
+ground.hittime = 32
+ground.velocity = ifelse(p2bodydist x>35,1,-2),0
+air.type = Low
+air.velocity = -1,-1.5
+getpower = 0
+envshake.time = 8
+envshake.freq = 60
+envshake.ampl = 4
+forcestand = 1
+
+[State 2500, hits no estômago >=D]
+type = hitdef
+trigger1 = anim = 2500 && (animelem = 15 || animelem = 25)
+trigger1 = var(17):=-10 && var(18):=-65
+attr = S,HA 
+damage = ceil(30+random/200),5  
+animtype = Hard 
+guardflag = M
+hitflag = MAF
+priority = 5,Hit
+pausetime = 2,2
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-65
+hitsound   = s1,1
+guardsound = s1,4
+p2facing = 1
+ground.type = Low
+ground.slidetime = 32
+ground.hittime = 32
+ground.velocity = ifelse(p2bodydist x>35,1,-3),0
+air.type = Low
+air.velocity = -1,-1.5
+getpower = 0
+envshake.time = 8
+envshake.freq = 60
+envshake.ampl = 4
+forcestand = 1
+
+[State 2500, gancho \o/]
+type = hitdef
+trigger1 = anim = 2500 && animelem = 29
+trigger1 = var(17):=-16 && var(18):=-80
+attr = S,HA 
+damage = ceil(50+random/200),5  
+animtype = Hard 
+guardflag = M
+hitflag = MAF
+priority = 7,Hit
+pausetime = 12,12
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-80
+hitsound   = s1,1
+guardsound = s1,4
+p2facing = 1
+ground.type = Low
+ground.slidetime = 32
+ground.hittime = 32
+ground.velocity = ifelse(p2bodydist x>35,1,-1),-4.5
+air.type = Low
+air.velocity = -1,-3
+getpower = 0
+envshake.time = 8
+envshake.freq = 60
+envshake.ampl = 4
+forcestand = 1
+ID = 2500
+
+[State 2500, segundo gancho (adianta não, cê nem escapa =P)]
+type = hitdef
+trigger1 = anim = 2500 && animelem = 30 && !movecontact
+trigger1 = var(17):=-16 && var(18):=-80
+attr = S,HA 
+damage = ceil(50+random/200),5  
+animtype = Back 
+guardflag = MA
+hitflag = MAF
+priority = 7,Hit
+pausetime = 12,12
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-80
+hitsound = s1,1 
+guardsound = s1,4
+p2facing = 1
+ground.type = High
+ground.slidetime = 24
+ground.hittime = 24
+ground.velocity = -6,-3
+air.type = Low
+air.velocity = -6,-3
+getpower = 0
+envshake.time = 8
+envshake.freq = 60
+envshake.ampl = 4
+
+[State 2500, shoryu primeiro hit]
+type = hitdef
+trigger1 = anim = 2501 && animelem = 4
+attr = S,HA 
+damage = ceil(45+random/200),5  
+animtype = Hard 
+fall.animtype = Hard
+guardflag = M 
+hitflag = MAF
+priority = 7,Hit
+pausetime = 10,10
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-79
+hitsound = s1,1 
+guardsound = s1,4
+p2facing = 1
+ground.type = Low
+ground.slidetime = 32
+ground.hittime = 32
+ground.velocity = 0,-5
+ground.cornerpush.veloff = 0
+air.type = Low
+air.velocity = 0,-3
+getpower = 0
+envshake.time = 24
+envshake.freq = 60
+envshake.ampl = 8
+fall = 1
+fall.recover = 0
+
+[State 3180, shoryu segundo hit]
+type = hitdef
+trigger1 = anim = 2501 && animelem = 5
+attr = A,HA 
+damage = ceil(40+random/200),5  
+animtype = Up
+guardflag = MA
+hitflag = MAF
+priority = 7,Hit
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-106
+hitsound = s1,1 
+guardsound = s1,4
+p2facing = 1
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = -3,-10
+air.type = Low
+air.velocity = -3,-10
+getpower = 0
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 5
+fall = 1
+fall.recover = 0
+
+[State 2500, soquinho naum rela dedo naum!]
+type = nothitby
+trigger1 = anim = 2500 && animelemtime(9) < 0
+time = 1
+value = SCA
+
+[State 3180, a passo de tartaruga]
+type = velset
+trigger1 = anim = 2500 && (animelemtime(8) > 0 && animelemtime(29) < 0)
+x = 2
+
+[State 2500, vai chalenger XD]
+type = velset
+trigger1 = anim = 2501 && !animelemtime(5)
+x = 9
+y = -10
+
+[State 2500, muda anim p/ shoryuken]
+type = changeanim
+trigger1 = anim = 2500 && (animelemtime(29) > 0 && animelemtime(30) < 0) && numtarget(2500) && movehit
+value = 2501
+ignorehitpause = 0
+persistent = 0
+
+[State 2500, muda anim p/ shoryuken fall]
+type = changeanim
+trigger1 = anim = 2501 && animelemtime(5) > 0 && vel y >-4
+value = 2502
+persistent = 0
+
+[State 2500, tah no ar]
+type = statetypeset
+trigger1 = anim = 2501 && animelemtime(5) >= 0
+trigger2 = anim = 2502
+statetype = A
+physics = A
+
+[State 3180, celera um tantin]
+type = velmul
+trigger1 = anim != 2500 && vel y
+x = .88
+
+[State 3180, toca no chao e cabou]
+type = changestate
+trigger1 = anim = 2500 && !animtime
+value = 0
+ctrl = 1
+
+; Tenma Gou Zankuu Kouu
+;-------------------------
+[StateDef 2600]
+type = A
+movetype = A
+physics = N
+ctrl = 0
+anim = 2600
+poweradd = -2000
+sprpriority = 2
+
+;-------- bloco do super charge
+
+[State 3050, VelSet]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 0
+y = 0
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2600 && !animelemtime(1)
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = -11,-99
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2600 && !animelemtime(1)
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+movetime = 61
+
+[State 2100, snd]
+type = playsnd
+trigger1 = !animelemtime(3)
+value = 2,7
+ignorehitpause = 1
+persistent = 0
+
+;----------------- fim do super charge
+
+[State -3, afterimage lv2]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 32,32,160
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 2600, vambora!]
+type = changestate
+trigger1 = Anim = 2600 && Time > 68
+value = 2601
+ctrl = 0
+
+;---[Ao ataque!]---
+[Statedef 2601]
+type = S
+physics = S
+movetype = A
+anim = 2601
+ctrl = 0
+velset = 0,0
+poweradd = 0
+sprpriority = 1
+
+[State -3, afterimage lv2]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 32,32,160
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 2600, subindo p/ tras]
+type = velset
+trigger1 = animelemtime(1)>1
+x = -.4
+y = -.4
+
+;---[Hadouken primera leva]---
+[State 1001, Hadouken primeira leva]
+type = helper
+triggerall = anim = 2601
+trigger1 = AnimElem = 3
+helpertype = normal
+stateno = 85821
+ID = 85821
+name = "Zankuu Hadouken 1"
+postype = p1
+pos = 65,-39
+
+[State 1001, Hadouken primeira leva]
+type = helper
+triggerall = anim = 2601
+trigger1 = AnimElem = 3
+helpertype = normal
+stateno = 85822
+ID = 85822
+name = "Zankuu Hadouken 2"
+postype = p1
+pos = 65,-39
+
+;---[Hadouken segunda leva]---
+[State 1001, Hadouken segunda leva]
+type = helper
+triggerall = anim = 2601
+trigger1 = AnimElem = 6
+helpertype = normal
+stateno = 85821
+ID = 85821
+name = "Zankuu Hadouken 1"
+postype = p1
+pos = 74,-40
+
+[State 1001, Hadouken segunda leva]
+type = helper
+triggerall = anim = 2601
+trigger1 = AnimElem = 6
+helpertype = normal
+stateno = 85822
+ID = 85822
+name = "Zankuu Hadouken 2"
+postype = p1
+pos = 74,-40
+
+[State 1050, snd]
+type = playsnd
+triggerall = anim = 2601
+trigger1 = !animelemtime(3) || !animelemtime(6)
+value = 2,1
+channel = 0
+
+[State 1050, snd]
+type = playsnd
+triggerall = anim = 2601
+trigger1 = !animelemtime(3) || !animelemtime(6)
+value = 3,1
+
+[State 3050, caindo]
+type = ChangeState
+trigger1 = Time = 100
+value = 2602
+ctrl = 0
+
+;---[Caindo]---
+[Statedef 2602]
+type    = A
+movetype= A
+physics = A
+juggle  = 4
+anim = 2602
+ctrl = 0
+
+[State -3, afterimage lv2]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 32,32,160
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+[State 3051, fim]
+type = ChangeState
+trigger1 = Pos Y >= 0
+value = 52
+ctrl = 1
+
+;--------------------------------------[ SUPER MOVES Lv.3]-----------------------------------------
+
+; Shin Asura Koku Hadou Ken
+;-------------------------
+[Statedef 2100]
+type = S
+physics = S
+movetype = A
+anim = 2100
+ctrl = 0
+velset = 0,0
+poweradd = -3000
+sprpriority = 1
+
+;-----------bloco do super charge
+
+[State 3200, superchargehelper]
+type = Helper
+trigger1 = anim = 2100 && !animelemtime(3)
+helpertype = normal
+stateno = 3100
+ID = 3100
+name = "Super Charge"
+postype = p1
+pos = -22,-48
+ownpal = 1
+persistent = 0
+supermovetime = 9999
+
+[State 3200, superchargepause]
+type = SuperPause
+trigger1 = anim = 2100 && !animelemtime(3)
+time = 61
+anim = -1
+sound = s10,0
+darken = 0
+movetime = 61
+
+[State 3100, great dust]
+type = explod
+trigger1 = !animelemtime(3)
+anim = 8573
+ID = 8573
+pos = 0,5
+sprpriority = 7
+postype = p1
+removetime = -2
+supermovetime = 300
+ownpal = 1
+
+;-------------fim do super charge
+
+[State 1000, muda state >=D]
+type = changestate
+trigger1 = Anim = 2100 && Time > 68
+value = 2101
+ctrl = 0
+
+;---[Beam]---
+[Statedef 2101]
+type = S
+physics = S
+movetype = A
+anim = 2101
+ctrl = 0
+velset = 0,0
+poweradd = 0
+sprpriority = 1
+
+;[State 3040, bgpal]
+;type = bgpalfx
+;trigger1 = anim = 2101
+;mul = 256, 256, 256
+;add = 0, -200, -200
+;color = 0
+;time = 2
+
+[State -3, afterimage lv3]
+type = afterimage
+trigger1 = AnimElem = 1
+time = 2
+timegap = 1
+framegap = 10
+length = 30
+paladd = 0,0,0
+palmul = .75,.75,.75
+palcontrast = 160,32,32
+palpostbright = 0,0,0
+trans = add1
+persistent = 0
+
+;-------------- bloco do carregamento do golpe
+
+[State 3055, bgpal]
+type = bgpalfx
+trigger1 = Anim = 2101 && Stateno = 2101
+mul = 512,0,0
+time = 23
+mul = 512,0,0
+add = -70,-70,-70
+color = 0
+
+[State 700, voice]
+type = playsnd
+trigger1 = AnimElem = 2
+value = 2,10
+channel = 2
+
+[State 2100, snd]
+type = playsnd
+trigger1 = animelem = 2
+value = 3,8
+ignorehitpause = 1
+channel = 1
+persistent = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = animelem = 6
+value = 2,5
+ignorehitpause = 1
+persistent = 0
+
+[State 2100, snd]
+type = playsnd
+trigger1 = animelem = 6
+value = 3,1
+ignorehitpause = 1
+channel = 2
+persistent = 0
+
+[State 2100, slow motion =D]
+type = Pause
+trigger1 = time = [2,23]
+time = 3
+
+[State 700, acumulando power \o/]
+type = Helper
+triggerall = Time = [2,23]
+trigger1 = !(time%1)
+helpertype = normal
+stateno = 8500
+ID = 8500 
+name = "particulas"
+pos = ceil(240-random/2),-ceil(random/2)
+size.xscale = .8
+size.yscale = .8
+
+[State 2100, charging]
+type = explod
+trigger1 = AnimElem = 2
+anim = 8581
+pos = -16,-61
+postype = p1
+sprpriority = 6
+ownpal = 1
+bindtime = -1
+scale = 1, 1
+
+;--------------- fim do carregamento
+
+[State 2100, Helper]
+type = helper
+trigger1 = AnimElem = 6
+helpertype = normal
+stateno = 8562
+ID = 8562
+name = "Shin Asura Koku Hadou Ken"
+postype = p1
+pos = 80,-65
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+
+[State 2500, quem bate pelas costas covarde eh]
+type = helper
+trigger1 = anim = 2101 && animelemtime(5) >= 0
+helpertype = normal
+stateno = 6000
+ID = 6000
+name = "Helper que evita os meliantes de baterem pelas costas =P"
+postype = p1
+pos = 40,0
+facing = -1
+size.xscale = 1
+size.yscale = 1
+size.ground.back = 20
+size.ground.front = 20
+size.height = 240
+persistent = 0
+
+[State 2500, tufao de ar]
+type = Explod
+trigger1 = AnimElem = 6
+anim = 8566
+sprpriority = 8566
+pos = 80, 8
+bindtime = 1
+supermove = 1
+removeongethit = 1
+
+[State 2100, Helper2]
+type = helper
+trigger1 = AnimElem = 3
+helpertype = normal
+stateno = 8560
+ID = 8560
+name = "Gou Hadouken Charge Ball"
+postype = p1
+pos = 0,0
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+
+[State 2100, muda p/ fim]
+type = changestate
+trigger1 = Anim = 2101 && !numhelper(8562) && animelemtime(6)>0
+value = 2102
+ctrl = 0
+
+;---[Ends]---
+[Statedef 2102]
+type = S
+physics = S
+movetype = A
+anim = 2102
+ctrl = 0
+velset = 0,0
+poweradd = 0
+sprpriority = 1
+
+[State 2102, do vermelho para o normal]
+type = bgpalfx
+trigger1 = Anim = 2102 && Stateno = 2102
+mul = 512-ceil(36*time), ceil(36*time), ceil(36*time)
+add = (-70+10*time),(-70+10*time),(-70+10*time)
+color = ceil(36*time)
+time = 2
+
+[State 1000, cabou]
+type = changestate
+trigger1 = Anim = 2102 && !animtime
+value = 0
+ctrl = 1
+

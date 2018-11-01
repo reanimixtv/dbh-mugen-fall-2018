@@ -1,0 +1,19 @@
+[Info]
+name="Saberwulf"
+displayname="Saberwulf"
+versiondate=11/20/08
+mugenversion=06,14,2003
+author="Dr. Your Mom"
+pal.defaults=1
+[Files]
+sprite=Saberwulf.sff
+sound=Saberwulf.snd
+anim=Saberwulf.air
+cmd=Saberwulf.cmd
+cns=Saberwulf.cns
+st=Saberwulf.cns
+stcommon=Saberwulf1.cns
+pal1=Saberwulf.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=ending.def

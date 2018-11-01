@@ -1,0 +1,32 @@
+[Info]
+Name         = "Freeman"
+DisplayName  = "Freeman"
+Author       = "ikaruga"
+VersionDate  = 08,04,2014
+MugenVersion = 1.0
+Pal.Defaults = 4
+localcoord   = 320
+
+[Files]
+Cmd      = Freeman.cmd
+Cns      = Constants.cns
+St       = Freeman.cns
+St1      = Freeman-N.cns
+St2      = Freeman-S.cns
+St3      = Freeman-H.cns
+St4      = Freeman-2-3.cns
+St5      = Helper.cns
+St6      = Config.cns
+StCommon = common_mow.cns
+Sprite   = Freeman.sff
+Anim     = Freeman.air
+Sound    = Freeman.snd
+
+;---カラーパレット---
+
+Pal1  = act/act02.act
+Pal2  = act/act04.act
+Pal3  = act/act06.act
+Pal4  = act/act01.act
+Pal5  = act/act03.act
+Pal6  = act/act05.act

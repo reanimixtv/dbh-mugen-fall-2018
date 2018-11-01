@@ -1,0 +1,28 @@
+;===========================================================================
+;Marvel vs. Capcom - Eternity of Heroes - Animations Template V.8
+;by Acey, FX ripped by Kong, Based on MvC2 Guile by RedHot, updated by Scar
+;===========================================================================
+
+[Info]
+name="Miss Marvel"
+displayname="Miss Marvel"
+versiondate=06.07.2008
+mugenversion=04.14.2001
+author=" "
+pal.defaults=1,2,3,4,5,6
+
+[Files]
+cmd=MissMarvel.cmd
+cns=MissMarvel.cns
+stcommon=common1.cns
+st=MissMarvel.cns
+sprite=MissMarvel.sff
+anim=MissMarvel.air
+sound=MissMarvel.snd
+pal1=pal1.act
+
+
+[Arcade]
+intro.storyboard =arcade.def
+ending.storyboard=
+;ending.storyboard =

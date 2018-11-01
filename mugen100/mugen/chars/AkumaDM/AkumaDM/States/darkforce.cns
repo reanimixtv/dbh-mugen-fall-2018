@@ -1,0 +1,981 @@
+;--------------------------------------------
+;SvC Akuma by Duende Macabro
+;contact: weaponx_nirvana@yahoo.com.br
+;http://www.rickiecreations.paodemugen.com.br
+;--------------------------------------------
+
+;----------------------------------[ DARK FORCE STATES ]--------------------------------------
+
+; Começo
+;-------------------------
+[Statedef 774]
+type = S
+physics = N
+movetype = I
+anim = 773
+ctrl = 0
+sprpriority = 1
+
+[State 774, caso o clone naum exista =/]
+type = changestate
+trigger1 = !ishelper(775)
+value = 0
+ctrl = 1
+
+[State 779, trasparente]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 774, superman]
+type = nothitby
+trigger1 = 1
+time = -1
+value = SCA,AA,AP,AT
+ignorehitpause = 1
+
+[State 774, gasparzinho]
+type = playerpush
+trigger1 = 1
+value = 0
+ignorehitpause = 1
+
+[State 774, vai fiote]
+type = velset
+trigger1 = !time
+x = .05*facing*(root,pos x+2*(root,p2dist x*root,facing)-pos x)
+
+[State 774, muda a anim pra parar]
+type = changeanim
+trigger1 = anim = 773 && time >= 20
+value = 774
+
+[State 774, freio]
+type = velset
+trigger1 = anim = 774
+x = 0
+
+[State 774, posição certa em relação ao mestre >=D]
+type = posset
+trigger1 = anim = 774
+x = root,pos x+2*(root,p2dist x*root,facing)
+y = root,pos y
+
+[State 774, vira pra eu]
+type = turn
+trigger1 = facing = (root,facing)
+
+[State 774, vira clone de fato]
+type = changestate
+trigger1 = anim = 774 && !animtime
+value = 775
+
+[State 774, tempooooooo!]
+type = changestate
+trigger1 = root,var(40) <= 0
+value = 779
+
+; Principal
+;-------------------------
+[Statedef 775]
+type = A
+physics = N
+movetype = I
+anim = 0
+ctrl = 0
+velset = 0,0
+
+[State 774, caso o clone naum exista =/]
+type = changestate
+trigger1 = !ishelper(775)
+value = 0
+ctrl = 1
+
+[State 500, flash]
+type = palfx
+trigger1 = !(time%5)
+add = 100,30,30
+sinadd = 100,30,30,8
+time = 8
+
+[State 775, superman]
+type = nothitby
+trigger1 = 1
+time = -1
+value = SCA,AA,AP,AT
+ignorehitpause = 1
+
+[State 775, gasparzinho]
+type = playerpush
+trigger1 = 1
+value = 0
+ignorehitpause = 1
+
+[State 775, sigam-me os bons!!!!!]
+type = changeanim
+triggerall = root,selfanimexist(root,anim) && (root,stateno != [770,771])
+triggerall = ifelse((root,movetype = H),(root,stateno = [5000,5300]),1)
+trigger1 = anim != (root,anim)
+trigger2 = animelemno(0) != (root,animelemno(0))
+value = root,anim
+elem = root,animelemno(0)
+
+[State 775, customstatesanim]
+type = changeanim
+trigger1 = root,movetype = H && (root,stateno != [5000,5300])
+trigger2 = !root,selfanimexist(root,anim)
+value = 5010
+
+[State 775, acha a posição certin]
+type = posset
+trigger1 = 1
+x = root,pos x+2*(root,p2dist x*root,facing)
+y = root,pos y
+
+[State 775, vira de frente pra eu =P]
+type = turn
+trigger1 = facing = (root,facing)
+
+[State 775, mesma prioridade de eu]
+type = sprpriority
+trigger1 = 1
+value = (root,movetype = A)
+
+[State 775, se eu tou no ar o clone também ta]
+type = statetypeset
+trigger1 = (root,movetype = A)
+movetype = A
+
+[State 775, se eu tou levando concha o clone também ta =P]
+type = statetypeset
+trigger1 = (root,movetype = H)
+movetype = H
+
+[State 775, se eu tou fazendo qualquer merda o clone também tá ù.u]
+type = statetypeset
+trigger1 = (root,movetype = I)
+movetype = I
+
+[State 775, strengthvar igual ao mestre]
+type = varset
+trigger1 = var(14) != root,var(14)
+var(14) = root,var(14)
+
+[State 775, cancela movehit]
+type = movehitreset
+trigger1 = !(root,movecontact)
+
+[State 775, hitspark eixo x]
+type = varset
+trigger1 = var(17) != root,var(17)
+var(17) = root,var(17)
+
+[State 775, hitspark eixo y]
+type = varset
+trigger1 = var(18) != root,var(18)
+var(18) = root,var(18)
+
+[State 1000, Helper]
+type = helper
+trigger1 = root,stateno = 1000
+trigger1 = anim = 1000 && AnimElem = 5
+helpertype = normal
+stateno = 4100
+ID = 4100
+name = "Gou Hadouken"
+postype = p1
+pos = 91,-65
+size.xscale = 1
+size.yscale = 1
+
+[State 1000, Helper2]
+type = helper
+trigger1 = root,stateno = 1000
+trigger1 = anim = 1000 && AnimElem = 2
+helpertype = normal
+stateno = 8560
+ID = 8560
+name = "Gou Hadouken Charge Ball"
+postype = p1
+pos = 0,0
+size.xscale = 1
+size.yscale = 1
+
+[State 1001, Hadouken]
+type = helper
+trigger1 = root,stateno = 1001
+trigger1 = anim = 1001
+trigger1 = !animelemtime(1) || !animelemtime(3)
+helpertype = normal
+stateno = 8582
+ID = 8582
+name = "Zankuu Hadouken"
+postype = p1
+pos = ifelse((animelem=1),65,74),ifelse((animelem=1),-39,-40)
+
+;---[ Socos em pé ]---
+
+[State 200, 1]
+type = HitDef
+triggerall = anim = [200,205]
+trigger1 = AnimElem = 2
+trigger1 = var(17):=-10 && var(18):=-83
+attr = S, NA           
+animtype = Light                
+guardflag = MA                
+hitflag = MAF                  
+priority = 3, Hit               
+pausetime = 5, 5  
+damage = ceil(21+random/200),3              
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10, -83               
+hitsound = s1, 0                  
+guardsound = s1, 4                
+ground.type = High              
+ground.slidetime = 5             
+ground.hittime  = 10            
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+air.hittime = 12   
+
+[State 210, far]
+type = HitDef
+trigger1 = Anim = 210 && animelemtime(4)>0
+trigger1 = var(17):=-10 && var(18):=-65
+attr = S, NA
+nochainID = 210
+ID = 210
+animtype  = Heavy
+damage  = ceil(56+random/200),3
+guardflag = MA
+pausetime = 5, 5 
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-65
+hitsound   = s1,1
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -0             
+airguard.velocity = -0,-.8    
+envshake.time = 8
+envshake.ampl = 6
+
+[State 210, close]
+type = HitDef
+trigger1 = Anim = 215 && animelemTime(2)>0
+trigger1 = var(17):=-16 && var(18):=-80
+attr = S, NA
+nochainID = 215
+ID = 215
+animtype  = Heavy
+damage = ceil(56+random/200),3 
+guardflag = MA
+pausetime = 5, 5 
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-80
+hitsound   = s1,1
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -0             
+airguard.velocity = -0,-.8    
+envshake.time = 8
+envshake.ampl = 6
+
+[State 210, hit1]
+type = HitDef
+trigger1 = Anim = 216 && AnimElem = 6
+trigger1 = var(17):=-10 && var(18):=-85
+attr = S, NA
+animtype  = Heavy
+damage = ceil(25+random/200),3 
+guardflag = MA
+pausetime = 8, 8 
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-85
+hitsound   = s1,1
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+envshake.time = 8
+envshake.ampl = 6
+
+[State 210, hit1]
+type = HitDef
+trigger1 = Anim = 216 && AnimElem = 7
+trigger1 = var(17):=-10 && var(18):=-44
+attr = S, NA
+animtype  = Heavy
+damage = ceil(25+random/200),3 
+guardflag = MA
+pausetime = 8, 8 
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-44
+hitsound   = s1,1
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+envshake.time = 8
+envshake.ampl = 6
+
+;---[ Chutes em pé ]---
+
+[State 230, 2]
+type = HitDef
+triggerall = anim = [230,235]
+trigger1 = animelem = 2
+trigger1 = var(17):=-10 && var(18):=ifelse(anim = 230,-80,-40)
+attr = S, NA
+animtype  = Medium
+damage = ceil(25+random/200),3 
+guardflag = MA
+pausetime = 5, 5 
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,ifelse(anim = 230,-80,-40)
+hitsound   = s1,2
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 11
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+
+[State 240, 2]
+type = HitDef
+trigger1 = Anim = 240 && animelem = 2
+trigger1 = var(17):=-10 && var(18):=-84
+attr = S, NA
+animtype  = Heavy
+damage = ceil(65+random/200),3 
+guardflag = MA
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-84
+hitsound   = s1,3
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+envshake.time = 8
+envshake.ampl = 6
+
+[State 240, 2]
+type = HitDef
+trigger1 = Anim = 245 && AnimElem = 2
+trigger1 = var(17):=-10 && var(18):=-94
+attr = S, NA
+animtype  = Heavy
+damage = ceil(35+random/200),3 
+guardflag = MA
+pausetime = 5,5
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-94
+hitsound   = s1,3
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+envshake.time = 8
+envshake.ampl = 6
+
+[State 240, 2]
+type = HitDef
+trigger1 = Anim = 245 && AnimElem = 5
+trigger1 = var(17):=-15 && var(18):=-70
+attr = S, NA
+animtype  = Heavy
+damage = ceil(35+random/200),3 
+guardflag = MA
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-70
+hitsound   = s1,3
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+envshake.time = 8
+envshake.ampl = 6
+
+;---[ Socos agachado ]---
+
+[State 400, 2]
+type = HitDef
+triggerall = anim = 400
+trigger1 = animelem = 2
+trigger1 = var(17):=-10 && var(18):=-49
+attr = C, NA
+damage = ceil(23+random/200),3 
+priority  = 3
+animtype  = Light
+hitflag = MAF
+guardflag = L
+pausetime = 5,5
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-49
+hitsound   = s1,0
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 4
+ground.hittime  = 10
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+
+[State 410, 2]
+type = HitDef
+triggerall = anim = 410
+trigger1 = animelemtime(5)>0
+trigger1 = var(17):=-10 && var(18):=-95
+attr = C, NA
+nochainID = 410
+ID = 410
+damage = ceil(55+random/200),3 
+animtype  = Medium
+hitflag = MAF
+guardflag = M
+pausetime = 5,5
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-80
+hitsound   = s1,1
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -0             
+airguard.velocity = -0,-.8     
+air.type = High                  
+air.velocity = -0,-3          
+envshake.time = 8
+envshake.ampl = 6
+
+;---[ Chutes agachado ]---
+
+[State 430, 2]
+type = HitDef
+triggerall = anim = 430
+trigger1 = AnimElem = 2
+trigger1 = var(17):=-10 && var(18):=-8
+attr = C, NA
+damage = ceil(30+random/200),3 
+animtype  = Light
+hitflag = MAFD
+guardflag = L
+pausetime = 5,5
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-8
+hitsound   = s1,2
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 6
+ground.hittime  = 10
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+down.hittime = 20
+
+[State 440, 3]
+type = HitDef
+triggerall = anim = 440
+trigger1 = animelemtime(4)>0
+trigger1 = var(17):=-5 && var(18):=-10
+attr = C, NA
+nochainID = 440
+ID = 440
+damage = ceil(70+random/200),3 
+hitflag = MAF
+guardflag = L
+pausetime = 5,5
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -5,-10
+hitsound   = s1,3
+guardsound = s1,4
+ground.type = Trip
+ground.slidetime = 10
+ground.hittime  = 15
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+guard.velocity = -5
+fall = 1
+envshake.time = 8
+envshake.ampl = 6
+
+;---[ Socos no ar ]---
+
+[State 600, 2]
+type = HitDef
+triggerall = anim = 600
+trigger1 = AnimElem = 2
+trigger1 = var(17):=-18 && var(18):=-78
+attr = A, NA
+damage = ceil(22+random/200),3 
+guardflag = HA
+priority = 3
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -18,var(18)
+hitsound   = s1,0
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 5
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+
+[State 610, 3]
+type = HitDef
+triggerall = anim = 610
+trigger1 = animelemtime(2)>0
+trigger1 = var(17):=-10 && var(18):=-55
+attr = A, NA
+nochainID = 610
+ID = 610
+damage = ceil(70+random/200),3 
+guardflag = HA
+priority = 4
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-55
+hitsound   = s1,1
+guardsound = s1,4
+animtype = Med
+ground.type = High
+ground.slidetime = 17
+ground.hittime  = 17
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+envshake.time = 8
+envshake.ampl = 6
+
+;---[ Chutes no ar ]---
+
+[State 630, 2]
+type = HitDef
+triggerall = anim = 630
+trigger1 = animelem = 2
+trigger1 = var(17):=-15 && var(8):=-45
+attr = A, NA
+damage = ceil(25+random/200),3 
+guardflag = HA
+priority = 3
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -15,-45
+hitsound   = s1,2
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 6
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+
+[State 630, 2]
+type = HitDef
+triggerall = anim = 635
+trigger1 = animelem = 2
+trigger1 = var(17):=-15 && var(18):=-45
+attr = A, NA
+damage = ceil(26+random/200),3 
+guardflag = HA
+priority = 3
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -15,-45
+hitsound   = s1,2
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 6
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+
+[State 640, 3]
+type = HitDef
+triggerall = anim = 640
+trigger1 = animelem = 3
+trigger1 = var(17):=-10 && var(18):=-70
+attr = A, NA
+damage = ceil(70+random/200),3 
+guardflag = HA
+priority = 4
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-60
+hitsound   = s1,3
+guardsound = s1,4
+animtype = Med
+ground.type = High
+ground.slidetime = 15
+ground.hittime  = 15
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+envshake.time = 8
+envshake.ampl = 6
+
+[State 640, 3]
+type = HitDef
+triggerall = anim = 645
+trigger1 = animelemTime(2)>0
+trigger1 = var(17):=-10 && var(18):=-45
+attr = A, NA
+ID = 645
+nochainID = 645
+damage = ceil(70+random/200),3 
+guardflag = HA
+priority = 4
+pausetime = 6,6
+sparkno = s8600+(random%5)
+guard.sparkno = s8519
+sparkxy = -10,-45
+hitsound   = s1,3
+guardsound = s1,4
+animtype = Med
+ground.type = High
+ground.slidetime = 15
+ground.hittime  = 15
+ground.velocity = -0
+air.velocity = -0,-3
+down.velocity = -0,0
+envshake.time = 8
+envshake.ampl = 6
+
+;---[ Shoryuken ]---
+
+[State 1050, hit]
+type = hitdef
+trigger1 = animelem = 2 && anim = 1050
+trigger1 = var(17):=-10 && var(18):=-52
+trigger2 = animelem = 3 && anim = 1050
+trigger2 = var(17):=-10 && var(18):=-75
+attr = S,SA                   
+damage = ifelse(var(14)=2,ceil(33+random/100),ceil(28+random/100))
+animtype = Medium
+fall.animtype = Medium
+guardflag = M          
+hitflag = MAF           
+priority = 6,Hit             
+pausetime = 10,10
+sparkno = s8600+(random%5)  
+guard.sparkno = s8519 
+sparkxy = -10, var(18)          
+hitsound = s1,1     
+guardsound = s1,4
+ground.type = Low
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = 0,-5.5
+air.type = Low
+air.velocity = 0,-5.5
+getpower = 10
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+fall.animtype = Medium
+
+[State 1050, hit2]
+type = hitdef
+trigger1 = animelem = 4 && anim = 1050
+trigger1 = var(17):=-10 && var(18):=-100
+attr = A,SA                   
+damage = ifelse(var(14)=2,ceil(38+random/100),ceil(32+random/100))
+animtype = Back        
+guardflag = MA           
+hitflag = MAF           
+priority = 6,Hit             
+pausetime = 12,12             
+sparkno = s8600+(random%5)  
+guard.sparkno = s8519  
+sparkxy = -10, var(18)      
+hitsound = s1,1      
+guardsound = s1,4
+ground.type = High
+ground.slidetime = 20
+ground.hittime = 20
+ground.velocity = 0,ifelse(var(14)=1,-5,-7)
+air.type = Low
+air.velocity = 0,ifelse(var(14)=1,-5,-7)
+getpower = 25
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+
+;---[ Tatsumaki Zankuu Kyaku ]---
+
+[State 1100, hit]
+type = hitdef
+triggerall = anim = [1101,1103]
+trigger1 = animelem = 1 || animelem = 8 || animelem = 15
+trigger1 = var(17):=-10 && var(18):=-60
+attr = S,SA                   
+damage = ceil(35+random/150),5    
+animtype = Hard        
+guardflag = MA       
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519         
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = 0,-4.5
+air.type = Low
+air.velocity = 0,-4.5
+getpower = 53
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+
+[State 1100, hit2]
+type = hitdef
+triggerall = anim = [1101,1103]
+trigger1 = animelem = 5 || animelem = 12 || animelem = 19
+trigger1 = var(17):=-10 && var(18):=-60
+attr = S,SA                   
+damage = ceil(35+random/150),5    
+animtype = Hard        
+guardflag = MA          
+hitflag = MAF           
+priority = 5,Hit             
+pausetime = 6,6
+sparkno = s8600+(random%5)
+sparkxy = -10,-60	
+guard.sparkno = s8519        
+hitsound = s1,3      
+guardsound = s1, 4
+ground.type = High
+ground.slidetime = 22
+ground.hittime = 22
+ground.velocity = 0,-4.5
+air.type = Low
+air.velocity = 0,-4.5
+getpower = 53
+givepower = 20
+envshake.time = 16
+envshake.freq = 60
+envshake.ampl = 4
+fall = 1
+p2facing = -1
+
+[State 775, tempooooooo!]
+type = changestate
+trigger1 = root,var(40) <= 0
+value = 779
+
+
+; Desaparece
+;-------------------------
+[Statedef 779]
+physics = N
+velset = 0,0
+
+[State 779, muda anim]
+type = changeanim
+trigger1 = 1
+value = anim
+elem = animelemno(0)
+
+[State 779, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+ignorehitpause = 1
+
+[State 779, emagrece XD]
+type = angledraw
+trigger1 = 1
+scale = 1-(.1*time),1
+
+[State 779, gasparzinho]
+type = trans
+trigger1 = 1
+trans = add
+
+[State 779, ele num morre e sim vira purpurina... noooooooooossa!!]
+type = helper
+trigger1 = time && !(time%1)
+helpertype = normal
+stateno = 6110
+ID = 6110
+name = "Clone Particles"
+postype = p1
+pos = 0,-55
+size.xscale = .6
+size.yscale = .7
+
+[State 779, cabou]
+type = destroyself
+trigger1 = time >= 10
+
+;---[ Clone Particles ]---
+[Statedef 6110]
+physics = N
+velset = -10+(random/50),-10+(random/50)
+anim = 8500
+sprpriority = 1
+
+[State 8500, afterimage]
+type = afterimage
+trigger1 = !time
+time = 999
+timegap = 1
+framegap = 1
+length = 6
+palbright = 30,0,0
+palmul = .75,.33,.33
+palcontrast = 120,0,0
+palpostbright = 50,0,0
+trans = add
+
+[State 6110, vel]
+type = veladd
+trigger1 = time > 10 && vel x < ifelse(rootdist x < 25,3,5) && rootdist x >= 0
+x = .75
+
+[State 6110, vel]
+type = veladd
+trigger1 = time > 10 && vel x > ifelse(rootdist x > -25,-3,-5) && rootdist x < 0
+x = -.75
+
+[State 6110, vel]
+type = veladd
+trigger1 = time > 10 && vel y < ifelse(rootdist y < 80,3,5) && rootdist y >= 65
+y = .75
+
+[State 6110, vel]
+type = veladd
+trigger1 = time > 10 && vel y > ifelse(rootdist y < 80,-3,-5) && rootdist y < 65
+y = -.75
+
+[State 6110, vel]
+type = velset
+trigger1 = vel y > 0 && pos y > -5
+y = 0
+
+[State 6110, end]
+type = destroyself
+trigger1 = (rootdist x = [-10,10]) && (rootdist y = [55,75])
+
+; Timer
+;-------------------------
+[Statedef 7275]
+physics = N
+velset = 0,0
+anim = 9741
+
+[State 7275, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 7275, back]
+type = explod
+trigger1 = !time
+anim = 7276
+postype = p1
+bindtime = -1
+ontop = 1
+
+[State 7275, front]
+type = explod
+trigger1 = !time
+anim = 7277
+ID = 7277
+postype = p1
+bindtime = -1
+ontop = 1
+
+[State 7275, frame]
+type = explod
+trigger1 = !time
+anim = 7275
+postype = p1
+bindtime = -1
+ontop = 1
+
+[State 7275, decrease]
+type = modifyexplod
+trigger1 = root,var(40)>0
+ID = 7277
+scale = (root,var(40)*.99)/(300*.99),1
+
+[State 7275, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = invisible
+ignorehitpause = 1
+
+[State 7275, bind]
+type = bindtoroot
+trigger1 = 1
+pos = -20*(root,facing),4
+time = -1
+
+[State 7275, safety]
+type = removeexplod
+trigger1 = !(root,var(40))
+
+[State 7275, end]
+type = destroyself
+trigger1 = !(root,var(40))
+
+

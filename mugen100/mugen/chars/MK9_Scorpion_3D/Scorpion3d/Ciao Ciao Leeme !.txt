@@ -1,0 +1,69 @@
+Description : Scorpion from Mortal Kombat
+
+Movelist: 
+
+[Command]
+name = "Punch 1"
+command = x
+
+[Command]
+name = "Punch 2"
+command = y
+
+[Command]
+name = "Kick"
+command = a
+
+[Command]
+name = "Sword"
+command = b
+
+[Command]
+name = "Scorpion Fury 2"
+command = ~D,B,a
+
+[Command]
+name = "Teleport Sword"
+command = ~D,F,a
+
+[Command]
+name = "Scorpion Fury 3"
+command = ~D,F,b
+
+[Command]
+name = "Throw Kunai"
+command = ~D,F,x
+
+[Command]
+name = "Teleport Punch"
+command = ~D,B,x
+
+[Command]
+name = "Fire Breath"
+command = ~D,F,y
+
+[Command]
+name = "Scorpion Fury 1"
+command = ~D,B,y
+
+Credits : 
+
+M.U.G.E.N Character by bumble_vin
+
+3D Model from Chaos Realm
+
+Base Model:
+NeilCatorce
+
+Textures:
+Netherealm Studios / Ed Boon & John Tobias
+
+Model Parts/Edits, ReUV, Animations, Bones and so on:
+Shin-Orojin
+
+If there's any glitches , errors or anything else that i can improve on do tell 
+so i can improve my next MUGEN Character Release 
+
+Made the button controls a lot easier .. Thanks for "ArtistGT" in deviantart for pointing it out ..
+
+Enjoy playing it in MUGEN .. Keep on rockin \m/
