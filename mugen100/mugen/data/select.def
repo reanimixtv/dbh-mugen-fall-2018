@@ -70,24 +70,36 @@
  ;
  ;Insert your characters below.
 
-chars\ReverseFlash\ReverseFlash.def,, order=1
-chars\Deadpool-2\Deadpool.def, stages\kfm.def, order=1
-chars\YuGi\YuGi\YuGiHD\YuGiHD.def
-chars\Venom\Venom.def, stages\kfm.def, order=1
-chars\Gambit\Gambit\gambit.def
-chars\Sabrewulf\Sabrewulf.def
-chars\AkumaDM\AkumaDM\AkumaDM.def
-chars\Joker\Joker\Joker.def
-chars\MK9_Scorpion_3D\Scorpion3d\Scorpion3d.def
-chars\jasonundead\jasonundead\jasonundead.def
-chars\MsMarvel\MissMarvel.def
-chars\IronMan-MGMX-150512\ironman-mgmx-.def
+ReverseFlash\ReverseFlash.def,, order=1
+Deadpool-2\Deadpool.def, stages\kfm.def, order=1
+YuGi\YuGi\YuGiHD\YuGiHD.def
+Venom\Venom.def, stages\kfm.def, order=1
+Gambit\Gambit\gambit.def
+Sabrewulf\Sabrewulf.def
+AkumaDM\AkumaDM\AkumaDM.def
+Joker\Joker\Joker.def
+MK9_Scorpion_3D\Scorpion3d\Scorpion3d.def
+jasonundead\jasonundead\jasonundead.def
+MsMarvel\MissMarvel.def
+IronMan-MGMX-150512\ironman-mgmx-.def
 
 ;-----------------------
 [ExtraStages]
  ;Put extra stages here. They will be available in VS and Watch modes.
  ;For example, you can insert "stages/mybg.def".
-stages\stage0-720.def
+stages\_DBFZ_World_Tournament_Arena\[DBFZ]World_Tournament_Arena(1.1&1.0).def
+stages\amc_3rdgill-night.def
+stages\Arena_Kahn.def
+stages\blackheart_stage.def
+stages\Egypt_Desert.def
+stages\Jiren_Ultimate_Stage_1_0\jiren_ultimate_stage_1.0.def
+stages\ki_cinder_stage.def
+stages\SvC - Blockade Space.def
+stages\mmX2wiresponge\MMX2wiresponge.def
+stages\MSH_shuma2.def
+stages\sfiii2_gouki\sfiii2_gouki\sfiii2_gouki.def
+stages\SF3-Ryubg.def
+stages\Marsh.def
 
 ;---------------------------------------------------------------------
 [Options]

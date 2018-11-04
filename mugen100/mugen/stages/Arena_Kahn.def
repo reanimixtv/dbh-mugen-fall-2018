@@ -1,0 +1,98 @@
+[Info]
+name 		= "Arena Kahn"
+author 		= "Checho"
+; thanks to sprites from Dong Dong Never Die and Gun0
+
+[Camera]
+startx 		= 0
+starty 		= 0
+boundleft 	= -160
+boundright 	= 158
+boundhigh 	= -85
+boundlow 	= 0
+tension 	= 50
+verticalfollow 	= .5
+floortension 	= 90
+
+[PlayerInfo]
+p1startx 	= -70
+p1starty 	= 0
+p1startz 	= 0
+p1facing 	= 1
+p2startx 	= 70
+p2starty 	= 0
+p2startz 	= 0
+p2facing 	= -1
+leftbound 	= -1000
+rightbound 	= 1000
+topbound  	= 0
+botbound  	= 0
+
+[Bound]
+screenleft 	= 20
+screenright 	= 20
+
+[StageInfo]
+zoffset 	= 222
+autoturn 	= 1
+resetBG 	= 0
+Hires		= 1
+
+[Scaling]
+topz     	= 0
+botz     	= 50
+topscale 	= 1
+botscale 	= 1.2
+
+[Shadow]
+color 		= 0,0,0
+yscale 		= .2
+
+[Music]
+bgmusic 	= sound/kahn_arena.mp3
+bgvolume 	= 255
+
+[BGdef]
+spr 		= stages/Arena_Kahn.sff
+debugbg 	= 0
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 1
+start 		= 0,-171
+delta 		= 2,2
+
+[BG image]
+type  		= normal
+spriteno 	= 0, 0
+start 		= 0,-171
+delta 		= 2,2 
+mask            = 1
+
+[BG image]
+type  		= anim
+actionno 	= 1
+start 		= 0,-171
+delta 		= 2,2
+trans           = add
+layerno         = 1
+
+[BG image]
+type  		= normal
+spriteno 	= 1, 0
+start 		= 0,-171
+delta 		= 2,2
+trans           = addalpha
+alpha           = 100,256
+layerno         = 1
+
+[Begin Action 1]
+1,1, 0,0, 2,,AS130D256
+1,1, 0,0, 2,,AS170D256
+1,1, 0,0, 2,,AS210D256
+1,1, 0,0, 2,,AS256D256
+1,1, 0,0, 2,,AS256D256
+1,1, 0,0, 2,,AS210D256
+1,1, 0,0, 2,,AS170D256 
+
+1,1, 0,0, 2,,AS130D256

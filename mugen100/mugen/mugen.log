@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\kepps\dbh-mugen-fall-2018\mugen100\mugen\mugen.exe
+Command line: C:\Users\kepps\repos\dbh-mugen-fall-2018\mugen100\mugen\mugen.exe
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -65,12 +65,42 @@ Initializing select screen...finding characters...OK
 
 Entering main loop
 Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Entering character select.
+attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/Gambit\Gambit\gambit.def...
+  Loading info...OK
+  Loading cmd command set Brain/gambit.cmd...OK
+  Loading cns Brain/gambit.cns...OK
+  Loading cns Brain/attacks.cns...OK
+  Loading cns Brain/specials.cns...OK
+  Loading cns Brain/supers.cns...OK
+  Loading cns Brain/system.cns...OK
+  Loading cns Brain/helpers.cns...OK
+  Loading cmd state entry Brain/gambit.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff gambit.sff...OK
+  Loading anim gambit.air...OK
+  Loading snd gambit.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  8325 expressions (2987 on trigger lines)
+Character gambit.def loaded OK
+attempting load and start...no BGM...Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+End of game loop
+Total time: 53.19s
+Total frames: 3192 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...no BGM...Entering character select.
 attempting load and start...no BGM...Returned from main loop
 Deinitializing...
-Frames      : 0
-Time elapsed: 9.620 sec
-ticks: 962, tps: 100, start 37, end 999
+Frames      : 3192
+Time elapsed: 68.290 sec
+ticks: 6829, tps: 100, start 47, end 6876
 
 Clearing player cache...OK
 Freeing character info...OK

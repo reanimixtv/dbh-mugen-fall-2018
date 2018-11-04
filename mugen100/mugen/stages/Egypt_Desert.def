@@ -1,0 +1,232 @@
+;--------------------------------------------------------
+; Stage      : Tropical Desert
+; Version    : 
+; Special Thanks : Mortalist
+; Autor      : Checho
+;
+;--------------------------------------------------------
+
+[Info]
+name = "Egypt Desert"
+
+;--------------------------------------------------------
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -435
+boundright = 435
+boundhigh = -20
+boundlow =  0
+verticalfollow = .30
+floortension = 0
+tension = 50
+
+;--------------------------------------------------------
+
+[PlayerInfo]
+p1startx = -80
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 80
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000 
+rightbound = 1000
+topbound  =  0
+botbound  =  0
+
+;--------------------------------------------------------
+
+[Scaling]
+topz     = 0       
+botz     = 50     
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+
+[Bound]
+screenleft = 37
+screenright = 37
+
+;--------------------------------------------------------
+
+[StageInfo]
+zoffset = 210
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+
+[Shadow]
+color = 100,100,100
+yscale = .2
+reflect = 0
+
+;--------------------------------------------------------
+
+[Music]
+bgmusic = sound/Dune_Soundtrack.mp3
+bgvolume = 255
+
+;--------------------------------------------------------
+
+[BGdef]
+spr = stages/Egypt_Desert.sff
+debugbg = 0
+
+;--------------------------------------------------------
+
+[BG sky]
+type  = normal
+spriteno = 0,2
+delta = .35,1
+mask  = 1
+tile = 1,0
+velocity = .20,0
+
+[BG piramids]
+type = normal
+spriteno = 10,0
+start = 220,-50
+mask = 1
+layerno = 0
+delta = 0.3,1
+
+[BG sphnx]
+type = normal
+spriteno = 11,0
+start = 220,-50
+mask = 1
+layerno = 0
+delta = 0.3,1
+
+[BG anubis]
+type = normal
+spriteno = 12,0
+start = 220,-50
+mask = 1
+layerno = 0
+delta = 0.3,1
+
+[BG Fog2]
+type  = normal
+spriteno = 2,1
+delta = .40,1
+tile = 1,1
+velocity = .30,-.25
+trans = add
+mask = 1
+
+[BG Fog1]
+type  = normal
+spriteno = 2,0
+delta = .45,1
+tile = 1,1
+velocity = -.40,0
+trans = add
+mask = 1
+
+[BG sand right]
+type  = normal
+spriteno = 5,2
+delta = .50,1
+mask = 1
+
+[BG tree]
+type  = normal
+spriteno = 9,0
+delta = .55,1
+mask = 1
+
+[BG tree very right]
+type  = normal
+spriteno = 9,1
+delta = .55,1
+mask = 1
+
+[BG tree left mid]
+type  = normal
+spriteno = 9,2
+delta = .55,1
+mask = 1
+
+[BG sand left]
+type  = normal
+spriteno = 5,0
+delta = .60,1
+mask = 1
+
+[BG mountain R]
+type  = normal
+spriteno = 4,4
+delta = .65,1
+mask = 1
+
+[BG mountain L]
+type  = normal
+spriteno = 4,0
+delta = .75,1
+mask = 1
+
+[BG mountain R]
+type  = normal
+spriteno = 4,2
+delta = .75,1
+mask = 1
+
+[BG Pillars]
+type  = normal
+spriteno = 4,1
+delta = .85,1
+mask = 1
+
+[BG floor]
+type  = normal
+spriteno = 0,6
+delta = 1,1
+tile  = 1,0
+mask = 1
+
+[BG floor left]
+type  = normal
+spriteno = 6,0
+delta = 1,1
+mask = 1
+layerno = 1
+
+[BG floor right]
+type  = normal
+spriteno = 6,1
+delta = 1,1
+mask = 1
+layerno = 1
+
+[BG tree front]
+type  = normal
+spriteno = 5,1
+delta = 1.1,1
+mask = 1
+layerno = 1
+
+[BG JDesert floor]
+type  = normal
+spriteno = 6,2
+tile = 1,0
+delta = 1,1
+mask = 1
+
+[BG JDesert front row]
+type  = normal
+spriteno = 7,0
+delta = 1.2,1
+mask = 1
+layerno = 1
+tile = 1,0
+
+,--------------------------------------------------------

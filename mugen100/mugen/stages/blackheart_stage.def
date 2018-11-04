@@ -1,0 +1,734 @@
+[Info]
+name="Blackheart Hell" 
+autor= JC ; http://eternal.mgbr.net ; 
+
+[Camera]
+startx=0
+starty=0
+boundleft = -224
+boundright = 224
+boundhigh = -185
+floortension = 65
+tension=60
+verticalfollow = .5
+
+
+[PlayerInfo]
+p1startx=-100
+p1starty=0
+p1startz=0
+p1facing=1
+
+p2startx= 100
+p2starty=0
+p2startz=0
+p2facing=-1
+
+leftbound=-1000
+rightbound=1000
+topbound=0
+botbound=0
+
+[Scaling]
+topz=0
+botz=50
+topscale=1
+botscale=1.2
+
+[Bound]
+screenleft=15
+screenright=15
+
+[StageInfo]
+zoffset=215
+autoturn=1
+resetBG = 0
+
+[Shadow]
+color = 32,32,32
+yscale = .2
+
+[Music]
+bgmusic= sound/blackheart.mp3
+bgvolume= 80
+
+[BGdef]
+spr=stages/blackheart_stage.sff
+DEBUGBG=0
+
+
+[BG A]
+type  = normal
+spriteno = 2,1
+start = 0, -5
+delta = .2428571, 0.35
+mask = 1
+
+[BG A]
+type  = normal
+spriteno = 2,0
+start = 0, 0
+delta = .2428571, 0.35
+mask = 1
+
+
+[BG B]
+type  = anim
+actionno = 6
+start = 0, 0
+delta = .2428571, 0.35
+mask = 1
+
+[BG C]
+type  = anim
+actionno = 7
+start = 0, 0
+delta = .2428571, 0.35
+mask = 1
+
+
+[BG D]
+type  = anim
+actionno = 2
+start = 0, 0
+delta = .2428571, 0.35
+mask = 1
+
+[BG E]
+type  = normal
+spriteno = 4,91
+start = 0, 0
+delta = .34, 0.70
+mask = 1
+
+
+
+[BG F]
+type  = anim
+actionno = 3
+start = 0, 0
+delta = .34, 0.70
+mask = 1
+ID = 15
+
+[BG G]
+type  = anim
+actionno = 11
+start = 0, 0
+delta = .34, 0.70
+mask = 1
+ID = 16
+
+[BG H]
+type  = anim
+actionno = 4
+start = 0, 0
+delta = .5628571, 0.70
+mask = 1
+
+[BG I]
+type  = anim
+actionno = 9
+start = -80, 0
+delta = .5628571, 0.70
+mask = 1
+
+[BG J]
+type  = anim
+actionno = 8
+start = 0, 0
+delta = .5628571, 0.70
+mask = 1
+
+
+[BG K]
+type  = anim
+actionno = 1
+start = 0, 0
+delta = .5628571, 1
+mask = 1
+
+
+
+
+[BG L]
+type  = parallax
+spriteno = 0,0
+start = 0, 0
+delta = .6428571, 1
+xscale = 1, 1.7777778
+mask = 1
+ID =8
+
+
+[BG M]
+type  = parallax
+spriteno = 0,1
+start = 0, 0
+delta = .6428571, 1
+xscale = 1, 1.7777778
+mask = 1
+ID =9
+
+
+[BG N]
+type  = parallax
+spriteno = 0,2
+start = 0, 0
+delta = .6428571, 1
+xscale = 1, 1.7777778
+mask = 1
+ID =10
+
+
+[BG 0]
+type  = parallax
+spriteno = 0,3
+start = 0, 0
+delta = .6428571, 1
+xscale = 1, 1.7777778
+mask = 1
+ID =11
+
+
+[BG P]
+type  = parallax
+spriteno = 0,2
+start = 0, 0
+delta = .6428571, 1
+xscale = 1, 1.7777778
+mask = 1
+ID =12
+
+
+[BG Q]
+type  = parallax
+spriteno = 0,1
+start = 0, 0
+delta = .6428571, 1
+xscale = 1, 1.7777778
+mask = 1
+ID =13
+
+[BG R]
+type  = anim
+actionno = 5
+start = 0, 0
+delta = .82, 1
+mask = 1
+
+
+[BG S]
+type  = anim
+actionno = 12
+start = -56, 0
+delta = 1.20, 1
+mask = 1
+layerno = 1
+trans = add
+
+
+[BG T]
+type  = anim
+actionno = 10
+start = -56, 0
+delta = 1.32, 1
+mask = 1
+layerno = 1
+trans = add
+
+; Hala se acabo XDDD
+
+[BGCtrlDef 8]
+looptime = 14
+CtrlID = 8
+
+[BGCtrl 8.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 8.2] 
+type = Enable
+time = 0
+value = 1
+
+[BGCtrl 8.3] 
+type = Enable
+time = 7
+value = 0
+
+
+[BGCtrlDef 9]
+looptime = 14
+CtrlID = 9
+
+[BGCtrl 9.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 9.2] 
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 9.3] 
+type = Enable
+time = 7
+value = 1
+
+[BGCtrl 9.4] 
+type = Enable
+time = 14
+value = 0
+
+
+
+
+[BGCtrlDef 9]
+looptime = 42
+CtrlID = 10
+
+[BGCtrl 9.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 9.2] 
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 9.3] 
+type = Enable
+time = 14
+value = 1
+
+[BGCtrl 9.4] 
+type = Enable
+time = 21
+value = 0
+
+
+
+
+[BGCtrlDef 9]
+looptime = 42
+CtrlID = 11
+
+[BGCtrl 9.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 9.2] 
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 9.3] 
+type = Enable
+time = 21
+value = 1
+
+[BGCtrl 9.4] 
+type = Enable
+time = 28
+value = 0
+
+
+
+
+[BGCtrlDef 9]
+looptime = 42
+CtrlID = 12
+
+[BGCtrl 9.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 9.2] 
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 9.3] 
+type = Enable
+time = 28
+value = 1
+
+[BGCtrl 9.4] 
+type = Enable
+time = 35
+value = 0
+
+
+
+
+[BGCtrlDef 9]
+looptime = 42
+CtrlID = 13
+
+[BGCtrl 9.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 9.2] 
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 9.3] 
+type = Enable
+time = 35
+value = 1
+
+[BGCtrl 9.4] 
+type = Enable
+time = 42
+value = 0
+
+; Volcan
+
+[BGCtrlDef 8]
+CtrlID = 15
+looptime = -1
+
+[BGCtrl 8.1] 
+type = Enable
+time = 0,0, -1
+value = 1
+
+[BGCtrl 8.2] 
+type = Enable
+time = 0
+value = 1
+
+[BGCtrl 8.3] 
+type = Enable
+time = 2000
+value = 0
+
+
+[BGCtrlDef 11]
+CtrlID = 16
+looptime = -1
+
+[BGCtrl 8.1] 
+type = Enable
+time = 0,0, -1
+value = 0
+
+[BGCtrl 9.2] 
+type = Enable
+time = 0
+value = 0
+
+[BGCtrl 9.3] 
+type = Enable
+time = 2000
+value = 1
+
+[BGCtrl 7-3]
+type = SinY
+time = 2000
+value = 5,8
+
+[BGCtrl 7-5]
+type = SinY
+time = 2007
+value = 4,8
+
+[BGCtrl 7-6]
+type = SinY
+time = 2014
+value = 3,8
+
+[BGCtrl 7-6]
+type = SinY
+time = 2021
+value = 2,8
+
+
+[BGCtrl 7-6]
+type = SinY
+time = 2028
+value = 1,8
+
+
+[BGCtrl 7-6]
+type = SinY
+time = 2035
+value = 0,8
+
+[BGCtrl 7-6]
+type = SinY
+time = 2042
+value = 0,0
+
+
+
+
+[Begin Action 1]
+1,0,0,0,6
+1,1,0,0,6
+1,2,0,0,6
+1,3,0,0,6
+1,4,0,0,6
+1,5,0,0,6
+
+[Begin Action 2]
+3,0,0,0,9
+3,1,0,0,9
+3,2,0,0,9
+3,3,0,0,9
+3,4,0,0,9
+3,5,0,0,9
+3,6,0,0,9
+3,7,0,0,9
+3,8,0,0,9
+3,9,0,0,9
+3,10,0,0,9
+3,11,0,0,9
+
+[Begin Action 3]
+4,0,0,0,1
+4,1,0,0,1
+4,2,0,0,1
+4,3,0,0,1
+4,4,0,0,1
+4,5,0,0,1
+4,6,0,0,1
+4,7,0,0,1
+4,8,0,0,1
+4,9,0,0,1
+4,10,0,0,1
+4,11,0,0,1
+4,12,0,0,1
+4,13,0,0,1
+4,14,0,0,1
+4,15,0,0,1
+4,16,0,0,1
+4,17,0,0,1
+4,18,0,0,1
+4,19,0,0,1
+4,20,0,0,1
+4,21,0,0,1
+4,22,0,0,1
+4,23,0,0,1
+4,24,0,0,1
+4,25,0,0,1
+4,26,0,0,1
+4,27,0,0,1
+4,28,0,0,1
+4,29,0,0,1
+4,30,0,0,1
+4,31,0,0,1
+4,32,0,0,1
+4,33,0,0,1
+4,34,0,0,1
+4,35,0,0,1
+4,36,0,0,1
+4,37,0,0,1
+4,38,0,0,1
+4,39,0,0,1
+4,40,0,0,1
+4,41,0,0,1
+4,42,0,0,1
+4,43,0,0,1
+4,44,0,0,1
+4,45,0,0,1
+4,46,0,0,1
+4,47,0,0,1
+4,48,0,0,1
+4,49,0,0,1
+4,50,0,0,1
+[Begin Action 4]
+5,0,0,0,5
+5,1,0,0,5
+5,2,0,0,5
+5,3,0,0,3
+5,4,0,0,5
+5,5,0,0,1
+5,6,0,0,5
+5,7,0,0,1
+5,8,0,0,5
+5,9,0,0,3
+5,10,0,0,3
+5,11,0,0,5
+5,12,0,0,3
+5,13,0,0,3
+
+[Begin Action 5]
+6,0,0,0,6
+6,1,0,0,6
+6,2,0,0,6
+6,1,0,0,6
+
+[Begin Action 6]
+10,0,0,0,4
+10,1,0,0,4
+10,2,0,0,4
+10,3,0,0,4
+10,5,0,0,4
+10,6,0,0,4
+10,7,0,0,4
+10,8,0,0,4
+10,9,0,0,4
+10,10,0,0,4
+10,11,0,0,4
+
+[Begin Action 7]
+11,0,0,0,12
+11,1,0,0,12
+11,2,0,0,12
+11,3,0,0,12
+11,4,0,0,12
+11,5,0,0,12
+11,6,0,0,12
+11,7,0,0,12
+[Begin Action 8]
+12,0,0,0,4
+12,1,0,0,4
+12,2,0,0,4
+12,3,0,0,4
+12,4,0,0,4
+12,5,0,0,4
+12,6,0,0,4
+12,7,0,0,4
+-1,0,0,0,165
+12,0,0,0,4
+12,1,0,0,4
+12,2,0,0,4
+12,3,0,0,4
+12,4,0,0,4
+12,5,0,0,4
+12,6,0,0,4
+12,7,0,0,4
+-1,0,0,0,100
+13,0,0,0,4
+13,1,0,0,4
+13,2,0,0,4
+13,3,0,0,4
+13,4,0,0,4
+13,5,0,0,4
+13,6,0,0,4
+13,7,0,0,4
+-1,0,0,0,300
+12,0,0,0,4
+12,1,0,0,4
+12,2,0,0,4
+12,3,0,0,4
+12,4,0,0,4
+12,5,0,0,4
+12,6,0,0,4
+12,7,0,0,4
+-1,0,0,0,165
+13,0,0,0,4
+13,1,0,0,4
+13,2,0,0,4
+13,3,0,0,4
+13,4,0,0,4
+13,5,0,0,4
+13,6,0,0,4
+13,7,0,0,4
+-1,0,0,0,200
+13,0,0,0,4
+13,1,0,0,4
+13,2,0,0,4
+13,3,0,0,4
+13,4,0,0,4
+13,5,0,0,4
+13,6,0,0,4
+13,7,0,0,4
+-1,0,0,0,465,H
+[Begin Action 9]
+-1,0,0,0,165,H
+12,0,0,0,4,H
+12,1,0,0,4,H
+12,2,0,0,4,H
+12,3,0,0,4,H
+12,4,0,0,4,H
+12,5,0,0,4,H
+12,6,0,0,4,H
+12,7,0,0,4,H
+-1,0,0,0,265,H
+12,0,0,0,4,H
+12,1,0,0,4,H
+12,2,0,0,4,H
+12,3,0,0,4,H
+12,4,0,0,4,H
+12,5,0,0,4,H
+12,6,0,0,4,H
+12,7,0,0,4,H
+-1,0,0,0,200,H
+13,0,0,0,4,H
+13,1,0,0,4,H
+13,2,0,0,4,H
+13,3,0,0,4,H
+13,4,0,0,4,H
+13,5,0,0,4,H
+13,6,0,0,4,H
+13,7,0,0,4,H
+-1,0,0,0,200
+12,0,0,0,4,H
+12,1,0,0,4,H
+12,2,0,0,4,H
+12,3,0,0,4,H
+12,4,0,0,4,H
+12,5,0,0,4,H
+12,6,0,0,4,H
+12,7,0,0,4,H
+-1,0,0,0,265,H
+13,0,0,0,4,H
+13,1,0,0,4,H
+13,2,0,0,4,H
+13,3,0,0,4,H
+13,4,0,0,4,H
+13,5,0,0,4,H
+13,6,0,0,4,H
+13,7,0,0,4,H
+-1,0,0,0,270,H
+13,0,0,0,4,H
+13,1,0,0,4,H
+13,2,0,0,4,H
+13,3,0,0,4,H
+13,4,0,0,4,H
+13,5,0,0,4,H
+13,6,0,0,4,H
+13,7,0,0,4,H
+[Begin Action 10]
+15,0,0,0,6
+15,1,0,0,6
+15,2,0,0,6
+15,3,0,0,6
+15,4,0,0,6
+15,5,0,0,6
+[Begin Action 11]
+4,51,0,0,7
+4,52,0,0,7
+4,53,0,0,7
+4,54,0,0,7
+4,55,0,0,7
+loopstart
+4,56,0,0,6
+4,57,0,0,6
+4,58,0,0,6
+4,59,0,0,6
+4,60,0,0,6
+4,61,0,0,6
+4,62,0,0,6
+4,63,0,0,6
+4,64,0,0,6
+4,65,0,0,6
+
+[Begin Action 12]
+16,0,0,0,6
+16,1,0,0,6
+16,2,0,0,6
+16,3,0,0,6
+16,4,0,0,6
+16,5,0,0,6

@@ -1,0 +1,528 @@
+;--------------------------------------------------------
+SVC-CHAOS-TEMPLO-1 stage por shammahomega
+;--------------------------------------------------------
+;e-mail:  shammahnissi@hotmail.com
+
+;-SPRITES:DEL JUEGO SVC CHAOS
+;-SONIDO:DEL JUEGO SVC CHAOS
+;-PHOTHOPAINT-10 DE CORELDRAW.
+;-ESCENARIO HECHO EN EL FIGTHER FACTORY, EL 31 DE MAYO 2012.
+;-POR FAVOR NO LO EDITES,NI LO LANCES COMO TUYO.
+;-DISFRÚTALO EN TU M.U.G.E.N.
+;--------------------------------------------------------
+
+
+[Info]
+name = "SVC-CHAOS-TEMPLO-1"
+displayname = "TEMPLO-PERROS-GUARDIAS"
+versiondate = 10,25,2013
+mugenversion = 1.0
+author = "shammahomega"
+
+
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -216
+boundright = 216
+boundhigh =-184;-128
+boundlow = 0
+verticalfollow =.16
+floortension =0
+tension =50
+
+
+;Parametros opcionales para Número de píxeles más allá de la parte superior e inferior de la pantalla que puede
+;ser dibujado.
+;Overdraw especifica cuanto puede verse durante un
+;EnvShake.
+;Overdraw especifica en píxeles, también se puede usar cuando el aspecto de pantalla
+; es más alto que el aspecto del escenario.
+overdrawhigh = 20
+overdrawlow = 20
+
+
+;Número de píxeles en la parte superior e inferior de la pantalla que puede ser
+; quitados  cuando el aspecto de la pantalla es más corto que el escenario
+; Estos parámetros sugieren una directriz y el real
+; número de píxeles para quitar depende de la diferencia de como se vera.
+;cuthigh = 35
+;cutlow = 25
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0            
+;p1startz = 0
+p1facing = 1            
+
+p2startx = 70
+p2starty = 0
+;p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+;topbound  =  0
+;botbound  =  0
+
+;[Scaling]
+;topz     = 0
+;botz     = 50
+;topscale = 1
+;botscale = 1.2
+
+[Bound]
+screenleft = 27
+screenright = 27
+
+[StageInfo]
+zoffset   = 220
+autoturn  = 1
+resetBG    =1; 0
+;zoffsetlink   = 1000
+
+ ;Width and height of the local coordinate space of the stage.
+localcoord = 320, 240
+
+ ;Horizontal and vertical scaling factor for drawing.
+xscale = 1
+yscale = 1
+
+[Shadow]
+intensity =128
+colour = 0,0,0
+yscale = -.2
+ 
+[reflection]
+intensity = 0
+
+[Music]
+
+bgmusic =SOUND/SVC-CHAOS-JEFES.mp3;SOUND/SVC-CHAOS-GOUKEN-1.OGG
+bgmvolume = 100
+
+bgmloopstart =003151290 ;<sample number>
+bgmloopend =-1 ;<sample number>
+
+[BGdef]
+spr = stages/SVC-CHAOS-TEMPLO-1.sff
+debugbg = 0   
+
+
+
+
+
+[BG  CIELO  ]
+type  = normal
+spriteno = 0,0
+tile =1,0
+tilespacing =0,0
+delta = 1, 1
+mask  = 0
+velocity =-.3,0
+
+
+
+[BG  MONTAÑA ]
+type  = normal
+spriteno = 1,0
+start = 0, 0
+delta = 1,1
+mask  = 1
+
+
+[BG  BAMBUS Y BOSQUE]
+type  = normal
+spriteno = 2,0
+start = 0, 0
+delta = 1,1
+mask  = 1
+
+
+[BG  CESPED]
+type  = normal
+spriteno = 3,0
+start = 0, 0
+delta = 1,1
+mask  = 1
+
+
+[BG  TEMPLO]
+type  = normal
+spriteno = 4,0
+start = 0, 0
+delta = 1,1
+mask  = 1
+
+
+[BG  PERROS ]
+type  = normal
+spriteno = 5,0
+start = 0, 0
+delta = 1,1
+mask  = 1
+
+
+[BG  ESPADAS]
+type  = normal
+spriteno = 6,0
+start = 0, 0
+delta = 1,1
+mask  = 1
+
+
+[BG LEE ]
+type  = anim
+actionno =1
+start = 0, 0
+delta =  1,1
+mask  = 1
+
+
+
+[BG ARDILLA ]
+type  = anim
+actionno =2
+start = 0, 0
+delta =  1,1
+mask  = 1
+
+;----------------------------
+[BG AGUILA ]
+type  = anim
+actionno =3
+start = 0, 0
+delta =  1,1
+mask  = 1
+id = 3
+
+;-BGCTROLES DEL AGUILA
+[BGCtrlDef AGUILA]
+CtrlID = 3
+loopTime =1000
+
+[BGCtrl Enable 1, AGUILA ]
+type =Enable
+time = 0,0
+value=0
+
+[BGCtrl Enable 2, AGUILA ]
+type =Enable
+time = 0
+value=1
+
+
+[BGCtrl Enable 3, AGUILA ]
+type =Enable
+time =1000
+value=0
+
+[BGCtrl visible 1]
+type =visible
+time =0
+value = 1
+
+
+[BGCtrl visible 2]
+type =visible
+time =1000
+value =0
+
+[BGCtrl VelSet AGUILA 1]
+type = VelSet
+time = 0
+x = -3
+y = 0
+
+
+[BGCtrl Veladd AGUILA ]
+type =Veladd
+time =20
+x =-1
+
+
+
+[BGCtrl VelSet AGUILA 2]
+type = VelSet
+time =1000
+x = 0
+y = 0
+;-------------------------
+
+
+[BG PAJARITOS ]
+type  = anim
+actionno =4
+start = 0, 0
+delta =  1,1
+mask  = 1
+
+
+
+[BG PALOMA 1]
+type  = anim
+actionno =5
+start = -300, 190
+delta =1,1
+mask  = 1
+
+
+[BG PALOMA 2]
+type  = anim
+actionno =6
+start = -330, 195
+delta =1,1
+mask  = 1
+
+
+
+[BG PALOMA 3]
+type  = anim
+actionno =7
+start = -280,200
+delta =1,1
+mask  = 1
+
+
+[BG PALOMA 4]
+type  = anim
+actionno =8
+start = -290,205
+delta =1,1
+mask  = 1
+
+
+[BG PALOMA 5]
+type  = anim
+actionno =9
+start = -240,205
+delta =1,1
+mask  = 1
+
+
+
+;---------------------------
+;-ANIMACIONES
+
+;-LEE
+[Begin action 1]
+7,0,0,0,200
+7,1,0,0,500
+
+;-ARDILLA
+[Begin action 2]
+8,0,0,0,8
+8,1,0,0,8
+8,2,0,0,8
+8,3,0,0,8
+8,4,0,0,8
+8,5,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+8,6,0,0,8
+8,7,0,0,8
+8,8,0,0,8
+
+;-AGUILA
+[Begin action 3]
+9,0,0,0,8
+9,1,0,0,8
+9,2,0,0,8
+9,3,0,0,8
+9,4,0,0,8
+
+;-PAJARITOS
+[Begin action 4]
+10,0,0,0,9
+10,1,0,0,9
+
+
+
+
+[Begin action 5]
+11,11,0,0,100,H
+15,0,0,0,8,H
+15,1,0,0,8,H
+15,2,0,0,50,H
+15,3,0,0,8,H
+11,11,0,0,100
+15,0,0,0,8
+15,1,0,0,8
+15,2,0,0,70
+15,3,0,0,8
+14,0,2,0,4
+14,1,4,0,4
+14,2,6,0,4
+14,3,8,0,4
+14,0,10,0,4
+14,1,12,0,4
+14,2,13,0,4
+14,3,14,0,4
+14,0,16,0,4
+14,1,18,0,4
+14,2,20,0,4
+14,3,22,0,4
+14,0,24,0,4
+14,1,26,0,4
+14,2,28,0,4
+14,3,30,0,4
+11,0,30,0,8
+11,1,30,0,8
+11,2,30,0,8
+11,3,30,0,50
+11,4,30,0,200
+15,0,30,0,8,H
+15,1,30,0,8,H
+15,2,30,0,50,H
+15,3,30,0,8,H
+14,0,30,0,4,H
+14,1,28,0,4,H
+14,2,26,0,4,H
+14,3,24,0,4,H
+14,0,22,0,4,H
+14,1,20,0,4,H
+14,2,18,0,4,H
+14,3,16,0,4,H
+14,0,14,0,4,H
+14,1,12,0,4,H
+14,2,10,0,4,H
+14,3,8,0,4,H
+14,0,6,0,4,H
+14,1,4,0,4,H
+14,2,2,0,4,H
+14,3,0,0,4,H
+11,0,0,0,8,H
+11,1,0,0,8,H
+11,2,0,0,8,H
+11,3,0,0,50,H
+11,4,0,0,200,H
+
+
+
+[Begin action 6]
+11,3,0,0,50
+11,4,0,0,50
+11,3,0,0,50
+11,4,0,0,50
+15,0,0,0,8
+15,1,0,0,8
+15,2,0,0,8
+15,3,0,0,8
+
+
+[Begin action 7]
+11,4,0,0,4,H
+11,5,0,0,4,H
+11,6,0,0,4,H
+11,7,0,0,4,H
+11,8,0,0,4,H
+11,9,0,0,4,H
+11,10,0,0,4,H
+11,11,0,0,100,H
+15,0,0,0,8,H
+15,1,0,0,8,H
+15,2,0,0,50,H
+15,3,0,0,8,H
+
+
+[Begin action 8]
+11,3,0,0,8
+11,2,0,0,8
+11,1,0,0,8
+14,0,2,0,4
+14,1,4,0,4
+14,2,6,0,4
+14,3,8,0,4
+14,0,10,0,4
+14,1,12,0,4
+14,2,13,0,4
+14,3,14,0,4
+14,0,16,0,4
+14,1,18,0,4
+14,2,20,0,4
+14,3,22,0,4
+14,0,24,0,4
+14,1,26,0,4
+14,2,28,0,4
+14,3,30,0,4
+11,0,30,0,8
+11,1,30,0,8
+11,2,30,0,8
+11,3,30,0,50
+11,4,30,0,200
+15,0,30,0,8,H
+15,1,30,0,8,H
+15,2,30,0,50,H
+15,3,30,0,8,H
+14,0,30,0,4,H
+14,1,28,0,4,H
+14,2,26,0,4,H
+14,3,24,0,4,H
+14,0,22,0,4,H
+14,1,20,0,4,H
+14,2,18,0,4,H
+14,3,16,0,4,H
+14,0,14,0,4,H
+14,1,12,0,4,H
+14,2,10,0,4,H
+14,3,8,0,4,H
+14,0,6,0,4,H
+14,1,4,0,4,H
+14,2,2,0,4,H
+14,3,0,0,4,H
+11,0,0,0,8,H
+11,1,0,0,8,H
+11,2,0,0,8,H
+11,3,0,0,50,H
+11,4,0,0,200,H
+
+
+[Begin action 9]
+11,0,0,0,8
+11,1,0,0,8
+11,2,0,0,8
+11,3,0,0,8
+11,4,0,0,4
+11,5,0,0,4
+11,6,0,0,4
+11,7,0,0,4
+11,8,0,0,4,
+11,9,0,0,4
+11,10,0,0,4
+11,11,0,0,100
+15,0,0,0,8
+15,1,0,0,8
+15,2,0,0,50
+15,3,0,0,8
+12,0,0,0,4
+12,1,0,0,4
+12,2,0,0,4
+13,0,0,0,4
+13,1,0,0,4
+13,2,0,0,4
+13,3,0,0,4
+
+
+
+
+
+
+
+
