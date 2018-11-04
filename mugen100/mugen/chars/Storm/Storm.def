@@ -1,0 +1,42 @@
+;                             	       _______
+; ____________________________________/ STORM \__________________________________
+;|_______________________________________________________________________________|
+;|		       By Alucard (alucard_1610@hotmail.com)			 |
+;|_________________ & WhiteMagic2002 (WhiteMagic2002@hotmail.com) _______________|
+                   \_____________________________________________/
+
+; Player information
+[Info]
+name ="Storm"
+displayname ="Storm"
+versiondate =03,23,2006
+mugenversion =1.0
+author ="Alucard & WhiteMagic2002"
+pal.defaults =1,4
+
+; Files for the player
+[Files]
+cmd     = storm_AI_hard.cmd   ;Command set with AI
+;cmd     = storm_AI.cmd   ;Command set with AI
+;cmd     =storm.cmd
+cns     =storm.cns
+st      =storm.cns
+stcommon =common1.cns
+sprite  =storm.sff
+anim    =storm.air
+sound  =storm.snd
+pal1=px1.act
+pal2=px2.act
+pal3=px3.act
+pal4=px4.act
+pal5=px5.act
+pal6=px6.act
+st1=storm2.cns
+st2=specials.cns
+st3=hypers.cns
+st4=other.cns
+st5=helpers.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=../data/ProjX/Ending01.def

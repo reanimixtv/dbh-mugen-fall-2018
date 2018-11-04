@@ -65,42 +65,59 @@ Initializing select screen...finding characters...OK
 
 Entering main loop
 Entering character select.
-attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/Gambit\Gambit\gambit.def...
+attempting load and start...no BGM...attempting load and start...no BGM...Loading character chars/Storm/Storm.def...
   Loading info...OK
-  Loading cmd command set Brain/gambit.cmd...OK
-  Loading cns Brain/gambit.cns...OK
-  Loading cns Brain/attacks.cns...OK
-  Loading cns Brain/specials.cns...OK
-  Loading cns Brain/supers.cns...OK
-  Loading cns Brain/system.cns...OK
-  Loading cns Brain/helpers.cns...OK
-  Loading cmd state entry Brain/gambit.cmd...OK
+  Loading cmd command set storm_AI_hard.cmd...OK
+  Loading cns storm.cns...OK
+  Loading cns storm2.cns...OK
+  Loading cns specials.cns...OK
+  Loading cns hypers.cns...OK
+  Loading cns other.cns...OK
+  Loading cns helpers.cns...OK
+  Loading cmd state entry storm_AI_hard.cmd...OK
   Loading common states common1.cns...OK
   Unloading command names...OK
-  Loading sff gambit.sff...OK
-  Loading anim gambit.air...OK
-  Loading snd gambit.snd...OK
-  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  Loading sff storm.sff...OK
+  Loading anim storm.air...OK
+  Loading snd storm.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
   SFF v1.01 palette hack engaged.
-  8325 expressions (2987 on trigger lines)
-Character gambit.def loaded OK
+  12443 expressions (3963 on trigger lines)
+Character Storm.def loaded OK
 attempting load and start...no BGM...Initializing stage...
   Loading BG...OK
   Allocating helpers...OK
 Stage initialized OK
+attempting load of sound/jiren_ultimate_stage.mp3...hooking mixer callback...
+success!
 Start of game loop
+prebuffering BGM...
 End of game loop
-Total time: 53.19s
-Total frames: 3192 	Skipped frames: 0
-Avg game rate: 60.01
-Avg frame rate: 60.01
+Total time: 16.22s
+Total frames: 974 	Skipped frames: 0
+Avg game rate: 60.05
+Avg frame rate: 60.05
+
+attempting load and start...no BGM...attempting load and start...no BGM...Initializing stage...
+  Loading BG...attempting load of sound/mm3wily3.mid...OK
+  Allocating helpers...OK
+Stage initialized OK
+unhooking mixer callback...
+success!
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 20.61s
+Total frames: 1238 	Skipped frames: 3
+Avg game rate: 60.07
+Avg frame rate: 59.92
 
 attempting load and start...no BGM...Entering character select.
 attempting load and start...no BGM...Returned from main loop
 Deinitializing...
-Frames      : 3192
-Time elapsed: 68.290 sec
-ticks: 6829, tps: 100, start 47, end 6876
+Frames      : 2212
+Time elapsed: 60.990 sec
+ticks: 6099, tps: 100, start 42, end 6141
 
 Clearing player cache...OK
 Freeing character info...OK
@@ -112,7 +129,13 @@ Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
 Deintializing timer...OK
 Deinitializing graphics...OK
-Deinitializing BGM...OK
+Deinitializing BGM...
+Mixer callback was entered 462 times
+Mixer callback timing stats (last 462 calls):
+	4.000000 median, 4.833333 avg, 4.427287 sample std. dev.
+Top 10 slowest times:	73 (1), 37 (1), 29 (1), 27 (1), 25 (1), 17 (1), 16 (1), 15 (1), 14 (1), 13 (4)
+Top 10 fastest times:	2 (25), 3 (107), 4 (171), 5 (93), 6 (24), 7 (7), 8 (5), 9 (7), 10 (4), 12 (6)
+OK
 Deinitializing sound...OK
 Successful program termination.
 
