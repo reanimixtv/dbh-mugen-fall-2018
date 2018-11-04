@@ -70,7 +70,7 @@
  ;
  ;Insert your characters below.
 
-ReverseFlash\ReverseFlash.def,, order=1
+ReverseFlash\ReverseFlash.def, order=1
 Deadpool-2\Deadpool.def, stages\kfm.def, order=1
 YuGi\YuGi\YuGiHD\YuGiHD.def
 Venom\Venom.def, stages\kfm.def, order=1
@@ -82,6 +82,7 @@ MK9_Scorpion_3D\Scorpion3d\Scorpion3d.def
 jasonundead\jasonundead\jasonundead.def
 MsMarvel\MissMarvel.def
 IronMan-MGMX-150512\ironman-mgmx-.def
+Songoku_US
 
 ;-----------------------
 [ExtraStages]
@@ -92,7 +93,7 @@ stages\amc_3rdgill-night.def
 stages\Arena_Kahn.def
 stages\blackheart_stage.def
 stages\Egypt_Desert.def
-stages\Jiren_Ultimate_Stage_1_0\jiren_ultimate_stage_1.0.def
+stages\jiren_ultimate_stage_1.0.def
 stages\ki_cinder_stage.def
 stages\SvC - Blockade Space.def
 stages\mmX2wiresponge\MMX2wiresponge.def

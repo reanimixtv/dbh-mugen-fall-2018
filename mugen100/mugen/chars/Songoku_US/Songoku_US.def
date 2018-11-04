@@ -1,0 +1,38 @@
+[Info]
+name = "Songoku"
+displayname = "Songoku"
+versiondate = 05,15,2018
+mugenversion =
+author = "280gou"
+pal.defaults = 1
+
+; Files for the player
+[Files]
+cmd      = Songoku_US.cmd	;Other config
+cns      = cns/Songoku_US.cns	;Constants
+st       = cns/Songoku_US.cns	;States
+st1      = cns/attacks.cns		;States
+st2      = cns/specials.cns		;States
+st3      = cns/hypers.cns		;States
+st4      = cns/misc.cns		;States
+st5      = cns/sys.cns		;States
+st6      = cns/unique.cns
+st7      = cns/ultimateblast.cns
+st8      = cns/characteristic.cns
+st9      = cns/dbf.cns
+stcommon = common1.cns		;Common states
+sprite   = Songoku_US.sff	;Sprite
+anim     = Songoku_US.air	;Animation
+sound    = Songoku_US.snd	;Sound
+pal1     = pals/goku.act		;Normal palette
+pal2     = pals/goku.act
+pal3     = pals/goku.act
+pal4     = pals/goku.act
+pal5     = pals/goku.act
+pal6     = pals/goku.act
+pal7     = pals/goku.act
+pal8     = pals/goku.act
+pal9     = pals/goku.act
+pal10    = pals/goku.act
+pal11    = pals/goku.act
+pal12    = pals/goku.act
