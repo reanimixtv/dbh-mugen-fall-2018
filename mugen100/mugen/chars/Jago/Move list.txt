@@ -1,0 +1,164 @@
+Shadow/Super Moves
+
+Shadow Endokuken Weak
+D, DF, F, D, DF, F, x
+
+Shadow Endokuken Medium
+D, DF, F, D, DF, F, y
+
+Shadow Endokuken Strong
+D, DF, F, D, DF, F, z
+
+Shadow Endokuken Level 2
+D, DF, F, D, DF, F, x+y
+
+Shadow Endokuken Level 2
+D, DF, F, D, DF, F, y+z
+
+Shadow Endokuken Level 2
+D, DF, F, D, DF, F, z+x
+
+Shadow Tiger Fury Weak
+D, DF, F, D, DF, F, a
+
+Shadow Tiger Fury Medium
+D, DF, F, D, DF, F, b
+
+Shadow Tiger Fury Strong
+D, DF, F, D, DF, F, c
+
+Shadow Tiger Fury Level 2
+D, DF, F, D, DF, F, a+b
+
+Shadow Tiger Fury Level 2
+D, DF, F, D, DF, F, b+c
+
+Shadow Tiger Fury Level 2
+D, DF, F, D, DF, F, c+a
+
+Shadow Laser Sword Weak
+D, DB, B, D, DB, B, x
+
+Shadow Laser Sword Medium
+D, DB, B, D, DB, B, y
+
+Shadow Laser Sword Strong
+D, DB, B, D, DB, B, z
+
+Shadow Laser Sword Level 2
+D, DB, B, D, DB, B, x+y
+
+Shadow Laser Sword Level 2
+D, DB, B, D, DB, B, y+z
+
+Shadow Laser Sword Level 2
+D, DB, B, D, DB, B, z+x
+
+Shadow Wind Kick Weak
+D, DB, B, D, DB, B, a
+
+Shadow Wind Kick Medium
+D, DB, B, D, DB, B, b
+
+Shadow Wind Kick Strong
+D, DB, B, D, DB, B, c
+
+Shadow Wind Kick Level 2
+D, DB, B, D, DB, B, a+b
+
+Shadow Wind Kick Level 2
+D, DB, B, D, DB, B, b+c
+
+Shadow Wind Kick Level 2
+D, DB, B, D, DB, B, c+a
+
+Ultra Combo
+D, DB, B, DB, D, DF, F, x
+
+Ultra Combo
+D, DB, B, DB, D, DF, F, y
+
+Ultra Combo
+D, DB, B, DB, D, DF, F, z
+
+;-------------------------------------------------------------
+
+Special Moves
+
+Endokuken Weak
+D, DF, F, x
+
+Endokuken Medium
+D, DF, F, y
+
+Endokuken Strong
+D, DF, F, z
+
+Endokuken Weak Ex
+D, DF, F, x+y
+
+Endokuken Medium Ex
+D, DF, F, y+z
+
+Endokuken Strong Ex
+D, DF, F, z+x
+
+Tiger Fury Weak
+F, D, DF, x
+
+Tiger Fury Medium
+F, D, DF, y
+
+Tiger Fury Strong
+F, D, DF, z
+
+Tiger Fury Weak Ex
+F, D, DF, x+y
+
+Tiger Fury Medium Ex
+F, D, DF, y+z
+
+Tiger Fury Strong Ex
+F, D, DF, z+x
+
+Laser Sword Weak
+D, DB, B, x
+
+Laser Sword Medium
+D, DB, B, y
+
+Laser Sword Strong
+D, DB, B, z
+
+Laser Sword Weak Ex
+D, DB, B, x+y
+
+Laser Sword Medium Ex
+D, DB, B, y+z
+
+Laser Sword Strong Ex
+D, DB, B, z+x
+
+Wind Kick Weak
+D, DB, B, a
+
+Wind Kick Medium
+D, DB, B, b
+
+Wind Kick Strong
+D, DB, B, c
+
+Wind Kick Weak Ex
+D, DB, B, a+b
+
+Wind Kick Medium Ex
+D, DB, B, b+c
+
+Wind Kick Strong Ex
+D, DB, B, c+a
+
+Stand Forward Medium Punch
+F, y
+
+Standing Forward Medium Kick
+F, b
