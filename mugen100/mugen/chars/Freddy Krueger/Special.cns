@@ -1,0 +1,12 @@
+[State -1, TELEPORT PUNCH]
+type = ChangeState
+value = 2000
+triggerall = P2Stateno != 003&&P2life != 1
+triggerall = command = "TeleportPunch"
+trigger1 = NumHelper(1000)= 0&&NumHelper(1100)= 0
+trigger1 = statetype = S
+trigger1 = statetype != A
+trigger1 = ctrl
+trigger2 =  (stateno = [200,440]) && (stateno !=[600,640])
+trigger2 = movecontact
+

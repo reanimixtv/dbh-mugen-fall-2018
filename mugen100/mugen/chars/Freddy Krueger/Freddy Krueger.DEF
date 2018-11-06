@@ -1,0 +1,29 @@
+; Player information
+[Info]
+name = "Freddy Krugger"
+displayname = "Freddy Krueger"
+mugenversion = 01,04,2000
+author = "mr zero"
+Pal.Defaults= 1
+
+; Files for the player
+[Files]
+cmd     = dafne.cmd   ;Command set
+cns     = dafne.cns   ;Constants
+st      = dafne.cns   ;States
+st1      = super.cns   ;States
+stcommon = common1.cns     ;Common states
+sprite  = ndaf.sff   ;Sprite
+anim    = dafne.air   ;Animation
+sound   = freddy.snd   ;Sound
+;pal1    = dark.act  ;Palettes (can have up to 12)
+;pal2    = dblue.act
+pal3    = ndaf.act
+;pal4    = dpink.act
+;pal5    = dn.act
+
+[Arcade]
+intro.storyboard  = FreddyIntro2.def
+
+
+

@@ -1,0 +1,31 @@
+[Info]
+name ="Jago"
+displayname ="Jago"
+versiondate =04,14,2002
+mugenversion =04,14,2002
+author ="Shin Mako/Gartanham"
+pal.defaults = 1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+cmd     =Jago.cmd
+cns     =Coding/System.cns
+st      =Coding/System.cns
+stcommon =common1.cns
+sprite  =Jago.sff
+anim    =Jago.air
+sound   =Jago.snd
+pal1=Colors/JagoCLASSIC.act
+pal2=Colors/JagoGOLD.act
+pal3=Colors/JagoSHIRAIRYU.act
+pal4=Colors/JagoLINKUEI.act
+pal5=Colors/JagoZATERRAN.act
+pal6=Colors/JagoERRORMACRO.act
+pal7=Colors/JagoSHADOW.act
+st1=Coding/Normal.cns
+st2=Coding/Specials.cns
+st3=Coding/Helpers.cns
+st4=Coding/Supers.cns
+
+[Arcade]
+intro.storyboard =
+ending.storyboard =

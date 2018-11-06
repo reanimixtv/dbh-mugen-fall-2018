@@ -84,6 +84,8 @@ MsMarvel\MissMarvel.def
 IronMan-MGMX-150512\ironman-mgmx-.def
 Songoku_US
 Storm
+Jago
+Freddy Krueger
 
 ;-----------------------
 [ExtraStages]
@@ -102,6 +104,7 @@ stages\MSH_shuma2.def
 stages\sfiii2_gouki\sfiii2_gouki\sfiii2_gouki.def
 stages\SF3-Ryubg.def
 stages\Marsh.def
+stages\YDA_Temple_of_Phobos\YDA_Temple_of_Phobos.def
 
 ;---------------------------------------------------------------------
 [Options]
