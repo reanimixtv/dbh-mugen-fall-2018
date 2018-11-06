@@ -2,7 +2,7 @@
 M.U.G.E.N ver 1.00 (2011.01.18) status log
 ------------------------------------------
 Parsing command line...
-Command line: C:\Users\kepps\repos\dbh-mugen-fall-2018\mugen100\mugen\mugen.exe
+Command line: C:\Users\kepps\repos\tests\dbh-mugen-fall-2018\mugen100\mugen\mugen.exe
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -64,7 +64,7 @@ Playing storyboard start.def: scene
 attempting load and start...attempting load of data/mugen1/start.ogg...hooking mixer callback...
 success!
 starting BGM...
-Storyboard playback finished OK
+Storyboard playback canceled by Esc
 Finished playing storyboard start.def: scene
 Initializing character info...OK
 Initializing select screen...finding characters...OK
@@ -73,64 +73,11 @@ Entering main loop
 Entering character select.
 attempting load and start...attempting load of data/snd/samori-919test-2.mp3...success!
 starting BGM...
-attempting load and start...no BGM...Loading character chars/Songoku_US/Songoku_US.def...
-  Loading info...OK
-  Loading cmd command set Songoku_US.cmd...OK
-  Loading cns cns/Songoku_US.cns...OK
-  Loading cns cns/attacks.cns...OK
-  Loading cns cns/specials.cns...OK
-  Loading cns cns/hypers.cns...OK
-  Loading cns cns/misc.cns...OK
-  Loading cns cns/sys.cns...OK
-  Loading cns cns/unique.cns...OK
-  Loading cns cns/ultimateblast.cns...OK
-  Loading cns cns/characteristic.cns...OK
-  Loading cns cns/dbf.cns...OK
-  Loading cmd state entry Songoku_US.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff Songoku_US.sff...OK
-  Loading anim Songoku_US.air...OK
-  Loading snd Songoku_US.snd...OK
-  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
-  SFF v1.01 palette hack engaged.
-  41903 expressions (13933 on trigger lines)
-Character Songoku_US.def loaded OK
-Loading character chars/MsMarvel\MissMarvel.def...
-  Loading info...OK
-  Loading cmd command set MissMarvel.cmd...OK
-  Loading cns MissMarvel.cns...OK
-  Loading cmd state entry MissMarvel.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff MissMarvel.sff...OK
-  Loading anim MissMarvel.air...OK
-  Loading snd MissMarvel.snd...OK
-  Loading pals...(1,1)OK
-  SFF v1.01 palette hack engaged.
-  5302 expressions (1856 on trigger lines)
-Character MissMarvel.def loaded OK
-attempting load and start...no BGM...Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-Start of game loop
-attempting load of sound/sf2.mp3...success!
-prebuffering BGM...
-End of game loop
-Total time: 60.94s
-Total frames: 3658 	Skipped frames: 1
-Avg game rate: 60.03
-Avg frame rate: 60.01
-
-attempting load and start...no BGM...attempting load and start...no BGM...Entering character select.
-attempting load and start...attempting load of data/snd/samori-919test-2.mp3...success!
-starting BGM...
 Returned from main loop
 Deinitializing...
-Frames      : 3658
-Time elapsed: 122.050 sec
-ticks: 12205, tps: 100, start 36, end 12241
+Frames      : 0
+Time elapsed: 4.070 sec
+ticks: 407, tps: 100, start 67, end 474
 
 Clearing player cache...OK
 Freeing character info...OK
@@ -144,11 +91,11 @@ Deintializing timer...OK
 Deinitializing graphics...OK
 Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
 
-Mixer callback was entered 2629 times
-Mixer callback timing stats (last 2629 calls):
-	3.000000 median, 6.451883 avg, 10.945555 sample std. dev.
-Top 10 slowest times:	73 (1), 63 (1), 62 (1), 61 (1), 60 (1), 59 (1), 58 (3), 57 (6), 56 (6), 55 (1)
-Top 10 fastest times:	1 (84), 2 (523), 3 (714), 4 (642), 5 (234), 6 (86), 7 (49), 8 (26), 9 (25), 10 (25)
+Mixer callback was entered 87 times
+Mixer callback timing stats (last 87 calls):
+	4.000000 median, 4.827586 avg, 2.335271 sample std. dev.
+Top 10 slowest times:	14 (1), 13 (1), 12 (1), 11 (3), 10 (2), 9 (1), 7 (2), 6 (5), 5 (14), 4 (37)
+Top 10 fastest times:	2 (3), 3 (17), 4 (37), 5 (14), 6 (5), 7 (2), 9 (1), 10 (2), 11 (3), 12 (1)
 OK
 Deinitializing sound...OK
 Successful program termination.
