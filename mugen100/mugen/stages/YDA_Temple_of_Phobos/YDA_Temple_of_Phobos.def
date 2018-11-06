@@ -1,0 +1,1462 @@
+
+;================================================================
+;  NIGHT WARRIORS: DARKSTALKERS REVENGE SERIES BY  MASTER YODA
+;----------------------------------------------------------------
+
+
+[Info]
+name = "YDA_Temple_of_Phobos"
+author= "Master Yoda"
+;DATE = 31/08/2010
+
+;This stage is dedicated to "Juan Carlos", who inspired my work and contributed greatly to the Spanish community with his tutorials
+;You can find his work here: http://eternal.mgbr.net/
+
+;Thanks to:
+;Capcom for making the Darkstalkers series
+;Winane for his tips about the deltas of the stages from capcom
+;and you for downloading this stage
+
+
+;My site: http://senseiyoda.mugen-infantry.net/
+
+[BGdef]
+spr = YDA_Temple_of_Phobos.sff
+debugbg = 0
+;--------------------------------------------------------
+[Music]
+bgmusic = 
+bgvolume = 225
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -224
+boundright = 224
+boundhigh = -6
+boundlow = 0
+verticalfollow = .2
+floortension = 0
+tension = 76
+
+;--------------------------------------------------------
+[PlayerInfo]
+
+;--- Player 1 ---
+p1startx = -80
+p1starty = 0            
+p1startz = 0            
+p1facing = 1            
+
+;--- Player 2 ---
+p2startx = 80
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+topbound  =  0     ;Top bound (z-movement)
+botbound  =  0     ;Bottom bound
+
+;--------------------------------------------------------
+[Scaling]
+topz     = 0       ;Top z-coordinate for scaling
+botz     = 50      ;Bottom z-coordinate for scaling
+topscale = 1       ;Scale to use at top
+botscale = 1.2     ;Scale to use at bottom
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 32    ;Dist from left of screen that player can move to
+screenright = 32   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 216
+autoturn = 1
+resetBG = 1
+HIRES = 0
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 118
+color = 0,0,0
+yscale = .25
+fade.range = -400,-100
+
+;--------------------------------------------------------
+[Reflection]
+;intensity = 128
+
+;========================================================
+;--------------------------------------------------------
+; Background definition
+; ***
+;-------------------------------------
+
+;-------------------------------------
+; [BG x]
+; type = ?       "Normal"/"Parallax"  (def: "normal")
+; spriteno = ?, ? Sprite group and number: groupno, imgno  (req'd)
+; start = ?, ?   Starting location (integer)  (def: 0, 0)
+; delta = ?, ?   Change in location per camera unit moved (float)  (def: 1,1)
+; trans = ?      Transparency settings: "none"/"add"/"add1"/"sub"" (def: "none")
+; mask = ?       Masking (int): 0 - off, 1 - on  (def: 0)
+; velocity = ?, ? Velocity: x, y (float): speed background moves (def: 0, 0)
+; tile = ?, ?    Tiling: xtile, ytile (int): 0 - off, 1 - infinite,
+;                        >1 - tile that number of times  (def: 0, 0) - only for Normal BG
+; tilespacing = ?, ? Tiling: x, y (int) : space between tiles (def: 0, 0)
+;  Parallax-only:
+; xscale = ?, ?    Top xscale, bottom xscale (float)
+; width = ?, ?     Top width, bottom width (int)  (use either this or above, but not both)
+; yscalestart = ?  Starting y-scale (float, in percent)  (def: 100)
+; yscaledelta = ?  Change in y-scale per unit (float, in percent)  (def: 0)
+;-------------------------------------
+
+[BG WALL]
+type  = anim
+actionno = 4
+delta = 0.37946428571428571428571428571429, .6
+
+[BG SPAGHETTI]
+type  = normal
+spriteno = 5, 0
+delta = 0.453125, .7
+mask = 1
+
+[BG LEFT SHOULDER]
+type  = anim
+actionno = 16
+delta = .49330357142857142857142857142857, .9
+
+[BG PHOBOS]
+type  = normal
+spriteno = 6, 0
+delta = .49330357142857142857142857142857, .8
+mask = 1
+
+[BG LIGHT CIRCUIT]
+type  = anim
+actionno = 7
+delta = .49330357142857142857142857142857, .8
+
+[BG SWICH LIGHT]
+type  = anim
+actionno = 21
+delta = .49330357142857142857142857142857, .8
+
+[BG GEAR]
+type  = anim
+actionno = 9
+delta = .49330357142857142857142857142857, .8
+
+[BG CABLES]
+type  = anim
+actionno = 10
+delta = .49330357142857142857142857142857, .8
+
+[BG LIGHT CIRCUIT]
+type  = anim
+actionno = 8
+START = 0, -1
+delta = .49330357142857142857142857142857, .8
+
+[BG PISTONS]
+type  = anim
+actionno = 11
+delta = .49330357142857142857142857142857, .8
+
+[BG RIGHT ARM]
+type  = normal
+spriteno = 12, 0
+delta = .49330357142857142857142857142857, .8
+start = 0, 4
+mask = 1
+id = 20
+[BG RIGHT FINGER.1]
+type  = anim
+actionno = 13
+delta = .49330357142857142857142857142857, .8
+start = 0, 4
+id = 20
+[BG RIGHT FINGER.2]
+type  = anim
+actionno = 14
+delta = .49330357142857142857142857142857, .8
+start = 0, 4
+id = 20
+[BG RIGHT FINGER.3]
+type  = anim
+actionno = 15
+delta = .49330357142857142857142857142857, .8
+start = 0, 4
+id = 20
+
+[BG LEFT ARM]
+type  = normal
+spriteno = 17, 0
+delta = .49330357142857142857142857142857, .8
+start = -8, -3
+mask = 1
+id = 21
+[BG LEFT FINGER.1]
+type  = anim
+actionno = 18
+delta = .49330357142857142857142857142857, .8
+start = -8, -3
+id = 21
+[BG LEFT FINGER.2]
+type  = anim
+actionno = 19
+delta = .49330357142857142857142857142857, .8
+start = -8, -3
+id = 21
+[BG LEFT FINGER.3]
+type  = anim
+actionno = 20
+delta = .49330357142857142857142857142857, .8
+start = -8, -3
+id = 21
+
+[BG RAILING]
+type  = anim
+actionno = 3
+delta = 0.765625, 1
+
+[BG SMALL CHAINS]
+type  = normal
+spriteno = 22, 0
+delta = .8, 1
+mask = 1
+
+[BG FLOOR_BLACK]
+type  = parallax
+spriteno = 1,0
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 1
+[BG FLOOR_PURPLE.6]
+type  = parallax
+spriteno = 1,6
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 2
+[BG FLOOR_PURPLE.5]
+type  = parallax
+spriteno = 1,5
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 3
+[BG FLOOR_PURPLE.4]
+type  = parallax
+spriteno = 1,4
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 4
+[BG FLOOR_PURPLE.3]
+type  = parallax
+spriteno = 1,3
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 5
+[BG FLOOR_PURPLE.2]
+type  = parallax
+spriteno = 1,2
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 6
+[BG FLOOR_PURPLE.1]
+type  = parallax
+spriteno = 1,1
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 7
+[BG FLOOR_RED.12]
+type  = parallax
+spriteno = 1,12
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 8
+[BG FLOOR_RED.11]
+type  = parallax
+spriteno = 1,11
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 9
+[BG FLOOR_RED.10]
+type  = parallax
+spriteno = 1,10
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 10
+[BG FLOOR_RED.9]
+type  = parallax
+spriteno = 1,9
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 11
+[BG FLOOR_RED.8]
+type  = parallax
+spriteno = 1,8
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 12
+[BG FLOOR_RED.7]
+type  = parallax
+spriteno = 1,7
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 13
+[BG FLOOR_GREEN.18]
+type  = parallax
+spriteno = 1,18
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 14
+[BG FLOOR_GREEN.17]
+type  = parallax
+spriteno = 1,17
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 15
+[BG FLOOR_GREEN.16]
+type  = parallax
+spriteno = 1,16
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 16
+[BG FLOOR_GREEN.15]
+type  = parallax
+spriteno = 1,15
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 17
+[BG FLOOR_GREEN.14]
+type  = parallax
+spriteno = 1,14
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 18
+[BG FLOOR_GREEN.13]
+type  = parallax
+spriteno = 1,13
+delta= .765625, 1
+xscale = 1, 1.56
+mask= 1
+id = 19
+
+[BG FLOOR FRONT]
+type  = anim
+actionno = 2
+delta = 1.1941964285714285714285714285714, 1
+
+;[BG BIG CHAINS]
+;type  = normal
+;spriteno = 22, 1
+;delta = 1.1941964285714285714285714285714, 1.2
+;mask = 1
+;[BG BIG CHAINS]
+;type  = normal
+;spriteno = 22, 1
+;delta = 1.1941964285714285714285714285714, 1.2
+;trans = sub
+;mask = 1
+[BG BIG CHAINS]
+type  = normal
+spriteno = 22, 1
+delta = 1.1941964285714285714285714285714, 1.2
+;trans = add1
+layerno = 1
+mask = 1
+;========================================================
+;                  ANIMATIONS
+;--------------------------------------------------------
+[Begin Action 2]
+2,0,0,0,140;Repeat
+2,6,0,0,2
+2,5,0,0,2
+2,4,0,0,2
+2,3,0,0,2
+2,2,0,0,2
+2,1,0,0,20; Purple
+2,2,0,0,2
+2,3,0,0,2
+2,4,0,0,2
+2,5,0,0,2
+2,6,0,0,2
+2,0,0,0,140;Repeat
+2,12,0,0,2
+2,11,0,0,2
+2,10,0,0,2
+2,9,0,0,2
+2,8,0,0,2
+2,7,0,0,20;Red
+2,8,0,0,2
+2,9,0,0,2
+2,10,0,0,2
+2,11,0,0,2
+2,12,0,0,2
+2,0,0,0,140;Repeat
+2,18,0,0,2
+2,17,0,0,2
+2,16,0,0,2
+2,15,0,0,2
+2,14,0,0,2
+2,13,0,0,20; Green
+2,14,0,0,2
+2,15,0,0,2
+2,16,0,0,2
+2,17,0,0,2
+2,18,0,0,2
+[Begin Action 3]
+3,0,0,0,140;Repeat
+3,6,0,0,2
+3,5,0,0,2
+3,4,0,0,2
+3,3,0,0,2
+3,2,0,0,2
+3,1,0,0,20; Purple
+3,2,0,0,2
+3,3,0,0,2
+3,4,0,0,2
+3,5,0,0,2
+3,6,0,0,2
+3,0,0,0,140;Repeat
+3,12,0,0,2
+3,11,0,0,2
+3,10,0,0,2
+3,9,0,0,2
+3,8,0,0,2
+3,7,0,0,20;Red
+3,8,0,0,2
+3,9,0,0,2
+3,10,0,0,2
+3,11,0,0,2
+3,12,0,0,2
+3,0,0,0,140;Repeat
+3,18,0,0,2
+3,17,0,0,2
+3,16,0,0,2
+3,15,0,0,2
+3,14,0,0,2
+3,13,0,0,20; Green
+3,14,0,0,2
+3,15,0,0,2
+3,16,0,0,2
+3,17,0,0,2
+3,18,0,0,2
+[Begin Action 4]
+4,0,0,0,16
+4,1,0,0,16
+4,2,0,0,16
+4,1,0,0,16
+[Begin Action 7]
+7,0,0,0,250
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+7,9,0,0,6
+7,10,0,0,6
+7,11,0,0,6
+7,12,0,0,6
+7,11,0,0,6
+7,10,0,0,6
+7,9,0,0,6
+7,0,0,0,12
+7,5,0,0,6
+7,6,0,0,6
+7,7,0,0,6
+7,8,0,0,6
+7,7,0,0,6
+7,6,0,0,6
+7,5,0,0,6
+7,0,0,0,12
+7,1,0,0,6
+7,2,0,0,6
+7,3,0,0,6
+7,4,0,0,6
+7,3,0,0,6
+7,2,0,0,6
+7,1,0,0,6
+7,0,0,0,12
+7,13,0,0,6
+7,14,0,0,6
+7,15,0,0,6
+7,16,0,0,6
+7,15,0,0,6
+7,14,0,0,6
+7,13,0,0,6
+7,0,0,0,12
+[Begin Action 8]
+8,0,0,0,250
+8,1,0,0,6
+8,2,0,0,6
+8,3,0,0,6
+8,4,0,0,6
+8,3,0,0,6
+8,2,0,0,6
+8,1,0,0,6
+8,0,0,0,12
+8,5,0,0,6
+8,6,0,0,6
+8,7,0,0,6
+8,8,0,0,6
+8,7,0,0,6
+8,6,0,0,6
+8,5,0,0,6
+8,0,0,0,12
+8,9,0,0,6
+8,10,0,0,6
+8,11,0,0,6
+8,12,0,0,6
+8,11,0,0,6
+8,10,0,0,6
+8,9,0,0,6
+8,0,0,0,12
+8,13,0,0,6
+8,14,0,0,6
+8,15,0,0,6
+8,16,0,0,6
+8,15,0,0,6
+8,14,0,0,6
+8,13,0,0,6
+8,0,0,0,12
+8,1,0,0,6
+8,2,0,0,6
+8,3,0,0,6
+8,4,0,0,6
+8,3,0,0,6
+8,2,0,0,6
+8,1,0,0,6
+8,0,0,0,552
+8,13,0,0,6
+8,14,0,0,6
+8,15,0,0,6
+8,16,0,0,6
+8,15,0,0,6
+8,14,0,0,6
+8,13,0,0,6
+8,0,0,0,12
+8,1,0,0,6
+8,2,0,0,6
+8,3,0,0,6
+8,4,0,0,6
+8,3,0,0,6
+8,2,0,0,6
+8,1,0,0,6
+8,0,0,0,12
+8,5,0,0,6
+8,6,0,0,6
+8,7,0,0,6
+8,8,0,0,6
+8,7,0,0,6
+8,6,0,0,6
+8,5,0,0,6
+8,0,0,0,12
+8,9,0,0,6
+8,10,0,0,6
+8,11,0,0,6
+8,12,0,0,6
+8,11,0,0,6
+8,10,0,0,6
+8,9,0,0,6
+8,0,0,0,12
+8,13,0,0,6
+8,14,0,0,6
+8,15,0,0,6
+8,16,0,0,6
+8,15,0,0,6
+8,14,0,0,6
+8,13,0,0,6
+8,0,0,0,282
+8,5,0,0,6
+8,6,0,0,6
+8,7,0,0,6
+8,8,0,0,6
+8,7,0,0,6
+8,6,0,0,6
+8,5,0,0,6
+8,0,0,0,12
+8,9,0,0,6
+8,10,0,0,6
+8,11,0,0,6
+8,12,0,0,6
+8,11,0,0,6
+8,10,0,0,6
+8,9,0,0,6
+8,0,0,0,12
+8,13,0,0,6
+8,14,0,0,6
+8,15,0,0,6
+8,16,0,0,6
+8,15,0,0,6
+8,14,0,0,6
+8,13,0,0,6
+8,0,0,0,12
+8,1,0,0,6
+8,2,0,0,6
+8,3,0,0,6
+8,4,0,0,6
+8,3,0,0,6
+8,2,0,0,6
+8,1,0,0,6
+8,0,0,0,12
+8,5,0,0,6
+8,6,0,0,6
+8,7,0,0,6
+8,8,0,0,6
+8,7,0,0,6
+8,6,0,0,6
+8,5,0,0,6
+8,0,0,0,12
+[Begin Action 9]
+9,0,0,0,9
+9,1,0,0,9
+9,2,0,0,9
+9,3,0,0,9
+9,4,0,0,9
+9,5,0,0,9
+[Begin Action 10]
+10,0,0,0,8
+10,1,0,0,8
+10,2,0,0,8
+10,3,0,0,8
+10,4,0,0,8
+10,5,0,0,8
+[Begin Action 11]
+11,0,0,0,74
+11,1,0,0,3
+11,2,0,0,3
+11,3,0,0,3
+11,2,0,0,3
+11,1,0,0,3
+11,0,0,0,3
+11,4,0,0,3
+11,5,0,0,3
+11,6,0,0,3
+11,5,0,0,3
+11,4,0,0,3
+11,0,0,0,3
+11,7,0,0,3
+11,8,0,0,3
+11,9,0,0,3
+11,8,0,0,3
+11,7,0,0,3
+11,0,0,0,3
+11,10,0,0,3
+11,11,0,0,3
+11,12,0,0,3
+11,11,0,0,3
+11,10,0,0,3
+[Begin Action 13]
+13,0,0,0,60
+13,1,0,0,12
+13,2,0,0,12
+13,3,0,0,12
+13,4,0,0,36
+13,3,0,0,12
+13,2,0,0,12
+13,1,0,0,12
+[Begin Action 14]
+14,0,0,0,124
+14,1,0,0,12
+14,2,0,0,12
+14,3,0,0,12
+14,4,0,0,16
+14,3,0,0,12
+14,2,0,0,12
+14,1,0,0,12
+[Begin Action 15]
+15,0,0,0,108
+15,1,0,0,12
+15,2,0,0,12
+15,3,0,0,16
+15,4,0,0,20
+15,3,0,0,16
+15,2,0,0,12
+15,1,0,0,12
+[Begin Action 16]
+16,0,0,0,199
+16,1,0,0,40
+16,2,0,0,20
+16,1,0,0,40
+16,0,0,0,21
+[Begin Action 18]
+18,0,0,0,40
+18,1,0,0,12
+18,2,0,0,12
+18,3,0,0,16
+18,2,0,0,12
+18,1,0,0,12
+[Begin Action 19]
+19,0,0,0,80
+19,1,0,0,8
+19,2,0,0,8
+19,3,0,0,12
+19,4,0,0,16
+19,3,0,0,12
+19,2,0,0,8
+19,1,0,0,8
+[Begin Action 20]
+20,0,0,0,116
+20,1,0,0,12
+20,2,0,0,12
+20,3,0,0,16
+20,4,0,0,20
+20,3,0,0,16
+20,2,0,0,12
+20,1,0,0,12
+[Begin Action 21]
+21,0,0,0,520
+21,1,0,0,270
+21,2,0,0,270
+21,3,0,0,270
+21,4,0,0,270
+-1,0,0,0,270
+
+;========================================================
+;                BG CONTROLS
+;--------------------------------------------------------
+;PARALLAX ANIMATED
+[BGCtrlDef Black]
+loopTime = 540
+CtrlID = 1
+[BGCtrl 1.0]
+type = Enable
+time = 0
+value = 1
+[BGCtrl 1.1]
+type = Enable
+time = 140
+value = 0
+[BGCtrl 1.2]
+type = Enable
+time = 180
+value = 1
+[BGCtrl 1.3]
+type = Enable
+time = 320
+value = 0
+[BGCtrl 1.4]
+type = Enable
+time = 360
+value = 1
+[BGCtrl 1.5]
+type = Enable
+time = 500
+value = 0
+
+[BGCtrlDef Purple.6]
+loopTime = 540
+CtrlID = 2
+[BGCtrl 2.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 2.1]
+type = Enable
+time = 140
+value = 1
+[BGCtrl 2.2]
+type = Enable
+time = 142
+value = 0
+[BGCtrl 2.3]
+type = Enable
+time = 178
+value = 1
+[BGCtrl 2.4]
+type = Enable
+time = 180
+value = 0
+
+[BGCtrlDef Purple.5]
+loopTime = 540
+CtrlID = 3
+[BGCtrl 3.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 3.1]
+type = Enable
+time = 142
+value = 1
+[BGCtrl 3.2]
+type = Enable
+time = 144
+value = 0
+[BGCtrl 3.3]
+type = Enable
+time = 176
+value = 1
+[BGCtrl 3.4]
+type = Enable
+time = 178
+value = 0
+
+[BGCtrlDef Purple.4]
+loopTime = 540
+CtrlID = 4
+[BGCtrl 4.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 4.1]
+type = Enable
+time = 144
+value = 1
+[BGCtrl 4.2]
+type = Enable
+time = 146
+value = 0
+[BGCtrl 4.3]
+type = Enable
+time = 174
+value = 1
+[BGCtrl 4.4]
+type = Enable
+time = 176
+value = 0
+
+[BGCtrlDef Purple.3]
+loopTime = 540
+CtrlID = 5
+[BGCtrl 5.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 5.1]
+type = Enable
+time = 146
+value = 1
+[BGCtrl 5.2]
+type = Enable
+time = 148
+value = 0
+[BGCtrl 5.3]
+type = Enable
+time = 172
+value = 1
+[BGCtrl 5.4]
+type = Enable
+time = 174
+value = 0
+
+[BGCtrlDef Purple.2]
+loopTime = 540
+CtrlID = 6
+[BGCtrl 6.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 6.1]
+type = Enable
+time = 148
+value = 1
+[BGCtrl 6.2]
+type = Enable
+time = 150
+value = 0
+[BGCtrl 6.3]
+type = Enable
+time = 170
+value = 1
+[BGCtrl 6.4]
+type = Enable
+time = 172
+value = 0
+
+[BGCtrlDef Purple.1]
+loopTime = 540
+CtrlID = 7
+[BGCtrl 7.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 7.1]
+type = Enable
+time = 150
+value = 1
+[BGCtrl 7.2]
+type = Enable
+time = 170
+value = 0
+
+[BGCtrlDef Red.12]
+loopTime = 540
+CtrlID = 8
+[BGCtrl 8.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 8.1]
+type = Enable
+time = 320
+value = 1
+[BGCtrl 8.2]
+type = Enable
+time = 322
+value = 0
+[BGCtrl 8.3]
+type = Enable
+time = 358
+value = 1
+[BGCtrl 8.4]
+type = Enable
+time = 360
+value = 0
+
+[BGCtrlDef Red.11]
+loopTime = 540
+CtrlID = 9
+[BGCtrl 9.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 9.1]
+type = Enable
+time = 322
+value = 1
+[BGCtrl 9.2]
+type = Enable
+time = 324
+value = 0
+[BGCtrl 9.3]
+type = Enable
+time = 356
+value = 1
+[BGCtrl 9.4]
+type = Enable
+time = 358
+value = 0
+
+[BGCtrlDef Red.10]
+loopTime = 540
+CtrlID = 10
+[BGCtrl 10.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 10.1]
+type = Enable
+time = 324
+value = 1
+[BGCtrl 10.2]
+type = Enable
+time = 326
+value = 0
+[BGCtrl 10.3]
+type = Enable
+time = 354
+value = 1
+[BGCtrl 10.4]
+type = Enable
+time = 356
+value = 0
+
+[BGCtrlDef Red.9]
+loopTime = 540
+CtrlID = 11
+[BGCtrl 11.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 11.1]
+type = Enable
+time = 326
+value = 1
+[BGCtrl 11.2]
+type = Enable
+time = 328
+value = 0
+[BGCtrl 11.3]
+type = Enable
+time = 352
+value = 1
+[BGCtrl 11.4]
+type = Enable
+time = 354
+value = 0
+
+[BGCtrlDef Red.8]
+loopTime = 540
+CtrlID = 12
+[BGCtrl 12.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 12.1]
+type = Enable
+time = 328
+value = 1
+[BGCtrl 12.2]
+type = Enable
+time = 330
+value = 0
+[BGCtrl 12.3]
+type = Enable
+time = 350
+value = 1
+[BGCtrl 12.4]
+type = Enable
+time = 352
+value = 0
+
+[BGCtrlDef Red.7]
+loopTime = 540
+CtrlID = 13
+[BGCtrl 12.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 12.1]
+type = Enable
+time = 330
+value = 1
+[BGCtrl 12.2]
+type = Enable
+time = 350
+value = 0
+
+[BGCtrlDef Green.18]
+loopTime = 540
+CtrlID = 14
+[BGCtrl 14.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 14.1]
+type = Enable
+time = 500
+value = 1
+[BGCtrl 14.2]
+type = Enable
+time = 502
+value = 0
+[BGCtrl 14.3]
+type = Enable
+time = 538
+value = 1
+[BGCtrl 14.4]
+type = Enable
+time = 540
+value = 0
+
+[BGCtrlDef Green.17]
+loopTime = 540
+CtrlID = 15
+[BGCtrl 15.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 15.1]
+type = Enable
+time = 502
+value = 1
+[BGCtrl 15.2]
+type = Enable
+time = 504
+value = 0
+[BGCtrl 15.3]
+type = Enable
+time = 536
+value = 1
+[BGCtrl 15.4]
+type = Enable
+time = 538
+value = 0
+
+[BGCtrlDef Green.16]
+loopTime = 540
+CtrlID = 16
+[BGCtrl 16.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 16.1]
+type = Enable
+time = 504
+value = 1
+[BGCtrl 16.2]
+type = Enable
+time = 506
+value = 0
+[BGCtrl 16.3]
+type = Enable
+time = 534
+value = 1
+[BGCtrl 16.4]
+type = Enable
+time = 536
+value = 0
+
+[BGCtrlDef Green.15]
+loopTime = 540
+CtrlID = 17
+[BGCtrl 17.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 17.1]
+type = Enable
+time = 506
+value = 1
+[BGCtrl 17.2]
+type = Enable
+time = 508
+value = 0
+[BGCtrl 17.3]
+type = Enable
+time = 532
+value = 1
+[BGCtrl 17.4]
+type = Enable
+time = 534
+value = 0
+
+[BGCtrlDef Green.14]
+loopTime = 540
+CtrlID = 18
+[BGCtrl 18.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 18.1]
+type = Enable
+time = 508
+value = 1
+[BGCtrl 18.2]
+type = Enable
+time = 510
+value = 0
+[BGCtrl 18.3]
+type = Enable
+time = 530
+value = 1
+[BGCtrl 18.4]
+type = Enable
+time = 532
+value = 0
+
+[BGCtrlDef Green.15]
+loopTime = 540
+CtrlID = 19
+[BGCtrl 19.0]
+type = Enable
+time = 0
+value = 0
+[BGCtrl 19.1]
+type = Enable
+time = 510
+value = 1
+[BGCtrl 19.2]
+type = Enable
+time = 530
+value = 0
+
+[BGCtrlDef BG Left Arm]
+loopTime = 871
+CtrlID = 20
+[BGCtrl Left Arm.1]
+type = veladd
+time = 20
+x = .35
+[BGCtrl Left Arm.1]
+type = SinY
+time = 17
+value = 5, 415
+[BGCtrl Left Arm.1]
+type = velset
+time = 435
+x = 0
+[BGCtrl Left Arm.1]
+type = SinY
+time = 435
+value = 0, 0
+[BGCtrl Left Arm.1]
+type = veladd
+time = 455
+x = -.35
+[BGCtrl Left Arm.1]
+type = SinY
+time = 455
+value = 4, 415
+[BGCtrl Left Arm.1]
+type = velset
+time = 870
+x = 0
+[BGCtrl Left Arm.1]
+type = SinY
+time = 870
+value = 0, 0
+
+[BGCtrlDef BG Left Arm]
+loopTime = 320
+CtrlID = 21
+[BGCtrl Left Arm.1]
+type = Posadd
+time = 179
+x = -4
+y = -2
+[BGCtrl Left Arm.2]
+type = Posadd
+time = 199
+x = -4
+y = -2
+[BGCtrl Left Arm.3]
+type = Posadd
+time = 219
+x = -4
+y = -2
+[BGCtrl Left Arm.4]
+type = Posadd
+time = 239
+x = -4
+y = -2
+[BGCtrl Left Arm.3]
+type = Posadd
+time = 259
+x = 4
+y = 2
+[BGCtrl Left Arm.2]
+type = Posadd
+time = 279
+x = 4
+y = 2
+[BGCtrl Left Arm.1]
+type = Posadd
+time = 299
+x = 4
+y = 2
+[BGCtrl Left Arm.1]
+type = Posadd
+time = 319
+x = 4
+y = 2
