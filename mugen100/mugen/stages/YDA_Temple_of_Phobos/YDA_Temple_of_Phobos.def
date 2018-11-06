@@ -25,7 +25,7 @@ spr = YDA_Temple_of_Phobos.sff
 debugbg = 0
 ;--------------------------------------------------------
 [Music]
-bgmusic = 
+bgmusic = sound/208_STAGE_GUY.mp3
 bgvolume = 225
 
 ;--------------------------------------------------------
