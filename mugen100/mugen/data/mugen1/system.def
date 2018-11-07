@@ -83,19 +83,19 @@ title.bgm.loop = 1        ;Set to 0 to prevent looping
 title.bgm.loopstart = 
 title.bgm.loopend = 
   ;Music to play at char select screen.
-select.bgm = 
+select.bgm = sound\09_Sacred_Ground_Te.mp3
 select.bgm.volume = 
 select.bgm.loop = 1
 select.bgm.loopstart =
 select.bgm.loopend = 
   ;Music to play at versus screen.
-vs.bgm = 
-vs.bgm.volume = 
+vs.bgm = sound\sf2.mp3
+vs.bgm.volume = sound\sf2.mp3
 vs.bgm.loop = 0
 vs.bgm.loopstart =
 vs.bgm.loopend = 
   ;Music to play at victory screen.
-victory.bgm = 
+victory.bgm = sound\20_SVC_Poem_of_Hell.mp3
 victory.bgm.volume =
 victory.bgm.loop = 0
 victory.bgm.loopstart =

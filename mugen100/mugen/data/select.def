@@ -105,6 +105,8 @@ stages\sfiii2_gouki\sfiii2_gouki\sfiii2_gouki.def
 stages\SF3-Ryubg.def
 stages\Marsh.def
 stages\YDA_Temple_of_Phobos\YDA_Temple_of_Phobos.def
+stages\_DBFZ_Asteroid_Battlefield_V2\[DBFZ]Asteroid_Battlefield.def
+stages\DM_supreme_kais_planet\DM_supreme_kais_planet.def
 
 ;---------------------------------------------------------------------
 [Options]
@@ -115,6 +117,8 @@ stages\YDA_Temple_of_Phobos\YDA_Temple_of_Phobos.def
  ;characters who have order=1, followed by 3 with order=2 and 1 with
  ;order=3.
 arcade.maxmatches = 6,1,1,0,0,0,0,0,0,0
+
+bgmusic = sounds/09_Sacred_Ground_Te.mp3
 
  ;Maximum number of matches to fight before game ends in Team Mode.
  ;Like arcade.maxmatches, but applies to Team Battle.

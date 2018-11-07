@@ -1,0 +1,4 @@
+bgmloopstart = 244087
+bmgloopend = 2957823
+
+Put this under bgvolume, now it will loop until the match is fully over. Have fun. - Flare Gamer 64
