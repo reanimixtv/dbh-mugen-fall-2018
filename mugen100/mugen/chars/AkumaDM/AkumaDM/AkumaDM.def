@@ -42,5 +42,5 @@ pal12   = Palletes\demon.act
 
 
 [Arcade]
-intro.storyboard = 
-ending.storyboard = 
+intro.storyboard = introakuma.def
+ending.storyboard = ENDING AKUMA USFIV 1.1.def

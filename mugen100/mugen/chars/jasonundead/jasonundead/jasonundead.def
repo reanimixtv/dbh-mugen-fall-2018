@@ -33,5 +33,5 @@ pal11 = MDDMvCAlt4.act
 pal12 = MDDMvCAlt5.act
 
 [Arcade]
-intro.storyboard = 
-ending.storyboard = 
+intro.storyboard = Jason Intro 2.def
+ending.storyboard = Mike Myers story.def

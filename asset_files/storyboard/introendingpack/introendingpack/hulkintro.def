@@ -1,0 +1,32 @@
+hulk intro ending by nick
+;------------------------------------
+[SceneDef]; 
+spr = hulkintro.sff
+
+startscene = 0
+
+;------------------------------------
+[Scene 0]
+bgm = hulk.mid
+bgm.loop = 1 
+fadein.time = 30
+fadout.time = 30 
+fadein.col = 0,0,0 
+
+fadeout.col = 0,0,0 
+
+clearcolor = 0,0,0
+layerall.pos = 0,0
+layer0.anim = 0 
+layer0.starttime = 0
+end.time = 1800 
+
+
+[Begin Action 0]
+0,0, 0, 0, 250
+0,1, 0, 0, 250
+0,2, 0, 0, 250
+0,3, 0, 0, 250
+0,4, 0, 0, 250
+0,5, 0, 0, 250
+0,6, 0, 0, 300

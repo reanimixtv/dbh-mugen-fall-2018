@@ -1,0 +1,1253 @@
+[SceneDef]
+spr = mshntro.sff
+startscene = 0
+
+[Scene 0]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 0.2]
+clearcolor = 0,0,0
+bg.name = Scene0bg
+end.time = 1
+
+[Scene0bgDef]
+
+[Scene0bg advisory]
+type = normal
+spriteno = 30,0
+
+[Scene 0.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 1]
+fadeout.time = 110
+fadeout.col = 255,255,255
+bg.name = Scene1bg
+end.time = 250
+bgm = MarvelSuperHeroes.mp3
+bgm.loop = 0
+
+[Scene1bgDef]
+
+[Scene1bg burst]
+type  = anim
+actionno = 31
+
+[Begin Action 31]
+18,0, 0,0, 5
+31,0, 0,0, 2
+31,1, 0,0, 2
+31,2, 0,0, 2
+31,3, 0,0, 2
+31,4, 0,0, 2
+31,5, 0,0, 2
+31,6, 0,0, 2
+31,7, 0,0, 2
+31,8, 0,0, 2
+31,9, 0,0, 2
+31,10, 0,0, 2
+31,11, 0,0, 2
+31,12, 0,0, 2
+31,13, 0,0, 2
+31,14, 0,0, 2
+31,15, 0,0, 2
+31,16, 0,0, 2
+31,17, 0,0, 2
+31,18, 0,0, 2
+31,19, 0,0, 2
+31,20, 0,0, 2
+31,21, 0,0, 2
+31,22, 0,0, 2
+31,23, 0,0, 2
+31,24, 0,0, 2
+31,25, 0,0, -1
+
+[Scene1bg logo]
+type = normal
+spriteno = 32,0
+mask = 1
+
+[Scene 1.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 2]
+;bgm = sound/mshntro.mp3
+;bgm.loop = 0
+bg.name = Scene2bg
+end.time = 60
+
+[Scene2bgDef]
+
+[Scene2bg stars]
+type  = anim
+actionno = 4
+
+[Scene2bg gemspin]
+type  = anim
+actionno = 3
+
+[Begin Action 3]
+-1,-1, 0,0, 1
+3,0, 0,0, 1
+3,1, 0,0, 1
+3,2, 0,0, 1
+3,3, 0,0, 1
+3,4, 0,0, 1
+3,5, 0,0, 1
+3,6, 0,0, 1
+3,7, 0,0, 1
+3,8, 0,0, 1
+3,9, 0,0, 1
+3,10, 0,0, 1
+3,11, 0,0, 1
+3,12, 0,0, 1
+3,13, 0,0, 1
+3,14, 0,0, 1
+3,15, 0,0, 1
+3,16, 0,0, 1
+3,17, 0,0, 1
+3,18, 0,0, 1
+3,19, 0,0, 1
+3,20, 0,0, 1
+3,21, 0,0, 1
+3,22, 0,0, 1
+3,23, 0,0, 1
+3,24, 0,0, 1
+3,25, 0,0, 1
+3,26, 0,0, 1
+3,27, 0,0, 1
+3,28, 0,0, 1
+3,29, 0,0, 1
+3,30, 0,0, 1
+3,31, 0,0, 1
+3,32, 0,0, 1
+3,33, 0,0, 1
+3,34, 0,0, 1
+-1,-1, 0,0, -1
+
+[Begin Action 4]
+4,1, 0,0, 59
+4,0, 0,0, -1
+
+[Scene 2.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 3]
+bg.name = Scene3bg
+end.time = 30
+
+[Scene3bgDef]
+
+[Scene3bg juggspidwind]
+type  = anim
+actionno = 2
+
+[Scene3bg jugghit]
+type = normal
+spriteno = 1,1
+mask = 1
+id = 1
+
+[Scene3bg spiderkick]
+type = normal
+spriteno = 1,0
+velocity = 2.8,-2.8
+mask = 1
+
+[Scene3bgCtrlDef 1]
+CtrlID = 1
+
+[Scene3bgCtrl 1.2] 
+type = Velset
+time = 20
+x = 2.7
+y = -2.7
+
+[Begin Action 2]
+2,0, 0,0, 1
+2,1, 0,0, 1
+2,2, 0,0, 1
+2,3, 0,0, 1
+2,4, 0,0, 1
+2,5, 0,0, 1
+2,6, 0,0, 1
+2,7, 0,0, 1
+2,8, 0,0, 1
+2,9, 0,0, 1
+2,10, 0,0, 1
+2,11, 0,0, 1
+2,12, 0,0, 1
+2,13, 0,0, 1
+2,14, 0,0, 1
+
+[Scene 4]
+clearcolor = 255,255,255
+end.time = 15
+
+[Scene 5]
+fadein.time = 80
+fadein.col = 255,255,255
+bg.name = Scene5bg
+end.time = 80
+
+[Scene5bgDef]
+
+[Scene5bg back]
+type  = anim
+actionno = 2
+
+[Scene5bg jugghit]
+type = normal
+spriteno = 1,1
+start = 50,-50
+velocity = .3,-.3
+mask = 1
+
+[Scene5bg spiderkick]
+type = normal
+spriteno = 1,0
+start = 160,-160
+mask = 1
+id = 1
+
+[Scene5bgCtrlDef 1]
+CtrlID = 1
+
+[Scene5bgCtrl 1.1] 
+type = Velset
+time = 0
+x = 1
+y = -1
+
+[Scene5bgCtrl 1.2] 
+type = Velset
+time = 50
+x = .3
+y = -.3
+
+[Scene 5.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 6]
+bg.name = Scene6bg
+end.time = 40
+
+[Scene6bgDef]
+
+[Scene6bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene6bg spiderman]
+type = normal
+spriteno = 29,6
+mask = 1
+
+[Scene 7]
+bg.name = Scene7bg
+end.time = 10
+
+[Scene7bgDef]
+
+[Scene7bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene7bg glove]
+type = normal
+spriteno = 22,0
+start = 0,10
+mask = 1
+
+[Scene7bg mshtitle]
+type = normal
+spriteno = 24,22
+mask = 1
+
+[Scene7bg flash]
+type  = anim
+actionno = 5
+
+[Begin Action 5]
+-1,-1, 0,0, 5
+31,25, 0,0, -1
+
+[Scene 8]
+bg.name = Scene8bg
+end.time = 40
+
+[Scene8bgDef]
+
+[Scene8bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene8bg jugg]
+type = normal
+spriteno = 29,3
+mask = 1
+
+[Scene 8.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 9]
+bg.name = Scene9bg
+end.time = 30
+
+[Scene9bgDef]
+
+[Scene9bg wolvbheartwind]
+type  = anim
+actionno = 7
+
+[Scene9bg bheart]
+type = normal
+spriteno = 6,0
+mask = 1
+id = 1
+
+[Scene9bg wolvjump]
+type = normal
+spriteno = 6,1
+velocity = -3.9,3.9
+mask = 1
+
+[Scene9bgCtrlDef 1]
+CtrlID = 1
+
+[Scene9bgCtrl 1.2] 
+type = Velset
+time = 20
+x = -3.9
+y = 3.9
+
+[Begin Action 7]
+7,0, 0,0, 1
+7,1, 0,0, 1
+7,2, 0,0, 1
+7,3, 0,0, 1
+7,4, 0,0, 1
+7,5, 0,0, 1
+7,6, 0,0, 1
+7,7, 0,0, 1
+7,8, 0,0, 1
+7,9, 0,0, 1
+7,10, 0,0, 1
+7,11, 0,0, 1
+7,12, 0,0, 1
+7,13, 0,0, 1
+7,14, 0,0, 1
+7,15, 0,0, 1
+7,16, 0,0, 1
+7,17, 0,0, 1
+7,18, 0,0, 1
+7,19, 0,0, 1
+7,20, 0,0, 1
+
+[Scene 10]
+clearcolor = 255,255,255
+end.time = 20
+
+[Scene 11]
+fadein.time = 60
+fadein.col = 255,255,255
+bg.name = Scene11bg
+end.time = 70
+
+[Scene11bgDef]
+
+[Scene11bg wolvbheartwind]
+type  = anim
+actionno = 7
+
+[Scene11bg bheart]
+type = normal
+spriteno = 6,0
+start = -50,50
+velocity = -.4,.4
+mask = 1
+
+[Scene11bg wolvjump]
+type = normal
+spriteno = 6,1
+start = -160,160
+velocity = -.3,.3
+mask = 1
+
+[Scene 11.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 12]
+bg.name = Scene12bg
+end.time = 40
+
+[Scene12bgDef]
+
+[Scene12bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene12bg wolverine]
+type = normal
+spriteno = 29,7
+mask = 1
+
+[Scene 13]
+bg.name = Scene7bg
+end.time = 10
+
+[Scene 14]
+bg.name = Scene14bg
+end.time = 40
+
+[Scene14bgDef]
+
+[Scene14bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene14bg bheart]
+type = normal
+spriteno = 29,0
+mask = 1
+
+[Scene 14.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 15]
+bg.name = Scene15bg
+end.time = 50
+
+[Scene15bgDef]
+
+[Scene15bg magback]
+type = normal
+spriteno = 8,0
+
+[Scene15bg magneto]
+type  = anim
+actionno = 9
+id = 1
+
+[Begin Action 9]
+9,0, 0,0, 1
+9,1, 0,0, 1
+9,2, 0,0, 1
+9,3, 0,0, 1
+
+[Scene15bgCtrlDef 1]
+CtrlID = 1
+
+[Scene15bgCtrl 1.1]
+type = Velset
+time = 0
+x = 10
+y = -4
+
+[Scene15bgCtrl 1.2]
+type = Velset
+time = 30
+x = 0
+y = 0
+
+[Scene 15.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 16]
+bg.name = Scene16bg
+end.time = 50
+
+[Scene16bgDef]
+
+[Scene16bg ironback]
+type = normal
+spriteno = 10,0
+
+[Scene16bg ironman]
+type  = anim
+actionno = 11
+id = 1
+
+[Begin Action 11]
+11,0, 0,0, 1
+11,1, 0,0, 1
+11,2, 0,0, 1
+11,3, 0,0, 1
+
+[Scene16bgCtrlDef 1]
+CtrlID = 1
+
+[Scene16bgCtrl 1.1]
+type = Velset
+time = 0
+x = -6
+y = -3
+
+[Scene16bgCtrl 1.2]
+type = Velset
+time = 30
+x = 0
+y = 0
+
+[Scene 16.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 17]
+bg.name = Scene17bg
+end.time = 40
+
+[Scene17bgDef]
+
+[Scene17bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene17bg magneto]
+type = normal
+spriteno = 29,4
+mask = 1
+
+[Scene 18]
+bg.name = Scene7bg
+end.time = 10
+
+[Scene 19]
+bg.name = Scene19bg
+end.time = 40
+
+[Scene19bgDef]
+
+[Scene19bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene19bg ironman]
+type = normal
+spriteno = 29,2
+mask = 1
+
+[Scene 19.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 20]
+bg.name = Scene20bg
+end.time = 80
+
+[Scene20bgDef]
+
+[Scene20bg shumamerwind]
+type = normal
+spriteno = 12,0
+tile = 0,1
+velocity = 0,15
+
+[Scene20bg shumaknock]
+type = normal
+spriteno = 13,0
+velocity = 0,-9
+mask = 1
+
+[Scene20bg captainsmack]
+type = normal
+spriteno = 13,1
+mask = 1
+id = 1
+
+[Scene20bgCtrlDef 1]
+CtrlID = 1
+
+[Scene20bgCtrl 1.1]
+type = Velset
+time = 0
+y = -9
+
+[Scene20bgCtrl 1.2]
+type = Velset
+time = 40
+y = -.5
+
+[Scene 21.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 22]
+bg.name = Scene22bg
+end.time = 40
+
+[Scene22bgDef]
+
+[Scene22bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene22bg camerica]
+type = normal
+spriteno = 29,1
+mask = 1
+
+[Scene 23]
+bg.name = Scene7bg
+end.time = 10
+
+[Scene 24]
+bg.name = Scene24bg
+end.time = 40
+
+[Scene24bgDef]
+
+[Scene24bg stars]
+type = normal
+spriteno = 4,0
+
+[Scene24bg shuma]
+type = normal
+spriteno = 29,5
+mask = 1
+
+[Scene 24.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 25]
+bg.name = Scene25bg
+end.time = 62
+
+[Scene25bgDef]
+
+[Scene25bg stars]
+type  = anim
+actionno = 42
+
+[Begin Action 42]
+4,1, 0,0, 42
+4,0, 0,0, -1
+
+[Scene25bg gemdrop]
+type  = anim
+actionno = 15
+
+[Begin Action 15]
+-1,-1, 0,0, 5
+14,0, 0,-111, 1
+14,0, 0,-105, 1
+14,0, 0,-99, 1
+14,0, 0,-93, 1
+14,0, 0,-87, 1
+14,0, 0,-81, 1
+14,0, 0,-75, 1
+14,0, 0,-69, 1
+14,0, 0,-63, 1
+14,0, 0,-57, 1
+14,0, 0,-51, 1
+14,0, 0,-45, 1
+14,0, 0,-39, 1
+14,0, 0,-33, 1
+14,0, 0,-27, 1
+14,0, 0,-21, 1
+14,0, 0,-15, 1
+14,0, 0,-9, 1
+14,0, 0,-3, 1
+14,0, 0,0, 1
+15,0, 0,0, 1
+15,1, 0,0, 1
+15,2, 0,0, 1
+15,3, 0,0, 1
+15,4, 0,0, 1
+15,5, 0,0, 1
+15,6, 0,0, 1
+15,7, 0,0, 1
+15,8, 0,0, 1
+15,9, 0,0, 1
+15,10, 0,0, 1
+15,11, 0,0, 1
+15,12, 0,0, 1
+15,13, 0,0, 1
+15,14, 0,0, 1
+15,15, 0,0, 1
+15,16, 0,0, 1
+15,17, 0,0, 1
+15,18, 0,0, 1
+15,19, 0,0, 1
+15,20, 0,0, 1
+15,21, 0,0, 1
+15,22, 0,0, 1
+15,23, 0,0, 1
+15,24, 0,0, 1
+15,25, 0,0, 1
+15,26, 0,0, 1
+15,27, 0,0, 1
+15,28, 0,0, 1
+15,29, 0,0, 1
+15,30, 0,0, 1
+15,31, 0,0, 1
+15,32, 0,0, 1
+15,33, 0,0, 1
+15,34, 0,0, 1
+15,35, 0,0, 1
+15,36, 0,0, -1
+
+[Scene 25.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 26]
+bg.name = Scene26bg
+end.time = 70
+
+[Scene26bgDef]
+
+[Scene26bg psywind]
+type = normal
+spriteno = 16,0
+tile = 1,0
+velocity = 15,0
+
+[Scene26bg psylocke]
+type = normal
+spriteno = 17,0
+mask = 1
+id = 1
+
+[Scene26bgCtrlDef 1]
+CtrlID = 1
+
+[Scene26bgCtrl 1.1]
+type = Velset
+time = 0
+x = -5
+
+[Scene26bgCtrl 1.2]
+type = Velset
+time = 30
+x = -.2
+
+[Scene 26.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 27]
+fadeout.time = 10
+fadeout.col = 255,255,255
+bg.name = Scene27bg
+end.time = 20
+
+[Scene27bgDef]
+
+[Scene27bg starburst]
+type = normal
+spriteno = 18,0
+
+[Scene 28]
+fadein.time = 40
+fadein.col = 255,255,255
+bg.name = Scene28bg
+end.time = 60
+
+[Scene28bgDef]
+
+[Scene28bg starburst]
+type = normal
+spriteno = 18,0
+
+[Scene28bg psykick]
+type  = anim
+actionno = 19
+velocity = -.5,-.1
+
+[Begin Action 19]
+19,0, 0,0, 3
+19,0, -1,0, 3
+19,0, -2,0, 3
+
+[Scene28bg hulkshove]
+type  = anim
+actionno = 20
+velocity = .5,-.1
+
+[Begin Action 20]
+20,0, 0,0, 3
+20,1, 0,0, 3
+
+[Scene28bg spider]
+type  = anim
+actionno = 51
+velocity = .5,0
+
+[Begin Action 51]
+19,2, 0,0, 3
+19,2, -1,-1, 3
+19,2, -2,0, 3
+
+[Scene28bg wolv]
+type  = anim
+actionno = 50
+velocity = -.5,0
+
+[Begin Action 50]
+19,1, 0,0, 3
+19,1, -1,0, 3
+19,1, -2,1, 3
+
+[Scene28bg doom]
+type  = anim
+actionno = 53
+velocity = -.5,.1
+
+[Begin Action 53]
+20,6, 0,0, 3
+20,7, 0,0, 4
+
+[Scene28bg magnus]
+type  = anim
+actionno = 52
+velocity = .5,.1
+
+[Begin Action 52]
+20,4, 0,0, 3
+20,2, 0,0, 3
+20,4, 0,0, 3
+20,5, 0,0, 3
+
+[Scene28bg gemscome]
+type  = anim
+actionno = 21
+
+
+[Begin Action 21]
+-1,-1, 0,0, 30
+21,0, 0,0, 1
+21,1, 0,0, 1
+21,2, 0,0, 1
+21,3, 0,0, 1
+21,4, 0,0, 1
+21,5, 0,0, 1
+21,6, 0,0, 1
+21,7, 0,0, 1
+21,8, 0,0, 1
+21,9, 0,0, 1
+21,10, 0,0, 1
+21,11, 0,0, 1
+21,12, 0,0, 1
+21,13, 0,0, 1
+21,14, 0,0, 1
+21,15, 0,0, 1
+21,16, 0,0, 1
+21,17, 0,0, 1
+21,18, 0,0, 1
+21,19, 0,0, 1
+21,20, 0,0, 1
+21,21, 0,0, 1
+21,22, 0,0, 1
+21,23, 0,0, 1
+21,24, 0,0, 1
+21,25, 0,0, 1
+21,26, 0,0, 1
+21,27, 0,0, 1
+21,28, 0,0, 1
+21,29, 0,0, 1
+21,30, 0,0, 1
+21,31, 0,0, 1
+21,32, 0,0, 1
+21,33, 0,0, 1
+21,34, 0,0, 1
+21,35, 0,0, 1
+21,36, 0,0, 1
+-1,-1, 0,0, -1
+
+[Scene 28.5]
+clearcolor = 0,0,0
+end.time = 5
+
+[Scene 29]
+bg.name = Scene29bg
+end.time = 491
+
+[Scene29bgDef]
+
+[Scene29bg stars]
+type = normal
+spriteno = 4,0
+start = 0, -48
+
+[Scene29bg glove]
+type  = anim
+actionno = 22
+
+[Begin Action 22]
+-1,-1, 0,0, 2
+22,0, 0,200, 1
+22,0, 0,190, 1
+22,0, 0,180, 1
+22,0, 0,170, 1
+22,0, 0,160, 1
+22,0, 0,150, 1
+22,0, 0,140, 1
+22,0, 0,130, 1
+22,0, 0,120, 1
+22,0, 0,110, 1
+22,0, 0,100, 1
+22,0, 0,90, 1
+22,0, 0,80, 1
+22,0, 0,70, 1
+22,0, 0,60, 1
+22,0, 0,50, 1
+22,0, 0,40, 1
+22,0, 0,30, 1
+22,0, 0,20, 1
+22,0, 0,10, 1
+22,0, 0,0, 2
+22,0, 0,10, 2
+22,0, 0,5, 2
+22,0, 0,10, 2
+22,0, 0,5, 2
+22,0, 0,10, 2
+22,0, 0,8, 2
+22,0, 0,10, 1
+22,0, 0,8, 1
+22,0, 0,10, 1
+22,0, 0,9, 1
+22,0, 0,10, -1
+
+[Scene29bg titlelower]
+type  = anim
+actionno = 24
+
+[Scene29bg crowdrumble]
+type  = anim
+actionno = 23
+
+[Begin Action 23]
+-1,-1, 0,0, 5
+23,0, 0,0, 1
+23,1, 0,0, 1
+23,2, 0,0, 1
+23,3, 0,0, 1
+23,4, 0,0, 1
+23,5, 0,0, 1
+23,6, 0,0, 1
+23,7, 0,0, 1
+23,8, 0,0, 1
+23,9, 0,0, 1
+23,10, 0,0, 1
+23,11, 0,0, 1
+23,12, 0,0, 1
+23,13, 0,0, 1
+23,14, 0,0, 1
+23,15, 0,0, 1
+23,16, 0,0, 1
+23,17, 0,0, 1
+23,18, 0,0, 1
+23,19, 0,0, 1
+23,20, 0,0, 1
+23,21, 0,0, 1
+23,22, 0,0, 1
+23,23, 0,0, 1
+23,24, 0,0, 1
+23,25, 0,0, 1
+23,26, 0,0, 1
+23,27, 0,0, 1
+23,28, 0,0, 1
+23,29, 0,0, -1
+
+[Scene29bg titlelower]
+type  = anim
+actionno = 242
+
+[Begin Action 24]
+-1,-1, 0,0, 18
+24,0, 0,0, 1
+24,1, 0,0, 1
+24,2, 0,0, 1
+24,3, 0,0, 1
+24,4, 0,0, 1
+24,5, 0,0, 1
+24,6, 0,0, 1
+24,7, 0,0, 1
+24,8, 0,0, 1
+24,9, 0,0, 1
+24,10, 0,0, 1
+24,11, 0,0, 1
+24,12, 0,0, 1
+24,13, 0,0, 1
+24,14, 0,0, 1
+24,15, 0,0, 1
+24,16, 0,0, 1
+24,17, 0,0, 1
+-1,-1, 0,0, -1
+
+[Begin Action 242]
+-1,-1, 0,0, 36
+24,18, 0,0, 1
+24,19, 0,0, 1
+24,20, 0,0, 1
+24,21, 0,0, 1
+24,22, 0,0, -1
+
+[Scene29bg titlesparkle]
+type  = anim
+actionno = 25
+
+[Begin Action 25]
+-1,-1, 0,0, 41
+LoopStart
+25,0, 0,0, 1
+25,1, 0,0, 1
+25,2, 0,0, 1
+25,3, 0,0, 1
+25,4, 0,0, 1
+25,5, 0,0, 1
+25,6, 0,0, 1
+25,7, 0,0, 1
+25,8, 0,0, 1
+25,9, 0,0, 1
+25,10, 0,0, 1
+25,11, 0,0, 1
+25,12, 0,0, 1
+25,13, 0,0, 1
+25,14, 0,0, 1
+25,15, 0,0, 1
+25,16, 0,0, 1
+25,17, 0,0, 1
+25,18, 0,0, 1
+25,19, 0,0, 1
+25,20, 0,0, 1
+25,21, 0,0, 1
+25,22, 0,0, 1
+25,23, 0,0, 1
+25,24, 0,0, 1
+25,25, 0,0, 1
+25,26, 0,0, 1
+25,27, 0,0, 1
+25,28, 0,0, 1
+25,29, 0,0, 1
+25,30, 0,0, 1
+25,31, 0,0, 1
+25,32, 0,0, 1
+25,33, 0,0, 1
+25,34, 0,0, 1
+25,35, 0,0, 1
+25,36, 0,0, 1
+25,37, 0,0, 1
+25,38, 0,0, 1
+25,39, 0,0, 1
+25,40, 0,0, 1
+25,41, 0,0, 1
+25,42, 0,0, 1
+25,43, 0,0, 1
+25,44, 0,0, 1
+25,45, 0,0, 1
+25,46, 0,0, 1
+25,47, 0,0, 1
+25,48, 0,0, 1
+25,49, 0,0, 1
+25,50, 0,0, 1
+25,51, 0,0, 1
+25,52, 0,0, 1
+25,53, 0,0, 1
+25,54, 0,0, 1
+25,55, 0,0, 1
+25,56, 0,0, 1
+25,57, 0,0, 1
+25,58, 0,0, 1
+25,59, 0,0, 1
+25,60, 0,0, 1
+25,61, 0,0, 1
+25,62, 0,0, 1
+25,62, 0,0, 1
+25,63, 0,0, 1
+25,64, 0,0, 1
+25,65, 0,0, 1
+25,66, 0,0, 1
+25,67, 0,0, 1
+25,68, 0,0, 1
+25,69, 0,0, 1
+25,70, 0,0, 1
+25,71, 0,0, 1
+25,72, 0,0, 1
+25,73, 0,0, 1
+25,74, 0,0, 1
+25,75, 0,0, 1
+25,76, 0,0, 1
+25,77, 0,0, 1
+25,78, 0,0, 1
+25,79, 0,0, 1
+25,80, 0,0, 1
+25,81, 0,0, 1
+25,82, 0,0, 1
+25,83, 0,0, 1
+25,84, 0,0, 1
+25,85, 0,0, 1
+25,86, 0,0, 1
+25,87, 0,0, 1
+25,88, 0,0, 1
+25,89, 0,0, 1
+25,90, 0,0, 1
+25,91, 0,0, 1
+25,92, 0,0, 1
+25,93, 0,0, 1
+25,94, 0,0, 1
+25,95, 0,0, 1
+25,96, 0,0, 1
+25,97, 0,0, 1
+25,98, 0,0, 1
+25,99, 0,0, 1
+25,100, 0,0, 1
+25,101, 0,0, 1
+25,102, 0,0, 1
+25,103, 0,0, 1
+25,104, 0,0, 1
+25,105, 0,0, 1
+25,106, 0,0, 1
+25,107, 0,0, 1
+25,108, 0,0, 1
+25,109, 0,0, 1
+25,110, 0,0, 1
+25,111, 0,0, 1
+25,112, 0,0, 1
+25,113, 0,0, 1
+25,114, 0,0, 1
+25,115, 0,0, 1
+25,116, 0,0, 1
+25,117, 0,0, 1
+25,118, 0,0, 1
+25,119, 0,0, 1
+25,120, 0,0, 1
+25,121, 0,0, 1
+25,122, 0,0, 1
+25,123, 0,0, 1
+25,124, 0,0, 1
+25,125, 0,0, 1
+25,126, 0,0, 1
+25,127, 0,0, 1
+25,128, 0,0, 1
+25,129, 0,0, 1
+25,130, 0,0, 1
+25,131, 0,0, 1
+25,132, 0,0, 1
+25,133, 0,0, 1
+25,134, 0,0, 1
+25,135, 0,0, 1
+25,136, 0,0, 1
+25,137, 0,0, 1
+25,138, 0,0, 1
+25,139, 0,0, 1
+25,140, 0,0, 1
+25,141, 0,0, 1
+25,142, 0,0, 1
+25,143, 0,0, 1
+25,144, 0,0, 1
+25,145, 0,0, 1
+25,146, 0,0, 1
+25,147, 0,0, 1
+25,148, 0,0, 1
+25,149, 0,0, 1
+25,150, 0,0, 1
+25,151, 0,0, 1
+25,152, 0,0, 1
+25,153, 0,0, 1
+25,154, 0,0, 1
+25,155, 0,0, 1
+25,156, 0,0, 1
+25,157, 0,0, 1
+25,158, 0,0, 1
+25,159, 0,0, 1
+25,160, 0,0, 1
+25,161, 0,0, 1
+25,162, 0,0, 1
+25,163, 0,0, 1
+25,164, 0,0, 1
+25,165, 0,0, 1
+25,166, 0,0, 1
+25,167, 0,0, 1
+25,168, 0,0, 1
+25,169, 0,0, 1
+25,170, 0,0, 1
+25,171, 0,0, 1
+25,172, 0,0, 1
+25,173, 0,0, 1
+25,174, 0,0, 1
+25,175, 0,0, 1
+25,176, 0,0, 1
+25,177, 0,0, 1
+25,178, 0,0, 1
+25,179, 0,0, 1
+25,180, 0,0, 1
+25,181, 0,0, 1
+25,182, 0,0, 1
+25,183, 0,0, 1
+25,184, 0,0, 1
+25,185, 0,0, 1
+25,186, 0,0, 1
+25,187, 0,0, 1
+25,188, 0,0, 1
+25,189, 0,0, 1
+25,190, 0,0, 1
+25,191, 0,0, 1
+25,192, 0,0, 1
+25,193, 0,0, 1
+25,194, 0,0, 1
+25,195, 0,0, 1
+25,196, 0,0, 1
+25,197, 0,0, 1
+25,198, 0,0, 1
+25,199, 0,0, 1
+25,200, 0,0, 1
+25,201, 0,0, 1
+25,202, 0,0, 1
+25,203, 0,0, 1
+25,204, 0,0, 1
+25,205, 0,0, 1
+25,206, 0,0, 1
+25,207, 0,0, 1
+25,208, 0,0, 1
+25,209, 0,0, 1
+25,210, 0,0, 1
+25,211, 0,0, 1
+25,212, 0,0, 1
+25,213, 0,0, 1
+25,214, 0,0, 1
+25,215, 0,0, 1
+25,216, 0,0, 1
+25,217, 0,0, 1
+25,218, 0,0, 1
+25,219, 0,0, 1
+25,220, 0,0, 1
+25,221, 0,0, 1
+25,222, 0,0, 1
+25,223, 0,0, 1
+25,224, 0,0, 1
+
+[Scene29bg capcom]
+type  = anim
+actionno = 28
+
+[Begin Action 28]
+-1,-1, 0,0, 5
+28,0, 0,0, -1
+
+[Scene29bg comics]
+type  = anim
+actionno = 27
+
+[Begin Action 27]
+-1,-1, 0,0, 41
+27,0, 0,0, -1
+
+[Scene29bg tm]
+type  = anim
+actionno = 26
+
+[Begin Action 26]
+-1,-1, 0,0, 41
+26,0, 0,0, -1

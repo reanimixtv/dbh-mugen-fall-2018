@@ -24,6 +24,7 @@ pal3    = ndaf.act
 
 [Arcade]
 intro.storyboard  = FreddyIntro2.def
+ending.storyboard = FreddyEnding.def
 
 
 

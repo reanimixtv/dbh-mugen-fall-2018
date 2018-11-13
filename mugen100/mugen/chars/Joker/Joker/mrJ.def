@@ -1,0 +1,37 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="The Joker"
+displayname ="The Joker"
+versiondate =06.07.2008
+mugenversion = 
+author ="Legends of the Dark Knight Team & Friends"
+pal.defaults =1
+
+[Files]
+sprite =Template.sff
+anim =Template.air
+sound =Template.snd
+cmd =Template.cmd
+cns =Template.cns
+stcommon =Common1.cns
+st =Basics.st
+pal1=JOKERTAS.act
+pal2=tas2.act
+pal3=TUX.act
+pal4=JLU.act
+pal5=JOKESTER.act
+pal6=DKR.act
+st1=Specials.st
+st2=Hypers.st
+st3=Statedef-2.st
+st4=Statedef-3.st
+st5=Flight.st
+st6=Extra.st
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

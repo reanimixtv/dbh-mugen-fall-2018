@@ -1,0 +1,34 @@
+;jokerending by shaka181, Sookie
+
+
+[SceneDef]
+spr = jokerending2.sff       
+
+[Info]
+localcoord = 1280,720
+
+
+
+[Scene 0]
+layerall.pos = 160,120 ;Default position for all layers
+layer0.anim =  0       ;Anim action number for slideshow pictures
+; Total time
+end.time = 2400     ;600 ticks = 10 seconds
+clearcolor = 0,0,0
+bgm = jokerending.mp3
+bgm.loop = 1
+
+[Begin Action 0]
+0,0, 0,0, 600
+0,1, 0,0, 600
+0,2, 0,0, 600
+0,3, 0,0, 600
+
+
+
+
+
+
+
+
+

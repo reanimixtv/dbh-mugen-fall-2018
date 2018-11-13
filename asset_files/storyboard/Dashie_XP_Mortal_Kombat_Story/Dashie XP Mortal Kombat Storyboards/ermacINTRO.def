@@ -1,0 +1,23 @@
+[SceneDef]
+spr = ermacintro.sff
+startscene = 0         ;Starting scene number (for debugging)
+
+
+[Scene ermac]
+fadein.time = 60
+fadein.col = 0,0,0
+fadeout.time = 60
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+layer1.anim =  0
+layer1.offset = 0,0
+layer2.anim = 6
+layer2.offset = 0,0
+end.time = 3900
+bgm = ermac.mp3
+bgm.loop =0
+
+[Begin Action 0];Background image
+0,0, 0,0, -1
+[Begin Action 6];ermac
+1,5, 0,0, -1
