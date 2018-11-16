@@ -54,7 +54,7 @@ fade.range	= -200,-50
 ;intensity	= 128
 
 [Music]
-bgmusic 	= 
+bgmusic 	= sound/Arabesque.mp3
 bgvolume 	= 0
 
 [BGdef]

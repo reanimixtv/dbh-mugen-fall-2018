@@ -62,8 +62,8 @@ intensity = 64
 intensity = 0
 
 [Music]
-bgmusic = 
-bgvolume = 210
+bgmusic = sound/Rising Dragoon.mp3
+bgvolume = 255
 
 [BGdef]
 spr = sfiii2_gouki.sff

@@ -29,4 +29,4 @@ pal7 = xmaspalette.act
 
 [Arcade]
 intro.storyboard = ending.def
-ending.storyboard = ending.def
+ending.storyboard = deadpoolend.def

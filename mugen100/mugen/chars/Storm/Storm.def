@@ -39,4 +39,4 @@ st5=helpers.cns
 
 [Arcade]
 intro.storyboard=
-ending.storyboard=../data/ProjX/Ending01.def
+ending.storyboard= STORMEND.DEF

@@ -64,7 +64,7 @@ fade.range = -400,-100
 intensity = 0
 ;--------------------------------------------------------
 [Music]
-bgmusic = ;sound/.mp3
+bgmusic = sound/Spinning Bird.mp3
 bgvolume = 255
 ;--------------------------------------------------------
 [BGdef]

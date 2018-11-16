@@ -24,5 +24,5 @@ pal1=pal1.act
 
 [Arcade]
 intro.storyboard =arcade.def
-ending.storyboard=
+ending.storyboard= msmend.def
 ;ending.storyboard =

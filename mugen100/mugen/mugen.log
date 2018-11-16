@@ -16,7 +16,7 @@ Opened mixer with parameters (44100, 16, 2, 2048)...
 OK
 Initializing BGM...BGMThreadInit returned 0
 OK
-Initializing graphics...gameCoord 1280x720...render mode 0_0...trying 1280x720x16 mode 0x0...success...OK
+Initializing graphics...gameCoord 1280x720...render mode 0_4...trying 1280x720x16 mode 0x0...success...OK
 Setting callbacks...OK
 Initializing font...OK
 Initializing game variables...OK
@@ -60,82 +60,29 @@ Loading system...
 System loaded OK
 Initialize OK
 Set up graphics...timer...OK
-Playing storyboard start.def: scene
-attempting load and start...attempting load of data/mugen1/start.ogg...hooking mixer callback...
+Playing storyboard logo2.def: scene
+attempting load and start...attempting load of data/mugen1/qsound logo.mp3...hooking mixer callback...
 success!
 starting BGM...
-Storyboard playback canceled 100:0 k3B p0
-Finished playing storyboard start.def: scene
+Storyboard playback canceled by Esc
+Finished playing storyboard logo2.def: scene
 Initializing character info...OK
 Initializing select screen...finding characters...OK
 
 Entering main loop
-Entering character select.
-attempting load and start...attempting load of data/snd/samori-919test-2.mp3...success!
+Playing storyboard start.def: scene
+attempting load and start...attempting load of data/mugen1/start.ogg...success!
 starting BGM...
-attempting load and start...attempting load of sound\09_sacred_ground_te.mp3...success!
-starting BGM...
-Loading character chars/jasonundead\jasonundead\jasonundead.def...
-  Loading info...OK
-  Loading cmd command set jason.cmd...OK
-  Loading cns jason.cns...OK
-  Loading cmd state entry jason.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff jason.sff...OK
-  Loading anim jason.air...OK
-  Loading snd jason.snd...OK
-  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
-  SFF v1.01 palette hack engaged.
-  2388 expressions (776 on trigger lines)
-Character jasonundead.def loaded OK
-Loading character chars/Deadpool-2\Deadpool.def...
-  Loading info...OK
-  Loading cmd command set Deadpool.cmd...OK
-  Loading cns Constants.cns...Playing storyboard chars/jasonundead\jasonundead\Jason Intro 2.def: scene
-OK
-  Loading cns States\Normal.cns...OK
-  Loading cns States\Specials.cns...OK
-  Loading cns States\Supers.cns...OK
-  Loading cns States\Helpers.cns...OK
-  Loading cns States\Customs.cns...OK
-  Loading cns config.txt...OK
-  Loading cmd state entry Deadpool.cmd...OK
-  Loading common states common1.cns...OK
-  Unloading command names...OK
-  Loading sff Deadpool.sff...OK
-  Loading anim Deadpool.air...OK
-  Loading snd Deadpool.snd...attempting load and start...attempting load of ./chars/jasonundead\jasonundead\jason voorhees theme remix.mp3...success!
-starting BGM...
-OK
-  Loading pals...OK
-  17579 expressions (4969 on trigger lines)
-Character Deadpool.def loaded OK
-Storyboard playback finished OK
-Finished playing storyboard chars/jasonundead\jasonundead\Jason Intro 2.def: scene
-attempting load and start...attempting load of sound\sf2.mp3...success!
-starting BGM...
-Initializing stage...
-  Loading BG...OK
-  Allocating helpers...OK
-Stage initialized OK
-attempting load of sound/kfm.mid...Couldn't open BGM file sound/kfm.mid!
-error 1!
-Start of game loop
-End of game loop
-Total time: 2.63s
-Total frames: 159 	Skipped frames: 0
-Avg game rate: 60.46
-Avg frame rate: 60.46
-
+Storyboard playback canceled by Esc
+Finished playing storyboard start.def: scene
 Entering character select.
 attempting load and start...attempting load of data/snd/samori-919test-2.mp3...success!
 starting BGM...
 Returned from main loop
 Deinitializing...
-Frames      : 159
-Time elapsed: 38.370 sec
-ticks: 3837, tps: 100, start 36, end 3873
+Frames      : 0
+Time elapsed: 7.030 sec
+ticks: 703, tps: 100, start 37, end 740
 
 Clearing player cache...OK
 Freeing character info...OK
@@ -149,11 +96,11 @@ Deintializing timer...OK
 Deinitializing graphics...OK
 Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
 
-Mixer callback was entered 826 times
-Mixer callback timing stats (last 826 calls):
-	4.000000 median, 5.934625 avg, 8.209381 sample std. dev.
-Top 10 slowest times:	123 (1), 96 (1), 58 (2), 57 (1), 51 (3), 50 (1), 47 (2), 46 (1), 43 (2), 41 (1)
-Top 10 fastest times:	2 (22), 3 (139), 4 (311), 5 (185), 6 (58), 7 (27), 8 (18), 9 (8), 10 (12), 11 (3)
+Mixer callback was entered 152 times
+Mixer callback timing stats (last 152 calls):
+	4.000000 median, 5.756579 avg, 6.598716 sample std. dev.
+Top 10 slowest times:	57 (1), 50 (1), 25 (1), 17 (1), 16 (3), 15 (2), 14 (2), 13 (1), 12 (1), 11 (3)
+Top 10 fastest times:	1 (2), 2 (17), 3 (26), 4 (54), 5 (16), 6 (10), 7 (3), 8 (3), 9 (3), 10 (2)
 OK
 Deinitializing sound...OK
 Successful program termination.

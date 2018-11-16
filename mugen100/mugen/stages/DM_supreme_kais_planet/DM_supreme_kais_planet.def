@@ -57,7 +57,7 @@ fade.range = 0,0
 intensity = 0
 
 [Music]
-bgmusic = sound/DBFZ_West_City.mp3
+bgmusic = sound/Dragon Ball Final Bout - Hero Of Heroes.mp3
 bgvolume = 255
 
 [BGdef]

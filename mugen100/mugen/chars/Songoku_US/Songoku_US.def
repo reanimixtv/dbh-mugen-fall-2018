@@ -5,6 +5,8 @@ versiondate = 05,15,2018
 mugenversion =
 author = "280gou"
 pal.defaults = 1
+intro.storyboard = goku.def
+ending.storyboard = SSJgodgokuending.def
 
 ; Files for the player
 [Files]

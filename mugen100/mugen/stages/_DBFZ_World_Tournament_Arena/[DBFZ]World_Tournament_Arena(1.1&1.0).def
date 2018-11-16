@@ -12,7 +12,7 @@ starty = 0
 boundleft = -178
 boundright = 178
 boundhigh = -990
-boundlow = 10
+boundlow = 0
 verticalfollow = 1.1
 floortension = 99
 tension = 80
@@ -69,7 +69,7 @@ intensity = 0
 bgmusic = sound/[DBFZ]World_Tournament_Arena.mp3
 ;bgmloopstart = <sample number>
 ;bgmloopend = <sample number>
-bgmvolume = 100
+bgmvolume = 250
 
 ;========================================================
 ;--------------------------------------------------------

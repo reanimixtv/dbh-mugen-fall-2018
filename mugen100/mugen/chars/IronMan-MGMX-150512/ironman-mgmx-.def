@@ -28,4 +28,4 @@ pal6		= mark_04.act
 
 [Arcade]
 intro.storyboard = 
-ending.storyboard = 
+ending.storyboard = ending.def

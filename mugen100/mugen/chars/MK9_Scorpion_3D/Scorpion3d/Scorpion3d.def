@@ -26,4 +26,4 @@ sound   = Scorpion.snd           ;Sound
 ; Arcade mode
 [Arcade]
 intro.storyboard = 
-ending.storyboard = 
+ending.storyboard = ending.def 

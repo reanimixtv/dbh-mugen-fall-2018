@@ -26,3 +26,5 @@ pal3     = PALETTES/IronMan_03.act
 pal4     = PALETTES/IronMan_04.act
 pal5     = PALETTES/IronMan_05.act
 pal6     = PALETTES/IronMan_06.act
+
+ending.storyboard = ending.def

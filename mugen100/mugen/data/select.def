@@ -71,9 +71,9 @@
  ;Insert your characters below.
 
 ReverseFlash\ReverseFlash.def, order=1
-Deadpool-2\Deadpool.def, stages\kfm.def, order=1
+Deadpool-2\Deadpool.def, order=1
 YuGi\YuGi\YuGiHD\YuGiHD.def
-Venom\Venom.def, stages\kfm.def, order=1
+Venom\Venom.def, order=1
 Gambit\Gambit\gambit.def
 Sabrewulf\Sabrewulf.def
 AkumaDM\AkumaDM\AkumaDM.def

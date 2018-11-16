@@ -49,7 +49,7 @@ color 		= 0,0,0
 yscale 		= .2
 
 [Music]
-bgmusic 	= sound/kahn_arena.mp3
+bgmusic 	= sound/kahn _arena.mp3
 bgvolume 	= 255
 
 [BGdef]
